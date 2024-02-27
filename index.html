@@ -26,6 +26,7 @@
     <!---frame-->
     <div
       class="m-2.5 fixed z-20 pointer-events-none left-1.5 -right-1 top-2 -bottom-1.5 border-2 border-solid border-gray-300 after:absolute after:border-2 after:border-solid after:border-black after:-left-2 after:-top-2 after:bottom-1 after:right-2 after:box-border after:w-full"
+      style="display: none"
     >
       <!---top-panel-->
       <div
@@ -138,7 +139,7 @@
       <!-- 3 section đầu tiên (Thiện) -->
 
       <!-- section 1 -->
-      <div class="relative z-10 w-full h-screen bg-transparent">
+      <div class="relative z-10 w-full h-screen" style="display: none">
         <div class="h-full">
           <div
             class="w-full h-full relative justify-center items-center flex flex-col"
@@ -167,12 +168,12 @@
                       <div class="flex justify-start">
                         <a
                           href=""
-                          class="flex z-30 items-center justify-center text-sm h-14 border-solid border-2 border-black duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] mr-4 pl-10 pr-10 uppercase rounded-sm border-black shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] hover:shadow-none"
+                          class="flex font-semibold z-30 items-center justify-center text-sm h-14 border-solid border-2 border-black duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] mr-4 pl-10 pr-10 uppercase rounded-sm border-black shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] hover:shadow-none"
                           >Portfolio</a
                         >
                         <a
                           href=""
-                          class="flex z-30 items-center justify-center text-sm h-14 duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] pl-10 pr-10 uppercase !border-transparent !bg-orange-600 border-black shadow-[7px_7px_0px_0px_rgba(250,71,41,0.18)] hover:shadow-none"
+                          class="flex font-semibold z-30 items-center justify-center text-sm h-14 duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] pl-10 pr-10 uppercase !bg-orange-600 text-white shadow-[7px_7px_0px_0px_rgba(250,71,41,0.18)] hover:shadow-none"
                           >Contact me</a
                         >
                       </div>
@@ -195,7 +196,8 @@
 
       <!-- section 2 -->
       <div
-        class="relative z-10 w-full h-screen flex bg-transparent justify-center items-center"
+        class="relative z-10 w-full h-screen flex justify-center items-center"
+        style="display: none"
       >
         <div
           class="top-block w-[400px] h-[460px] absolute -top-1/4 right-32 origin-bottom -rotate-12 opacity-35 rounded-full bg-black"
@@ -249,10 +251,22 @@
       </div>
       <!-- End section 2 -->
 
+      <!-- section 3 -->
+      <div class="relative z-10 w-full h-screen">
+        <div
+          class="top-block w-[400px] h-[460px] absolute -top-32 right-80 origin-bottom -rotate-12 opacity-35 rounded-full bg-black"
+        ></div>
+        <div
+          class="w-80 h-[420px] opacity-35 absolute rounded-full bg-black origin-bottom"
+        ></div>
+      </div>
+      <!-- End section 3 -->
+
       <!-- End 3 section đầu tiên -->
       <!-- Education -->
       <div
         class="mil-section relative h-screen w-full flex justify-center items-center pt-8"
+        style="display: none"
       >
         <div class="container w-full mx-auto px-8 mt-10">
           <div class="flex mt-8 mx-6">
