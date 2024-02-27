@@ -5,8 +5,6 @@
 
 
 .fade {
-    margin: 10px;
-    padding: 50px;
 }
   
 .fadeOut { 
@@ -19,3 +17,22 @@
     transition: 2s;
     transform: translateY(1%);
 }
+
+
+.box-bg {
+    --dot-size: 2px;
+    --dot-space: 10px;
+  
+    background: linear-gradient(
+          90deg,
+          #fff calc(var(--dot-space) - var(--dot-size)),
+          transparent 1%
+        )
+        center/var(--dot-space) var(--dot-space),
+      linear-gradient(
+          #fff calc(var(--dot-space) - var(--dot-size)),
+          transparent 1%
+        )
+        center/var(--dot-space) var(--dot-space),
+      #101010;
+  }
