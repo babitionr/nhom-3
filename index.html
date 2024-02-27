@@ -18,11 +18,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./src/output.css" />
-
+    <link rel="stylesheet" href="./src/full-page-scroll.css">
+    <script src="./src/full-page-scroll.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Treto - Personal Portfolio Resume HTML Template</title>
   </head>
-  <body class="bg-white">
+  <body class="bg-white overflow-hidden">
     <!---frame-->
     <div
       class="m-2.5 fixed z-20 pointer-events-none left-1.5 -right-1 top-2 -bottom-1.5 border-2 border-solid border-gray-300 after:absolute after:border-2 after:border-solid after:border-black after:-left-2 after:-top-2 after:bottom-1 after:right-2 after:box-border after:w-full"
@@ -134,197 +135,322 @@
     </div>
     <!---frame-end-->
 
-    <div class="mil-onepage">
+    <div id="main" class="scroll-container mil-onepage">
       <!-- 3 section đầu tiên (Thiện) -->
-      <div class="relative z-10 w-full h-full bg-transparent">
-        <div class="h-full">
-          <div
-            class="w-full h-full relative justify-center items-center flex flex-col"
-          >
-            <!-- section 1 -->
-            <div class="w-full h-full flex z-10">
-              <div class="col-xl-7 pr-4 flex items-center">
-                <div class="relative w-full pr-[111px] pl-[221px] mill-banner">
-                  <!-- <div
-                class="w-full opacity-35 absolute bg-black h-[150px]"
-              ></div> -->
-                  <div>
-                    <p class="mb-8 text-base font-bold uppercase">
-                      Graphic
-                      <span class="text-orange-600"> and </span>
-                      Web Developer
-                    </p>
-                    <h1 class="text-shadow text-7xl mb-10 uppercase font-bold">
-                      Sophie Miller
-                    </h1>
-                    <div class="pl-14">
-                      <p class="mb-8">
-                        From France, Paris. I have rich experience in web design,
-                        also I am good at wordpress. I love to talk with you about
-                        our unique.
+  
+        <!-- section 1 -->
+        <section id="sec1" class="mil-section section1 fade fadeOut relative z-10 w-full h-screen">
+          <div class="h-full">
+            <div
+              class="w-full h-full relative justify-center items-center flex flex-col"
+            >
+              <div class="w-full h-full flex z-10">
+                <div class="w-7/12 pr-4 flex items-center">
+                  <div class="relative w-full pr-[111px] pl-[221px] mill-banner">
+                    <!-- <div
+            class="w-full opacity-35 absolute bg-black h-[150px]"
+          ></div> -->
+                    <div>
+                      <p class="mb-8 text-base font-bold uppercase">
+                        Graphic
+                        <span class="text-orange-600"> and </span>
+                        Web Developer
                       </p>
-                      <div class="flex justify-start">
-                        <a
-                          href=""
-                          class="flex z-30 items-center justify-center text-sm h-14 border-solid border-2 border-black duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] mr-4 pl-10 pr-10 uppercase rounded-sm border-black shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] hover:shadow-none"
-                          >Portfolio</a
-                        >
-                        <a
-                          href=""
-                          class="flex z-30 items-center justify-center text-sm h-14 duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] pl-10 pr-10 uppercase !border-transparent !bg-orange-600 border-black shadow-[7px_7px_0px_0px_rgba(250,71,41,0.18)] hover:shadow-none"
-                          >Contact me</a
-                        >
+                      <h1 class="text-shadow text-7xl mb-10 uppercase font-bold">
+                        Sophie Miller
+                      </h1>
+                      <div class="pl-14">
+                        <p class="mb-8">
+                          From France, Paris. I have rich experience in web
+                          design, also I am good at wordpress. I love to talk with
+                          you about our unique.
+                        </p>
+                        <div class="flex justify-start">
+                          <a
+                            href=""
+                            class="flex font-semibold z-30 items-center justify-center text-sm h-14 border-solid border-2 border-black duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] mr-4 pl-10 pr-10 uppercase rounded-sm border-black shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] hover:shadow-none"
+                            >Portfolio</a
+                          >
+                          <a
+                            href=""
+                            class="flex font-semibold z-30 items-center justify-center text-sm h-14 duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] pl-10 pr-10 uppercase !bg-orange-600 text-white shadow-[7px_7px_0px_0px_rgba(250,71,41,0.18)] hover:shadow-none"
+                            >Contact me</a
+                          >
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-xl-5 pl-4">
-                <img
-                  src="https://html.bslthemes.com/treto/img/faces/5.jpg"
-                  alt=""
-                  class="h-full w-full object-cover object-center align-top"
-                />
+                <div class="w-5/12 pl-4">
+                  <img
+                    src="https://html.bslthemes.com/treto/img/faces/5.jpg"
+                    alt=""
+                    class="h-full w-full object-cover object-center align-top"
+                  />
+                </div>
               </div>
             </div>
-            <!-- End section 1 -->
-
-            <!-- section 2 -->
-            <!-- <div class="w-full h-80 flex z-10 bg-black"></div> -->
-            <!-- End section 2 -->
           </div>
-        </div>
-      </div>
+        </section>
+        <!-- End section 1 -->
+  
+        <!-- section 2 -->
+        <section id="sec2" class="mil-section section2 fade fadeOut relative z-10 w-full h-screen flex justify-center items-center">
+          <div
+            class="top-block w-[400px] h-[460px] absolute -top-1/4 right-32 origin-bottom -rotate-12 opacity-35 rounded-full bg-black"
+          ></div>
+          <div class="container px-[30px] mx-[118px]">
+            <div class="flex justify-between items-center">
+              <div class="w-4/12">
+                <div class="w-full relative">
+                  <img
+                    src="https://html.bslthemes.com/treto/img/faces/1.jpg"
+                    alt=""
+                    class="h-[500px] after:absolute after:left-3 after:top-3 after:-bottom-3 after:-right-3 after:border-solid after:border-2 after:border-black"
+                  />
+                </div>
+              </div>
+              <div class="w-7/12">
+                <div class="flex flex-wrap font-Jost-Font">
+                  <div class="w-full px-4">
+                    <p class="pb-[30px] uppercase text-xs font-semibold">
+                      <span class="text-orange-600">Hello</span>
+                      , my name is
+                    </p>
+                    <h2
+                      class="pb-[60px] uppercase text-6xl font-semibold text-shadow font-Jost-Font"
+                    >
+                      Sophie Miller
+                    </h2>
+                    <p class="pb-[30px] text-lg font-medium font-Jost-Font">
+                      From France, Paris. I have rich experience in web design,
+                      also I am good at React, Vue.js. I love to talk with you
+                      about our unique. I have been studying UI UX Design since
+                      October 2020. I like creating a cool design project.
+                    </p>
+                    <p class="pb-[30px] text-lg font-medium font-Jost-Font">
+                      Over 6+ years of IT experience which includes 2+ years of a
+                      React JS Developer and 3 years of Experience as a UI/UX
+                      Developer and 1 years of Experience as software Developer.
+                    </p>
+                    <div class="flex">
+                      <a
+                        href=""
+                        class="h-14 flex text-sm items-center justify-center duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] pr-10 pl-10 uppercase !border-transparent !bg-orange-600 border-black shadow-[7px_7px_0px_0px_rgba(250,71,41,0.18)] text-white hover:shadow-none"
+                        >Download CV</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End section 2 -->
+  
+        <!-- End 3 section đầu tiên -->
+
+      <!-- End section 1 -->
+
       <!-- End 3 section đầu tiên -->
-      <!-- Education (Uyên)-->
-      <div class="mil-section relative h-screen w-full flex justify-center items-center pt-8">
-      <div class="container w-full mx-auto px-8 mt-10">
-      <div class="flex mt-8 mx-6">
-      <div class="col-start-1 justify-start mr-6">
-        <div class="text-right">
-          <p
-            class="text-black uppercase font-Jost-Font font-medium text-base mb-7"
-          >
-            Certificates
-          </p>
-          <h2
-            class="text-black uppercase font-Jost-Font font-bold text-5xl mb-14 text-shadow"
-          >
-            Education
-          </h2>
-          <p class="text-black font-Jost-Font font-light text-lg">
-            Extensive education in developing web pages using: HTML5,
-            <br />
-            CSS3, SASS, JavaScript, React JS, Angular JS, JQuery, JSON,
-            <br />
-            Node.js, Bootstrap.
-          </p>
+      <!-- Education -->
+      <section id="sec3" class="mil-section section3 fade fadeOut">
+        <div class="container w-full mx-auto px-8 mt-10">
+          <div class="flex mt-8 mx-6">
+            <div class="col-start-1 justify-start mr-6">
+              <div class="text-right">
+                <p
+                  class="text-black uppercase font-Jost-Font font-medium text-base mb-7"
+                >
+                  Certificates
+                </p>
+                <h2
+                  class="text-black uppercase font-Jost-Font font-bold text-5xl mb-14 text-shadow"
+                >
+                  Education
+                </h2>
+                <p class="text-black font-Jost-Font font-light text-lg">
+                  Extensive education in developing web pages using: HTML5,
+                  <br />
+                  CSS3, SASS, JavaScript, React JS, Angular JS, JQuery, JSON,
+                  <br />
+                  Node.js, Bootstrap.
+                </p>
+              </div>
+            </div>
+            <div class="col-start-2 justify-end ml-24">
+              <div class="flex mb-10">
+                <div
+                  class="relative border-2 border-solid border-black box-border w-16 h-16 flex justify-center items-center pb-2 before:absolute before:bg-zinc-200 before:-top-2.5 before:-left-2.5 before:w-16 before:h-16 before:-z-10 after:-top-10 after:left-auto after:-right-5"
+                >
+                  <a
+                    href="https://html.bslthemes.com/treto/img/certificate.jpg"
+                    class="text-black font-Jost-Font font-normal text-3xl"
+                    >+</a
+                  >
+                </div>
+
+                <div class="pl-10 pt-1">
+                  <p
+                    class="text-black uppercase font-Jost-Font font-medium text-lg mb-4"
+                  >
+                    Backend Programming
+                  </p>
+
+                  <p
+                    class="text-black uppercase font-Jost-Font font-medium text-sm mb-7"
+                  >
+                    2020 <span class="text-orange-600"> to </span>2021
+                  </p>
+
+                  <p class="text-black font-Jost-Font font-light text-lg">
+                    It has survived not only five centuries, but also the leap
+                    <br />
+                    into electronic typesetting, remaining unchanged.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex mb-10">
+                <div
+                  class="relative border-2 border-solid border-black box-border w-16 h-16 flex justify-center items-center pb-2 before:absolute before:bg-zinc-200 before:-top-2.5 before:-left-2.5 before:w-16 before:h-16 before:-z-10 after:-top-10 after:left-auto after:-right-5"
+                >
+                  <a
+                    href="https://html.bslthemes.com/treto/img/certificate.jpg"
+                    class="text-black font-Jost-Font font-normal text-3xl"
+                    >+</a
+                  >
+                </div>
+
+                <div class="pl-10 pt-1">
+                  <p
+                    class="text-black uppercase font-Jost-Font font-medium text-lg mb-4"
+                  >
+                    Backend Programming
+                  </p>
+
+                  <p
+                    class="text-black uppercase font-Jost-Font font-medium text-sm mb-7"
+                  >
+                    2020 <span class="text-orange-600"> to </span>2021
+                  </p>
+
+                  <p class="text-black font-Jost-Font font-light text-lg">
+                    It has survived not only five centuries, but also the leap
+                    <br />
+                    into electronic typesetting, remaining unchanged.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex mb-10">
+                <div
+                  class="relative border-2 border-solid border-black box-border w-16 h-16 flex justify-center items-center pb-2 before:absolute before:bg-zinc-200 before:-top-2.5 before:-left-2.5 before:w-16 before:h-16 before:-z-10 after:-top-10 after:left-auto after:-right-5"
+                >
+                  <a
+                    href="https://html.bslthemes.com/treto/img/certificate.jpg"
+                    class="text-black font-Jost-Font font-normal text-3xl"
+                    >+</a
+                  >
+                </div>
+
+                <div class="pl-10 pt-1">
+                  <p
+                    class="text-black uppercase font-Jost-Font font-medium text-lg mb-4"
+                  >
+                    Backend Programming
+                  </p>
+
+                  <p
+                    class="text-black uppercase font-Jost-Font font-medium text-sm mb-7"
+                  >
+                    2020 <span class="text-orange-600"> to </span>2021
+                  </p>
+
+                  <p class="text-black font-Jost-Font font-light text-lg">
+                    It has survived not only five centuries, but also the leap
+                    <br />
+                    into electronic typesetting, remaining unchanged.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="col-start-2 justify-end ml-24">
-        <div class="flex mb-10">
-          <div
-            class="relative border-2 border-solid border-black box-border w-16 h-16 flex justify-center items-center pb-2 before:absolute before:bg-zinc-200 before:-top-2.5 before:-left-2.5 before:w-16 before:h-16 before:-z-10 after:-top-10 after:left-auto after:-right-5"
-          >
-            <a
-              href="https://html.bslthemes.com/treto/img/certificate.jpg"
-              class="text-black font-Jost-Font font-normal text-3xl"
-              >+</a
-            >
-          </div>
+      </section>
 
-          <div class="pl-10 pt-1">
-            <p
-              class="text-black uppercase font-Jost-Font font-medium text-lg mb-4"
-            >
-              Backend Programming
-            </p>
-
-            <p
-              class="text-black uppercase font-Jost-Font font-medium text-sm mb-7"
-            >
-              2020 <span class="text-orange-600"> to </span>2021
-            </p>
-
-            <p class="text-black font-Jost-Font font-light text-lg">
-              It has survived not only five centuries, but also the leap
-              <br />
-              into electronic typesetting, remaining unchanged.
-            </p>
-          </div>
-        </div>
-
-        <div class="flex mb-10">
-          <div
-            class="relative border-2 border-solid border-black box-border w-16 h-16 flex justify-center items-center pb-2 before:absolute before:bg-zinc-200 before:-top-2.5 before:-left-2.5 before:w-16 before:h-16 before:-z-10 after:-top-10 after:left-auto after:-right-5"
-          >
-            <a
-              href="https://html.bslthemes.com/treto/img/certificate.jpg"
-              class="text-black font-Jost-Font font-normal text-3xl"
-              >+</a
-            >
-          </div>
-
-          <div class="pl-10 pt-1">
-            <p
-              class="text-black uppercase font-Jost-Font font-medium text-lg mb-4"
-            >
-              Backend Programming
-            </p>
-
-            <p
-              class="text-black uppercase font-Jost-Font font-medium text-sm mb-7"
-            >
-              2020 <span class="text-orange-600"> to </span>2021
-            </p>
-
-            <p class="text-black font-Jost-Font font-light text-lg">
-              It has survived not only five centuries, but also the leap
-              <br />
-              into electronic typesetting, remaining unchanged.
-            </p>
-          </div>
-        </div>
-
-        <div class="flex mb-10">
-          <div
-            class="relative border-2 border-solid border-black box-border w-16 h-16 flex justify-center items-center pb-2 before:absolute before:bg-zinc-200 before:-top-2.5 before:-left-2.5 before:w-16 before:h-16 before:-z-10 after:-top-10 after:left-auto after:-right-5"
-          >
-            <a
-              href="https://html.bslthemes.com/treto/img/certificate.jpg"
-              class="text-black font-Jost-Font font-normal text-3xl"
-              >+</a
-            >
-          </div>
-
-          <div class="pl-10 pt-1">
-            <p
-              class="text-black uppercase font-Jost-Font font-medium text-lg mb-4"
-            >
-              Backend Programming
-            </p>
-
-            <p
-              class="text-black uppercase font-Jost-Font font-medium text-sm mb-7"
-            >
-              2020 <span class="text-orange-600"> to </span>2021
-            </p>
-
-            <p class="text-black font-Jost-Font font-light text-lg">
-              It has survived not only five centuries, but also the leap
-              <br />
-              into electronic typesetting, remaining unchanged.
-            </p>
-          </div>
-        </div>
-      </div>
-      </div>
-      </div>
-      </div>
       <!-- Education end -->
     </div>
    
+
     <script type="module" src="/src/main.ts"></script>
-    <!-- <script src="./isotope.pkgd.min.js"></script> -->
+    <!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!--Scroll effect-->
+    <script>
+     $(document).ready(function() {
+      var delay = false;
+      var currentPage = 1;
+      var pageCount = $(".mil-section").length;
+      var swipe = document.getElementsByTagName('.mil-section');
+
+      $(document).on('mousewheel DOMMouseScroll', function(event) {
+        event.preventDefault();
+        if (delay) return;
+        delay = true;
+        setTimeout(function() { delay = false }, 600)
+
+        var wd = event.originalEvent.wheelDelta || -event.originalEvent.detail;
+        console.log(wd);
+        
+        if (wd < 0) {
+            if (currentPage < pageCount) {
+                currentPage++;
+            }
+        } else {
+            if (1 < currentPage) {
+                currentPage--;
+            }
+        }
+    
+        $('html,body').animate({
+            scrollTop: $('#sec' + currentPage).offset().top
+        }, 700);
+
+        $('#tag' + currentPage).addClass('active');
+        for (var i = 1; i <= pageCount; i++) {
+            if (i != currentPage) {
+                $('#tag' + i).removeClass('active');
+            }
+        }
+    });
+    });
+
+    
+    </script>
+    <!--Scroll effect end-->
+    <!-- </script> -->
+    <script>
+      
+      const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.7
+      };
+      function observerCallback(entries, observer) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // fade in observed elements that are in view
+            entry.target.classList.replace('fadeOut', 'fadeIn');
+          } else {
+            // fade out observed elements that are not in view
+            entry.target.classList.replace('fadeIn', 'fadeOut');
+          }
+        });
+      }
+      const observer = new IntersectionObserver(observerCallback, observerOptions);
+      const fadeElms = document.querySelectorAll('.fade');
+      fadeElms.forEach(el => observer.observe(el));
+    </script>
   </body>
 </html>
