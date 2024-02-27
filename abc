@@ -3,34 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    />
-
-    <link
       rel="icon"
       type="image/svg+xml"
       href="https://html.bslthemes.com/treto/favicon.ico"
     />
-
-    <!-- Font Family -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Magnific Popup core CSS file -->
-    <link rel="stylesheet" href="src/magnific-popup.css" />
-
     <link rel="stylesheet" href="./src/output.css" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Treto - Personal Portfolio Resume HTML Template</title>
   </head>
-
-  <body class="bg-white overflow-hidden">
+  <body class="bg-white">
     <!---frame-->
     <div
       class="m-2.5 fixed z-20 pointer-events-none left-1.5 -right-1 top-2 -bottom-1.5 border-2 border-solid border-gray-300 after:absolute after:border-2 after:border-solid after:border-black after:-left-2 after:-top-2 after:bottom-1 after:right-2 after:box-border after:w-full"
@@ -142,7 +134,7 @@
     </div>
     <!---frame-end-->
 
-    <div class="mil-onepage w-full">
+    <div class="mil-onepage">
       <!-- 3 section đầu tiên (Thiện) -->
       <div class="relative z-10 w-full h-full bg-transparent">
         <div class="h-full">
@@ -204,8 +196,6 @@
         </div>
       </div>
       <!-- End 3 section đầu tiên -->
-
-      <!-- 3 Section tiếp theo (Uyên) -->
       <!-- Education -->
       <div
         class="mil-section relative h-screen w-full flex justify-center items-center pt-8"
@@ -272,7 +262,7 @@
                 >
                   <a
                     href="https://html.bslthemes.com/treto/img/certificate.jpg"
-                    class="text-black font-Jost-Font font-normal text-3xl mfp-image"
+                    class="text-black font-Jost-Font font-normal text-3xl"
                     >+</a
                   >
                 </div>
@@ -334,29 +324,7 @@
         </div>
       </div>
       <!-- Education end -->
-
-      <!-- Expirience -->
-      <div
-        class="mil-section relative h-screen w-full flex justify-center items-center pt-8"
-      >
-        <div class="container w-full mx-auto px-8 mt-10">
-          <div class="flex mt-8 mx-6">
-            <div class="bg-orange-600">
-              skdlfsddkkdkdkdkkdkdkdkdkdkkdkdkdkkdkd
-            </div>
-            <div class="bg-blue-600">
-              skdlfsddkkdkdkdkkdkdkdkdkdkkdkdkdkkdkd
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-
-    <!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-    <!-- Magnific Popup core JS file -->
-    <script src="src/magnific-popup.js"></script>
 
     <script type="module" src="/src/main.ts"></script>
     <!-- <script src="./isotope.pkgd.min.js"></script> -->
