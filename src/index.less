@@ -5,3 +5,21 @@
 .text-shadow {
   text-shadow: 5px 5px 0 rgba(16, 16, 16, 0.18);
 }
+
+.box-bg {
+  --dot-size: 2px;
+  --dot-space: 10px;
+
+  background: linear-gradient(
+        90deg,
+        #fff calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center/var(--dot-space) var(--dot-space),
+    linear-gradient(
+        #fff calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center/var(--dot-space) var(--dot-space),
+    #101010;
+}
