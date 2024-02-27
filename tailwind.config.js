@@ -10,5 +10,7 @@ export default {
       'Jost-Font': ['"Jost"', 'sans-serif'],
     },},
   },
-  plugins: [],
+  plugins: [{
+    groupHover: {}
+  }],
 }
