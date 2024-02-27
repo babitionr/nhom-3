@@ -5,7 +5,10 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {  
+      fontFamily: {
+      'Jost-Font': ['"Jost"', 'sans-serif'],
+    },},
   },
   plugins: [],
 }
