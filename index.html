@@ -20,7 +20,7 @@
     />
 
     <!-- Magnific Popup core CSS file -->
-    <link rel="stylesheet" href="magnific-popup/magnific-popup.css" />
+    <link rel="stylesheet" href="src/magnific-popup.css" />
 
     <link rel="stylesheet" href="./src/output.css" />
 
@@ -287,7 +287,7 @@
                   >
                     <a
                       href="https://html.bslthemes.com/treto/img/certificate.jpg"
-                      class="text-black font-Jost-Font font-normal text-3xl"
+                      class="text-black font-Jost-Font font-normal text-3xl image-link"
                       >+</a
                     >
                   </div>
@@ -322,7 +322,7 @@
                   >
                     <a
                       href="https://html.bslthemes.com/treto/img/certificate.jpg"
-                      class="text-black font-Jost-Font font-normal text-3xl"
+                      class="text-black font-Jost-Font font-normal text-3xl image-link"
                       >+</a
                     >
                   </div>
@@ -357,7 +357,7 @@
                   >
                     <a
                       href="https://html.bslthemes.com/treto/img/certificate.jpg"
-                      class="text-black font-Jost-Font font-normal text-3xl"
+                      class="text-black font-Jost-Font font-normal text-3xl image-link"
                       >+</a
                     >
                   </div>
@@ -662,7 +662,12 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
     <!-- Magnific Popup core JS file -->
-    <script src="magnific-popup/jquery.magnific-popup.js"></script>
+    <script src="src/magnific-popup.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".image-link").magnificPopup({ type: "image" });
+      });
+    </script>
 
     <script type="module" src="/src/main.ts"></script>
   </body>
