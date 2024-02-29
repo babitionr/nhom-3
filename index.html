@@ -19,6 +19,12 @@
       rel="stylesheet"
     />
 
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <!-- Magnific Popup core CSS file -->
     <link rel="stylesheet" href="src/magnific-popup.css" />
 
@@ -441,9 +447,9 @@
             <div class="2xl:w-6/12 xl:w-6/12 lg:w-6/12 2xl:px-4 xl:px-4">
               <div class="flex col-start-2 justify-end items-center">
                 <div
-                  class="w-auto mr-7 mb-7 text-black uppercase font-Jost-Font font-semibold text-base"
+                  class="w-auto mr-7 mb-7 text-black uppercase font-Jost-Font font-semibold text-base swiper-pag"
                 >
-                  <span>1</span> / <span>2</span>
+                  <span>1</span> / <span>4</span>
                 </div>
                 <div class="flex justify-between items-center mb-7">
                   <div
@@ -452,7 +458,7 @@
                     <i class="fa-solid fa-chevron-left"></i>
                   </div>
                   <div
-                    class="flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] hover:shadow-none duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] mr-4"
+                    class="swiper-button-next flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] hover:shadow-none duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] mr-4"
                   >
                     <i class="fa-solid fa-chevron-right"></i>
                   </div>
@@ -465,9 +471,11 @@
             ></div>
 
             <div class="max-w-full 2xl:px-4 xl:px-4">
-              <div class="pt-14 overflow-hidden touch-pan-y">
+              <div
+                class="swiper swiper-section-experience pt-14 overflow-hidden touch-pan-y"
+              >
                 <div
-                  class="relative flex w-full h-full box-content transform duration-0"
+                  class="swiper-wrapper relative flex w-full h-full box-content transform duration-0"
                 >
                   <div class="swiper-slide">
                     <div class="mr-10 mb-7 flex">
@@ -494,7 +502,7 @@
                     </div>
                   </div>
 
-                  <div class="swiper-slide 2xl:block xl:block lg:block hidden">
+                  <div class="swiper-slide">
                     <div class="mr-10 mb-7 flex">
                       <div class="w-full">
                         <p
@@ -519,7 +527,7 @@
                     </div>
                   </div>
 
-                  <div class="swiper-slide 2xl:block xl:block lg:block hidden">
+                  <div class="swiper-slide">
                     <div class="mr-10 mb-7 flex">
                       <div class="w-full">
                         <p
@@ -544,7 +552,7 @@
                     </div>
                   </div>
 
-                  <div class="swiper-slide hidden">
+                  <div class="swiper-slide">
                     <div class="mr-10 mb-7 flex">
                       <div class="w-full">
                         <p
@@ -757,9 +765,11 @@
             class="flex 2xl:flex-row xl:flex-row flex-col relative w-full h-full box-content"
           >
             <div class="2xl:w-8/12 xl:w-8/12">
-              <div class="overflow-hidden touch-pan-y pt-14">
+              <div
+                class="swiper swiper-section-testimonials overflow-hidden touch-pan-y pt-14"
+              >
                 <div
-                  class="relative w-full h-full box-content flex transform duration-0"
+                  class="swiper-wrapper relative w-full h-full box-content flex transform duration-0"
                 >
                   <div class="swiper-slide">
                     <div
@@ -808,7 +818,7 @@
                     </div>
                   </div>
 
-                  <div class="swiper-slide hidden">
+                  <div class="swiper-slide">
                     <div
                       class="flex mb-10 2xl:flex-row xl:flex-row lg:flex-row flex-col"
                     >
@@ -855,7 +865,7 @@
                     </div>
                   </div>
 
-                  <div class="swiper-slide hidden">
+                  <div class="swiper-slide">
                     <div
                       class="flex mb-10 2xl:flex-row xl:flex-row lg:flex-row flex-col"
                     >
@@ -902,7 +912,7 @@
                     </div>
                   </div>
 
-                  <div class="swiper-slide hidden">
+                  <div class="swiper-slide">
                     <div
                       class="flex mb-10 2xl:flex-row xl:flex-row lg:flex-row flex-col"
                     >
@@ -967,14 +977,14 @@
                         <i class="fa-solid fa-chevron-left"></i>
                       </div>
                       <div
-                        class="flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] hover:shadow-none duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] mr-4"
+                        class="swiper-button-next flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] hover:shadow-none duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] mr-4"
                       >
                         <i class="fa-solid fa-chevron-right"></i>
                       </div>
                     </div>
 
                     <div
-                      class="w-auto mr-7 mb-7 text-black uppercase font-Jost-Font font-semibold text-base"
+                      class="w-auto mr-7 2xl:mb-36 xl:mb-36 2xl:ml-16 xl:ml-16 text-black uppercase font-Jost-Font font-semibold text-base swiper-pagination"
                     >
                       <span>1</span> / <span>4</span>
                     </div>
@@ -997,6 +1007,60 @@
     <script>
       $(document).ready(function () {
         $(".image-link").magnificPopup({ type: "image" });
+      });
+    </script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".swiper-section-experience", {
+        ewind: true,
+        hashNavigation: true,
+        pagination: {
+          el: ".swiper-pag",
+          type: "fraction",
+        },
+        centeredSlides: true,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        slidesPerView: 3,
+        breakpoints: {
+          1366: {
+            slidesPerView: 3,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+          768: {
+            slidesPerView: 1,
+          },
+          500: {
+            slidesPerView: 1,
+          },
+        },
+      });
+
+      new Swiper(".swiper-section-testimonials", {
+        rewind: true,
+        hashNavigation: true,
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+        centeredSlides: true,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        slidesPerView: 1,
       });
     </script>
 
