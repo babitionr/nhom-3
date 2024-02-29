@@ -13,3 +13,67 @@
 .text-shadow {
     text-shadow: 5px 5px 0 rgba(16,16,16,.18)
 }
+
+.box-bg {
+  --dot-size: 2px;
+  --dot-space: 10px;
+
+  background: linear-gradient(
+        90deg,
+        #fff calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center/var(--dot-space) var(--dot-space),
+    linear-gradient(
+        #fff calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center/var(--dot-space) var(--dot-space),
+    #101010;
+}
+
+.box-bg::before {
+  --dot-size: 2px;
+  --dot-space: 10px;
+
+  background: linear-gradient(
+        90deg,
+        #fff calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center/var(--dot-space) var(--dot-space),
+    linear-gradient(
+        #fff calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center/var(--dot-space) var(--dot-space),
+    #101010;
+}
+
+.box-email::after,
+.box-phone::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 70px;
+  height: 70px;
+  opacity: 0.3;
+  pointer-events: none;
+
+  --dot-size: 2px;
+  --dot-space: 10px;
+
+  background: linear-gradient(
+        90deg,
+        #fff calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center/var(--dot-space) var(--dot-space),
+    linear-gradient(
+        #fff calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center/var(--dot-space) var(--dot-space),
+    #101010;
+}
