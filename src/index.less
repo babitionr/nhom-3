@@ -2,11 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-.fade {
+.text-shadow {
+  text-shadow: 5px 5px 0 rgba(16, 16, 16, 0.18);
 }
-  
+
 .fadeOut { 
     opacity: 0;
     transition: 0s;
@@ -14,12 +13,16 @@
 }
 .fadeIn { 
     opacity: 1; 
-    transition: 2s;
+    transition: 1.5s;
     transform: translateY(1%);
 }
 
+.active{
+  border: 4px solid #EA580C;
+}
 
 .box-bg {
+
     --dot-size: 2px;
     --dot-space: 10px;
   
@@ -35,4 +38,5 @@
         )
         center/var(--dot-space) var(--dot-space),
       #101010;
+
   }

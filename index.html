@@ -18,8 +18,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./src/output.css" />
-    <link rel="stylesheet" href="./src/full-page-scroll.css">
-    <script src="./src/full-page-scroll.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Treto - Personal Portfolio Resume HTML Template</title>
   </head>
@@ -50,7 +48,7 @@
               <li class="relative flex items-center mr-10">
                 <div class="group cursor-pointer hover:text-orange-600 duration-500"
                   ><a>Home</a>
-                  <ul class="opacity-0 group-hover:opacity-100 bg-white duration-500 absolute top-20 -left-9 px-7 py-7 border-2 border-solid border-gray-300">
+                  <ul class="hidden group-hover:block bg-white duration-500 absolute top-20 -left-9 px-7 py-7 border-2 border-solid border-gray-300">
                     <li>
                       <a class="text-black hover:text-orange-600 duration-500">Type 1</a>
                     </li>
@@ -139,7 +137,7 @@
       <!-- 3 section đầu tiên (Thiện) -->
 
       <!-- section 1 -->
-      <div id="sec1" class="mil-section fade fadeOut relative z-10 w-full h-screen">
+      <div id="1" class="mil-section fade fadeOut relative z-10 w-full h-screen">
         <div class="h-full">
           <div
             class="w-full h-full relative justify-center items-center flex flex-col"
@@ -151,21 +149,21 @@
           class="w-full opacity-35 absolute bg-black h-[150px]"
         ></div> -->
                   <div>
-                    <p class="mb-8 text-base font-bold uppercase">
+                    <p class="mb-8 text-base font-semibold uppercase font-Jost-Font">
                       Graphic
                       <span class="text-orange-600"> and </span>
                       Web Developer
                     </p>
-                    <h1 class="text-shadow text-7xl mb-10 uppercase font-bold">
+                    <h1 class="text-shadow text-7xl mb-10 uppercase font-bold font-Jost-Font">
                       Sophie Miller
                     </h1>
                     <div class="pl-14">
-                      <p class="mb-8">
+                      <p class="mb-8 text-base">
                         From France, Paris. I have rich experience in web
                         design, also I am good at wordpress. I love to talk with
                         you about our unique.
                       </p>
-                      <div class="flex justify-start">
+                      <div class="flex justify-start font-Jost-Font">
                         <a
                           href=""
                           class="flex font-semibold z-30 items-center justify-center text-sm h-14 border-solid border-2 border-black duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] mr-4 pl-10 pr-10 uppercase rounded-sm border-black shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] hover:shadow-none"
@@ -195,30 +193,30 @@
       <!-- End section 1 -->
 
       <!-- section 2 -->
-      <div id="sec2" class="mil-section fade fadeOut relative z-10 w-full h-screen flex justify-center items-center">
+      <div id="2" class="mil-section fade fadeOut relative z-10 w-full h-screen flex justify-center items-center">
         <div
-          class="box-bg top-block w-[400px] h-[460px] absolute -top-[30%] right-40 origin-bottom -rotate-12 opacity-35 rounded-full bg-black"
+          class="-z-10 box-bg top-block w-[400px] h-[460px] absolute -top-[30%] right-40 origin-bottom -rotate-12 opacity-35 rounded-full bg-black"
         ></div>
         <div class="container px-[30px] mx-[118px]">
           <div class="flex justify-between items-center">
             <div class="w-4/12">
-              <div class="w-full relative">
+              <div class="w-full relative after:absolute after:border-2 after:border-solid after:border-black after:left-3 after:top-3 after:-bottom-3 after:right-3">
                 <img
                   src="https://html.bslthemes.com/treto/img/faces/1.jpg"
                   alt=""
-                  class="h-[500px] after:absolute after:left-3 after:top-3 after:-bottom-3 after:-right-3 after:border-solid after:border-2 after:border-black"
+                  class="h-[500px]"
                 />
               </div>
             </div>
             <div class="w-7/12">
               <div class="flex flex-wrap font-Jost-Font">
                 <div class="w-full px-4">
-                  <p class="pb-[30px] uppercase text-xs font-semibold">
+                  <p class="pb-[30px] uppercase text-sm font-semibold">
                     <span class="text-orange-600">Hello</span>
                     , my name is
                   </p>
                   <h2
-                    class="pb-[60px] uppercase text-6xl font-semibold text-shadow font-Jost-Font"
+                    class="pb-[60px] uppercase  text-6xl font-semibold text-shadow font-Jost-Font"
                   >
                     Sophie Miller
                   </h2>
@@ -236,7 +234,7 @@
                   <div class="flex">
                     <a
                       href=""
-                      class="h-14 flex text-sm items-center justify-center duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] pr-10 pl-10 uppercase !border-transparent !bg-orange-600 border-black shadow-[7px_7px_0px_0px_rgba(250,71,41,0.18)] text-white hover:shadow-none"
+                      class="h-14 flex text-sm font-semibold items-center justify-center duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] pr-10 pl-10 uppercase !border-transparent !bg-orange-600 border-black shadow-[7px_7px_0px_0px_rgba(250,71,41,0.18)] text-white hover:shadow-none"
                       >Download CV</a
                     >
                   </div>
@@ -249,7 +247,7 @@
       <!-- End section 2 -->
 
       <!-- section 3 -->
-      <div id="sec3" class="mil-section fade fadeOut relative z-10 w-full h-screen flex justify-center items-center" >
+      <div id="3" class="mil-section fade fadeOut relative z-10 w-full h-screen flex justify-center items-center" >
         <div
           class="box-bg top-block w-[400px] h-[460px] absolute -top-32 right-80 origin-bottom -rotate-12 opacity-35 rounded-full bg-black"
         ></div>
@@ -264,14 +262,14 @@
             <p class="mb-8">
               my great <span class="text-orange-600">work</span>
             </p>
-            <h2 class="text-6xl mb-16">ABILITY OR SKILL</h2>
+            <h2 class="text-6xl mb-16 font-Jost-Font text-shadow">ABILITY OR SKILL</h2>
           </div>
 
           <div class="flex flex-wrap -mx-3">
             <div class="w-2/12 px-3"></div>
             <div class="w-10/12 px-3">
               <div class="flex flex-wrap">
-                <div class="w-1/2 mb-10 px-3">
+                <div class="w-1/2 mb-10 px-3 font-Jost-Font">
                   <div class="box-icon flex justify-between">
                     <div class="flex">
                       <div
@@ -281,7 +279,7 @@
                       </div>
                     </div>
                     <div class="w-[calc(100%-90px)]">
-                      <span class="font-semibold text-base uppercase"
+                      <span class="font-semibold  text-base uppercase"
                         >figma</span
                       >
                       <div
@@ -291,7 +289,7 @@
                           class="w-3/5 relative -left-2 h-3 border-b-2 border-r-2 border-orange-600"
                         >
                           <span
-                            class="absolute top-0 right-0 translate-x-4 -translate-y-6"
+                            class="absolute top-0 right-0 translate-x-4 -translate-y-6 text-orange-600 font-semibold"
                             >60%</span
                           >
                         </div>
@@ -299,7 +297,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="w-1/2 mb-10 px-3">
+                <div class="w-1/2 mb-10 px-3 font-Jost-Font">
                   <div class="box-icon flex justify-between">
                     <div class="flex">
                       <div
@@ -319,7 +317,7 @@
                           class="w-4/5 relative -left-2 h-3 border-b-2 border-r-2 border-orange-600"
                         >
                           <span
-                            class="absolute top-0 right-0 translate-x-4 -translate-y-6"
+                            class="absolute top-0 right-0 translate-x-4 -translate-y-6 text-orange-600 font-semibold"
                             >80%</span
                           >
                         </div>
@@ -327,7 +325,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="w-1/2 mb-10 px-3">
+                <div class="w-1/2 mb-10 px-3 font-Jost-Font">
                   <div class="box-icon flex justify-between">
                     <div class="flex">
                       <div
@@ -347,7 +345,7 @@
                           class="w-3/4 relative -left-2 h-3 border-b-2 border-r-2 border-orange-600"
                         >
                           <span
-                            class="absolute top-0 right-0 translate-x-4 -translate-y-6"
+                            class="absolute top-0 right-0 translate-x-4 -translate-y-6 text-orange-600 font-semibold"
                             >75%</span
                           >
                         </div>
@@ -355,7 +353,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="w-1/2 mb-10 px-3">
+                <div class="w-1/2 mb-10 px-3 font-Jost-Font">
                   <div class="box-icon flex justify-between">
                     <div class="flex">
                       <div
@@ -375,7 +373,7 @@
                           class="w-3/4 relative -left-2 h-3 border-b-2 border-r-2 border-orange-600"
                         >
                           <span
-                            class="absolute top-0 right-0 translate-x-4 -translate-y-6"
+                            class="absolute top-0 right-0 translate-x-4 -translate-y-6 text-orange-600 font-semibold"
                             >75%</span
                           >
                         </div>
@@ -383,7 +381,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="w-1/2 mb-10 px-3">
+                <div class="w-1/2 mb-10 px-3 font-Jost-Font">
                   <div class="box-icon flex justify-between">
                     <div class="flex">
                       <div
@@ -403,7 +401,7 @@
                           class="w-[90%] relative -left-2 h-3 border-b-2 border-r-2 border-orange-600"
                         >
                           <span
-                            class="absolute top-0 right-0 translate-x-4 -translate-y-6"
+                            class="absolute top-0 right-0 translate-x-4 -translate-y-6 text-orange-600 font-semibold"
                             >90%</span
                           >
                         </div>
@@ -411,7 +409,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="w-1/2 mb-10 px-3">
+                <div class="w-1/2 mb-10 px-3 font-Jost-Font">
                   <div class="box-icon flex justify-between">
                     <div class="flex">
                       <div
@@ -431,7 +429,7 @@
                           class="w-[55%] relative -left-2 h-3 border-b-2 border-r-2 border-orange-600"
                         >
                           <span
-                            class="absolute top-0 right-0 translate-x-4 -translate-y-6"
+                            class="absolute top-0 right-0 translate-x-4 -translate-y-6 text-orange-600 font-semibold"
                             >55%</span
                           >
                         </div>
@@ -453,7 +451,7 @@
       <!-- Section 4 -->
 
       <!-- Education -->
-      <div id="sec4" class="mil-section fade fadeOut relative h-screen w-full flex justify-center items-center pt-8">
+      <div id="4" class="mil-section fade fadeOut relative h-screen w-full flex justify-center items-center pt-8">
         <div class="container w-full mx-auto px-8 mt-10">
           <div class="flex mt-8 mx-6">
             <div class="col-start-1 justify-start mr-6">
@@ -588,7 +586,7 @@
 
       <!-- Section 5 -->
       <!-- Expirience -->
-      <div id="sec5" class="mil-section fade fadeOut relative h-screen w-full flex justify-center items-center pt-6">
+      <div id="5" class="mil-section fade fadeOut relative h-screen w-full flex justify-center items-center pt-6">
         <div class="container w-full mx-auto px-8 mt-10">
           <p
             class="text-black uppercase font-Jost-Font font-medium text-base mb-7 px-4"
@@ -725,7 +723,7 @@
 
       <!-- Section 6 -->
       <!-- Services -->
-      <div id="sec6" class="mil-section fade fadeOut relative h-screen w-full flex justify-center items-center pt-8">
+      <div id="6" class="mil-section fade fadeOut relative h-screen w-full flex justify-center items-center pt-8">
         <div class="container w-full mx-auto px-8 mt-10">
           <p
             class="text-black uppercase font-Jost-Font font-medium text-base mb-7 px-4"
@@ -848,7 +846,52 @@
       <!-- Servicesn end -->
       <!-- End Section 6 -->
     </div>
-   
+    
+    <!--pagination-->
+    <div class="mil-pagination z-50 flex-col flex fixed top-1/2 right-12 -translate-y-28 items-center before:absolute before:left-1/2 before:min-w-0.5 before:h-full before:bg-gray-300">
+      <div class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4">
+        <a href="#1" id="tag1" class="group active absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex">
+          <p class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45">Home</p>
+        </a>
+      </div>
+      <div class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4">
+        <a href="#2" id="tag2" class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex">
+          <p class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45">About</p>
+        </a>
+      </div>
+      <div class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4">
+        <a href="#3" id="tag3" class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex">
+          <p class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45">Skills</p>
+        </a>
+      </div>
+      <div class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4">
+        <a href="#4" id="tag4" class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex">
+          <p class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-12 right-4 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45">Education</p>
+        </a>
+      </div>
+      <div class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4">
+        <a href="#5" id="tag5" class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex">
+          <p class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45">Experience</p>
+        </a>
+      </div>
+      <div class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4">
+        <a href="#6" id="tag6" class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex">
+          <p class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45">Services</p>
+        </a>
+      </div>
+      <div class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4">
+        <a href="#7" id="tag7" class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex">
+          <p class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45">Testimonials</p>
+        </a>
+      </div>
+      <div class="mil-dot flex items-center relative w-4 h-4 cursor-pointer ">
+        <a href="#8" id="tag8" class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex">
+          <p class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45">Contacts</p>
+        </a>
+      </div>
+      
+    </div>
+    <!--pagination- end-->
 
     <script type="module" src="/src/main.ts"></script>
     <!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
@@ -860,40 +903,57 @@
       var currentPage = 1;
       var pageCount = $(".mil-section").length;
       var swipe = document.getElementsByTagName('.mil-section');
-
+      
+      //Pagination Effect
+      for (var j = 1; j <= 8; j++) {
+          $('#tag' + j).click((function(page) {
+              return function() {
+                  currentPage = page;
+                  $('#tag' + page).addClass('active');
+                  for (var i = 1; i <= pageCount; i++) {
+                      if (i != page) {
+                          $('#tag' + i).removeClass('active');
+                      }
+                  }
+              };
+          })(j));
+      }
+      //Pagination Effect End
+      
       $(document).on('mousewheel DOMMouseScroll', function(event) {
-        event.preventDefault();
         if (delay) return;
         delay = true;
         setTimeout(function() { delay = false }, 600)
 
         var wd = event.originalEvent.wheelDelta || -event.originalEvent.detail;
-        console.log(wd);
-        
         if (wd < 0) {
             if (currentPage < pageCount) {
-                currentPage++;
+              currentPage++;
+              console.log(currentPage);
             }
         } else {
             if (1 < currentPage) {
                 currentPage--;
+                console.log(currentPage);
             }
         }
-    
         $('html,body').animate({
-            scrollTop: $('#sec' + currentPage).offset().top
+            scrollTop: $('#' + currentPage).offset().top
         }, 700);
-
+        
+        
         $('#tag' + currentPage).addClass('active');
         for (var i = 1; i <= pageCount; i++) {
             if (i != currentPage) {
                 $('#tag' + i).removeClass('active');
             }
         }
-    });
-    });
+      });
 
-    
+        
+      });
+
+
     </script>
     <!--Scroll effect end-->
     <!-- </script> -->
