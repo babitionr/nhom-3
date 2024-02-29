@@ -6,6 +6,20 @@
   text-shadow: 5px 5px 0 rgba(16, 16, 16, 0.18);
 }
 
+.fade {
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: 0s;
+  transform: translateY(1%);
+}
+.fadeIn {
+  opacity: 1;
+  transition: 2s;
+  transform: translateY(1%);
+}
+
 .box-bg {
   --dot-size: 2px;
   --dot-space: 10px;
@@ -22,4 +36,67 @@
       )
       center/var(--dot-space) var(--dot-space),
     #101010;
+}
+
+.box-bg::before {
+  --dot-size: 2px;
+  --dot-space: 10px;
+
+  background: linear-gradient(
+        90deg,
+        #fff calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center/var(--dot-space) var(--dot-space),
+    linear-gradient(
+        #fff calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center/var(--dot-space) var(--dot-space),
+    #101010;
+}
+
+.box-email::after,
+.box-phone::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 70px;
+  height: 70px;
+  opacity: 0.3;
+  pointer-events: none;
+
+  --dot-size: 2px;
+  --dot-space: 10px;
+
+  background: linear-gradient(
+        90deg,
+        #fff calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center/var(--dot-space) var(--dot-space),
+    linear-gradient(
+        #fff calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center/var(--dot-space) var(--dot-space),
+    #101010;
+}
+
+.checked {
+  background-color: #fa4729;
+}
+
+.checked::after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 6px;
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg) scale(1.2);
 }
