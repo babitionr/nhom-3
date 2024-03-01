@@ -8,7 +8,9 @@ export default {
     extend: {  
       fontFamily: {
       'Jost-Font': ['"Jost"', 'sans-serif'],
-    },},
+    },
+  },
+
   },
   plugins: [{
     groupHover: {}
