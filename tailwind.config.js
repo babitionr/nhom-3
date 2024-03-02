@@ -9,14 +9,15 @@ export default {
       width: {
         "100px": "100px",
         "400px": "25rem",
-        "460px": "28.75rem",
       },
       height: {
         "150px": "9.375rem",
+        "460px": "28.75rem",
         "60vh": "60vh",
       },
       padding: {
         "4/5": "80%",
+        "30px": "30px",
       },
       spacing: {
         "3/2": "150%",
