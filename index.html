@@ -17,20 +17,55 @@
       href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script type="module">
+      import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+          bulletActiveClass: ".swiper-pagination-bullet-active",
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: ".swiper-scrollbar",
+          // dragClass: "swiper-scrollbar-drag",
+        },
+      });
+    </script>
+
     <link rel="stylesheet" href="./src/output.css" />
     <link rel="stylesheet" href="./src/full-page-scroll.css" />
     <script src="./src/full-page-scroll.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Treto - Personal Portfolio Resume HTML Template</title>
   </head>
-  <body class="bg-white">
+  <body class="bg-white overflow-hidden max-xl:overflow-auto">
     <!---frame-->
     <div
+      style="display: none"
       class="m-2.5 fixed z-20 pointer-events-none left-1.5 -right-1 top-2 -bottom-1.5 border-2 border-solid border-gray-300 after:absolute after:border-2 after:border-solid after:border-black after:-left-2 after:-top-2 after:bottom-1 after:right-2 after:box-border after:w-full"
     >
       <!---top-panel-->
       <div
-        class="mil-top-panel col-span-2 flex items-center h-20 justify-between transition delay-0 pointer-events-auto"
+        class="mil-top-panel col-span-2 flex items-center h-20 justify-between transition delay-0 pointer-events-auto max-xl:bg-white max-xl:fixed"
       >
         <div class="col-start-1 w-full justify-start items-center flex h-full">
           <a
@@ -163,7 +198,7 @@
                   class="relative w-full pr-[111px] pl-[221px] mill-banner max-xl:px-8 max-xl:py-16 max-xl:text-center"
                 >
                   <div
-                    class="w-full opacity-35 absolute box-bg h-[150px] t-0 -left-[82%] -z-10 before:w-full before:h-full before:absolute before:left-[150%]"
+                    class="w-full opacity-35 absolute box-bg h-150px t-0 -left-4/5 -z-10 before:w-full before:h-full before:absolute before:left-3/2"
                   ></div>
                   <div>
                     <p class="mb-8 text-base font-bold uppercase">
@@ -187,12 +222,12 @@
                       >
                         <a
                           href=""
-                          class="flex font-semibold z-30 items-center justify-center text-sm h-14 border-solid border-2 border-black duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] mr-4 pl-10 pr-10 uppercase rounded-sm border-black shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] hover:shadow-none max-lg:mb-4 max-lg:w-full"
+                          class="flex font-semibold z-30 items-center justify-center text-sm h-14 border-solid border-2 border-black duration-500 ease-custom-cubic mr-4 pl-10 pr-10 uppercase rounded-sm shadow-custom-dark hover:shadow-none max-lg:mb-4 max-lg:w-full"
                           >Portfolio</a
                         >
                         <a
                           href=""
-                          class="flex font-semibold z-30 items-center justify-center text-sm h-14 duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] pl-10 pr-10 uppercase !bg-orange-600 text-white shadow-[7px_7px_0px_0px_rgba(250,71,41,0.18)] hover:shadow-none"
+                          class="flex font-semibold z-30 items-center justify-center text-sm h-14 duration-500 ease-custom-cubic pl-10 pr-10 uppercase !bg-orange-600 text-white shadow-custom-orange hover:shadow-none"
                           >Contact me</a
                         >
                       </div>
@@ -204,7 +239,7 @@
                 <img
                   src="https://html.bslthemes.com/treto/img/faces/5.jpg"
                   alt=""
-                  class="h-full w-full object-cover object-center align-top max-xl:h-[60vh]"
+                  class="h-full w-full object-cover object-center align-top max-xl:h-60vh"
                 />
               </div>
             </div>
@@ -219,7 +254,7 @@
         class="mil-section fade fadeOut relative z-10 w-full h-screen flex justify-center items-center max-xl:h-auto max-xl:pb-24 max-md:pt-64"
       >
         <div
-          class="box-bg top-block w-[400px] h-[460px] absolute -z-10 -top-[30%] right-40 origin-bottom -rotate-12 opacity-35 rounded-full bg-black"
+          class="box-bg top-block w-400px h-460px absolute -z-10 -top-[30%] right-40 origin-bottom -rotate-12 opacity-35 rounded-full bg-black"
         ></div>
         <div class="container px-[30px] mx-auto w-full max-w-7xl">
           <div
@@ -262,7 +297,7 @@
                   <div class="flex justify-center">
                     <a
                       href=""
-                      class="h-14 flex text-sm items-center justify-center duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] pr-10 pl-10 uppercase !border-transparent !bg-orange-600 border-black shadow-[7px_7px_0px_0px_rgba(250,71,41,0.18)] text-white hover:shadow-none max-lg:w-full"
+                      class="h-14 flex text-sm items-center justify-center duration-500 ease-custom-cubic pr-10 pl-10 uppercase !border-transparent !bg-orange-600 border-black shadow-custom-orange text-white hover:shadow-none max-lg:w-full"
                       >Download CV</a
                     >
                   </div>
@@ -280,13 +315,13 @@
         class="mil-section fade fadeOut relative z-10 w-full h-screen flex justify-center items-center max-xl:h-auto"
       >
         <div
-          class="box-bg top-block w-[400px] h-[460px] absolute -z-10 -top-32 right-80 origin-bottom -rotate-12 opacity-35 rounded-full bg-black"
+          class="box-bg top-block w-400px h-460px absolute -z-10 -top-32 right-80 origin-bottom -rotate-12 opacity-35 rounded-full bg-black"
         ></div>
         <div
           class="box-bg w-80 h-[420px] absolute -z-10 origin-top-left rotate-6 bottom-32 left-36 opacity-35 rounded-full"
         ></div>
         <div
-          class="box-bg w-[100px] h-[150px] absolute top-32 left-16 -z-10 origin-top-left rotate-6 bottom-32 opacity-35 rounded-full bg-black"
+          class="box-bg w-[100px] h-150px absolute top-32 left-16 -z-10 origin-top-left rotate-6 bottom-32 opacity-35 rounded-full bg-black"
         ></div>
         <div class="px-8 max-w-7xl w-full mx-auto">
           <div class="uppercase font-semibold font-Jost-Font text-black">
@@ -480,29 +515,35 @@
       <!-- 3 Section tiếp theo -->
 
       <!-- Section 4 -->
-
+      <!-- Education -->
+      <!-- Section 4 -->
       <!-- Education -->
       <div
         id="4"
-        class="mil-section fade fadeOut relative h-screen w-full flex justify-center items-center pt-8"
-        style="display: none"
+        class="mil-section relative fade fadeOut h-full w-full flex justify-center items-center 2xl:pt-8 xl:pt-8 pb-20"
       >
-        <div class="container w-full mx-auto px-8 mt-10">
-          <div class="flex mt-8 mx-6">
-            <div class="col-start-1 justify-start mr-6">
-              <div class="text-right">
+        <div
+          class="w-72 h-96 opacity-35 -rotate-12 absolute box-bg top-2/4 left-1/4 -z-10 rounded-full before:w-24 before:h-36 before:absolute before:-left-28 before:rounded-full"
+        ></div>
+
+        <div class="container w-full mx-auto px-8">
+          <div class="2xl:flex xl:flex mt-8 2xl:mx-6 xl:mx-6">
+            <div
+              class="2xl:col-start-1 2xl:justify-start xl:col-start-1 xl:justify-start flex-col mr-6"
+            >
+              <div class="2xl:text-right xl:text-right text-left">
                 <p
-                  class="text-black uppercase font-Jost-Font font-medium text-base mb-7"
+                  class="text-black uppercase font-Jost-Font font-semibold text-base mb-7"
                 >
                   Certificates
                 </p>
                 <h2
-                  class="text-black uppercase font-Jost-Font font-bold text-5xl mb-14 text-shadow"
+                  class="text-black uppercase font-Jost-Font font-bold 2xl:text-6xl xl:text-6xl lg:text-5xl md:text-4xl sm:text-4xl text-3xl mb-14 text-shadow"
                 >
                   Education
                 </h2>
                 <p
-                  class="text-black font-Jost-Font font-light text-base leading-8"
+                  class="text-black font-Jost-Font font-light text-lg leading-8"
                 >
                   Extensive education in developing web pages using: HTML5,
                   CSS3, SASS, JavaScript, React JS, Angular JS, JQuery, JSON,
@@ -510,15 +551,18 @@
                 </p>
               </div>
             </div>
-            <div class="col-start-2 justify-end ml-24">
-              <div class="flex mb-10 px-1">
+
+            <div
+              class="2xl:col-start-2 2xl:justify-end flex-col 2xl:ml-24 xl:ml-24 mt-10"
+            >
+              <div class="flex mb-10 2xl:px-1 xl:px-1">
                 <div class="flex justify-start items-start">
                   <div
-                    class="relative border-2 border-solid border-black box-border w-16 h-16 flex justify-center items-center pb-2 before:absolute before:bg-zinc-200 before:-top-3.5 before:-left-3.5 before:w-16 before:h-16 before:-z-10 after:-top-10 after:left-auto after:-right-5"
+                    class="relative border-2 border-solid border-black box-border w-16 h-16 flex justify-center items-center pb-2 before:absolute before:bg-zinc-200 before:-top-3.5 before:-left-3.5 before:w-16 before:h-16 before:-z-10 after:-top-10 after:left-auto after:-right-5 after:absolute box-phone after:w-16 after:h-16 after:-z-10"
                   >
                     <a
                       href="https://html.bslthemes.com/treto/img/certificate.jpg"
-                      class="text-black font-Jost-Font font-normal text-3xl"
+                      class="text-black font-Jost-Font font-normal text-3xl image-link"
                       >+</a
                     >
                   </div>
@@ -526,7 +570,7 @@
 
                 <div class="pl-10 pt-1">
                   <p
-                    class="text-black uppercase font-Jost-Font font-medium text-base mb-2"
+                    class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
                   >
                     Backend Programming
                   </p>
@@ -538,7 +582,7 @@
                   </p>
 
                   <p
-                    class="text-black font-Jost-Font font-light text-base leading-8"
+                    class="text-black font-Jost-Font font-light text-lg leading-8"
                   >
                     It has survived not only five centuries, but also the leap
                     into electronic typesetting, remaining unchanged.
@@ -549,11 +593,11 @@
               <div class="flex mb-10 px-1">
                 <div class="flex justify-start items-start">
                   <div
-                    class="relative border-2 border-solid border-black box-border w-16 h-16 flex justify-center items-center pb-2 before:absolute before:bg-zinc-200 before:-top-3.5 before:-left-3.5 before:w-16 before:h-16 before:-z-10 after:-top-10 after:left-auto after:-right-5"
+                    class="relative border-2 border-solid border-black box-border w-16 h-16 flex justify-center items-center pb-2 before:absolute before:bg-zinc-200 before:-top-3.5 before:-left-3.5 before:w-16 before:h-16 before:-z-10 after:-top-10 after:left-auto after:-right-5 after:absolute box-phone after:w-16 after:h-16 after:-z-10"
                   >
                     <a
                       href="https://html.bslthemes.com/treto/img/certificate.jpg"
-                      class="text-black font-Jost-Font font-normal text-3xl"
+                      class="text-black font-Jost-Font font-normal text-3xl image-link"
                       >+</a
                     >
                   </div>
@@ -561,7 +605,7 @@
 
                 <div class="pl-10 pt-1">
                   <p
-                    class="text-black uppercase font-Jost-Font font-medium text-base mb-2"
+                    class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
                   >
                     Master in Graphic
                   </p>
@@ -573,7 +617,7 @@
                   </p>
 
                   <p
-                    class="text-black font-Jost-Font font-light text-base leading-8"
+                    class="text-black font-Jost-Font font-light text-lg leading-8"
                   >
                     It has survived not only five centuries, but also the leap
                     into electronic typesetting, remaining unchanged.
@@ -584,11 +628,11 @@
               <div class="flex mb-10 px-1">
                 <div class="flex justify-start items-start">
                   <div
-                    class="relative border-2 border-solid border-black box-border w-16 h-16 flex justify-center items-center pb-2 before:absolute before:bg-zinc-200 before:-top-3.5 before:-left-3.5 before:w-16 before:h-16 before:-z-10 after:-top-10 after:left-auto after:-right-5"
+                    class="relative border-2 border-solid border-black box-border w-16 h-16 flex justify-center items-center pb-2 before:absolute before:bg-zinc-200 before:-top-3.5 before:-left-3.5 before:w-16 before:h-16 before:-z-10 after:-top-10 after:left-auto after:-right-5 after:absolute box-phone after:w-16 after:h-16 after:-z-10"
                   >
                     <a
                       href="https://html.bslthemes.com/treto/img/certificate.jpg"
-                      class="text-black font-Jost-Font font-normal text-3xl"
+                      class="text-black font-Jost-Font font-normal text-3xl image-link"
                       >+</a
                     >
                   </div>
@@ -596,10 +640,11 @@
 
                 <div class="pl-10 pt-1">
                   <p
-                    class="text-black uppercase font-Jost-Font font-medium text-base mb-2"
+                    class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
                   >
                     Bachelors of FineArt
                   </p>
+
                   <p
                     class="text-black uppercase font-Jost-Font font-medium text-sm mb-5"
                   >
@@ -607,7 +652,7 @@
                   </p>
 
                   <p
-                    class="text-black font-Jost-Font font-light text-base leading-8"
+                    class="text-black font-Jost-Font font-light text-lg leading-8"
                   >
                     It has survived not only five centuries, but also the leap
                     into electronic typesetting, remaining unchanged.
@@ -620,72 +665,84 @@
       </div>
       <!-- Education end -->
       <!-- End Section 4 -->
+      <!-- Education end -->
+      <!-- End Section 4 -->
 
       <!-- Section 5 -->
       <!-- Expirience -->
       <div
         id="5"
-        class="mil-section fade fadeOut relative h-screen w-full flex justify-center items-center pt-6"
-        style="display: none"
+        class="mil-section relative fade fadeOut h-full w-full flex justify-center items-center 2xl:pt-8 xl:pt-8 pb-20"
       >
-        <div class="container w-full mx-auto px-8 mt-10">
+        <div
+          class="w-72 h-96 opacity-35 -rotate-12 absolute box-bg bottom-3/4 right-1/4 -z-10 rounded-full before:w-24 before:h-36 before:absolute before:-left-28 before:rounded-full"
+        ></div>
+
+        <div
+          class="w-72 h-96 opacity-35 -rotate-12 absolute box-bg top-1/3 -left-0 -z-10 rounded-full"
+        ></div>
+
+        <div class="container w-full mx-auto px-8 mt-10 max-xl:mt-0">
           <p
-            class="text-black uppercase font-Jost-Font font-medium text-base mb-7 px-4"
+            class="text-black uppercase font-Jost-Font font-semibold text-base mb-7 2xl:px-4 xl:px-4"
           >
             A Decade of <span class="text-orange-600"> work</span>
           </p>
 
           <h2
-            class="text-black uppercase font-Jost-Font font-bold text-5xl mb-14 text-shadow px-4"
+            class="text-black uppercase font-Jost-Font font-bold 2xl:text-6xl xl:text-6xl lg:text-5xl md:text-4xl sm:text-4xl text-3xl mb-14 text-shadow"
           >
             Experience
           </h2>
 
           <div class="flex flex-wrap mt-8">
-            <div class="w-6/12 px-4">
+            <div class="2xl:w-6/12 xl:w-6/12 lg:w-6/12 2xl:px-4 xl:px-4">
               <div class="flex col-start-1 justify-start items-center">
                 <p
-                  class="text-black font-Jost-Font font-light text-base leading-8 mb-16"
+                  class="text-black font-Jost-Font font-light text-lg leading-8 mb-16"
                 >
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
               </div>
             </div>
-            <div class="w-6/12 px-4">
+
+            <div class="2xl:w-6/12 xl:w-6/12 lg:w-6/12 2xl:px-4 xl:px-4">
               <div class="flex col-start-2 justify-end items-center">
                 <div
-                  class="w-auto mr-7 mb-7 text-black uppercase font-Jost-Font font-medium text-base"
+                  class="w-auto mr-7 mb-7 text-black uppercase font-Jost-Font font-semibold text-base"
                 >
                   <span>1</span> / <span>2</span>
                 </div>
                 <div class="flex justify-between items-center mb-7">
                   <div
-                    class="flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] hover:shadow-none duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] mr-4"
+                    class="flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-custom-dark hover:shadow-none duration-500 ease-custom-cubic mr-4"
                   >
                     <i class="fa-solid fa-chevron-left"></i>
                   </div>
                   <div
-                    class="flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] hover:shadow-none duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] mr-4"
+                    class="flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-custom-dark hover:shadow-none duration-500 ease-custom-cubic mr-4"
                   >
                     <i class="fa-solid fa-chevron-right"></i>
                   </div>
                 </div>
               </div>
             </div>
+
             <div
-              class="relative w-full border-t-2 border-solid border-black -left-2 -top-2 bottom-1 right-2 after:absolute after:w-full after:border-t-2 after:border-solid after:border-gray-300 after:left-1.5 after:-right-1 after:top-2 after:-bottom-1.5"
+              class="relative border-t-2 border-solic border-gray-300 w-full after:absolute after:border-t-2 after:border-solid after:border-black after:-left-2 after:-top-2 after:bottom-1 after:right-2 after:w-full"
             ></div>
-            <div class="max-w-full px-4">
+
+            <div class="max-w-full 2xl:px-4 xl:px-4">
               <div class="pt-14 overflow-hidden touch-pan-y">
                 <div
-                  class="relative w-full h-full box-content flex transform duration-0"
+                  class="relative flex w-full h-full box-content transform duration-0"
                 >
                   <div class="swiper-slide">
                     <div class="mr-10 mb-7 flex">
                       <div class="w-full">
                         <p
-                          class="text-black uppercase font-Jost-Font font-medium text-base mb-2"
+                          class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
                         >
                           Freelance
                         </p>
@@ -697,7 +754,7 @@
                         </p>
 
                         <p
-                          class="text-black font-Jost-Font font-light text-base leading-8"
+                          class="text-black font-Jost-Font font-light text-lg leading-8"
                         >
                           It has survived not only five centuries, but also the
                           leap into electronic typesetting.
@@ -705,11 +762,12 @@
                       </div>
                     </div>
                   </div>
-                  <div class="swiper-slide">
+
+                  <div class="swiper-slide 2xl:block xl:block lg:block hidden">
                     <div class="mr-10 mb-7 flex">
                       <div class="w-full">
                         <p
-                          class="text-black uppercase font-Jost-Font font-medium text-base mb-2"
+                          class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
                         >
                           Agency Macll
                         </p>
@@ -721,7 +779,7 @@
                         </p>
 
                         <p
-                          class="text-black font-Jost-Font font-light text-base leading-8"
+                          class="text-black font-Jost-Font font-light text-lg leading-8"
                         >
                           It has survived not only five centuries, but also the
                           leap into electronic typesetting.
@@ -729,11 +787,12 @@
                       </div>
                     </div>
                   </div>
-                  <div class="swiper-slide">
+
+                  <div class="swiper-slide 2xl:block xl:block lg:block hidden">
                     <div class="mr-10 mb-7 flex">
                       <div class="w-full">
                         <p
-                          class="text-black uppercase font-Jost-Font font-medium text-base mb-2"
+                          class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
                         >
                           Envato
                         </p>
@@ -745,7 +804,32 @@
                         </p>
 
                         <p
-                          class="text-black font-Jost-Font font-light text-base leading-8"
+                          class="text-black font-Jost-Font font-light text-lg leading-8"
+                        >
+                          It has survived not only five centuries, but also the
+                          leap into electronic typesetting.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide hidden">
+                    <div class="mr-10 mb-7 flex">
+                      <div class="w-full">
+                        <p
+                          class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
+                        >
+                          Themeforest
+                        </p>
+
+                        <p
+                          class="text-black uppercase font-Jost-Font font-medium text-sm mb-5"
+                        >
+                          2014 <span class="text-orange-600"> to </span> 2017
+                        </p>
+
+                        <p
+                          class="text-black font-Jost-Font font-light text-lg leading-8"
                         >
                           It has survived not only five centuries, but also the
                           leap into electronic typesetting.
@@ -766,30 +850,39 @@
       <!-- Services -->
       <div
         id="6"
-        class="mil-section fade fadeOut relative h-screen w-full flex justify-center items-center pt-8"
-        style="display: none"
+        class="mil-section relative fade fadeOut h-full w-full flex justify-center items-center 2xl:pt-8 xl:pt-8 pb-20"
       >
+        <div
+          class="w-72 h-96 opacity-35 -rotate-12 absolute box-bg bottom-3/4 right-1/4 -z-10 rounded-full"
+        ></div>
+
+        <div
+          class="w-72 h-96 opacity-35 -rotate-12 absolute box-bg top-1/3 -left-0 -z-10 rounded-full"
+        ></div>
+
         <div class="container w-full mx-auto px-8 mt-10">
           <p
-            class="text-black uppercase font-Jost-Font font-medium text-base mb-7 px-4"
+            class="text-black uppercase font-Jost-Font font-semibold text-base mb-7 2xl:px-4 xl:px-4"
           >
             Freelance
           </p>
 
           <h2
-            class="text-black uppercase font-Jost-Font font-bold text-5xl mb-14 text-shadow px-4"
+            class="text-black uppercase font-Jost-Font font-bold 2xl:text-6xl xl:text-6xl lg:text-5xl md:text-4xl sm:text-4xl text-3xl mb-14 text-shadow"
           >
             Services
           </h2>
 
           <div
-            class="flex flex-wrap justify-between items-center px-4 max-w-full"
+            class="flex flex-wrap justify-between items-center max-w-full 2xl:px-4 xl:px-4"
           >
-            <div class="flex">
-              <div class="flex mb-10 pr-14">
+            <div
+              class="flex 2xl:flex-row xl:flex-row flex-col relative w-full h-full box-content"
+            >
+              <div class="flex mb-10 2xl:pr-14 xl:pr-14">
                 <div class="flex justify-start items-start">
                   <div
-                    class="relative border-2 border-solid border-black box-border w-16 h-16 flex justify-center items-center pb-2 before:absolute before:bg-zinc-200 before:-top-3.5 before:-left-3.5 before:w-16 before:h-16 before:-z-10 after:-top-10 after:left-auto after:-right-5"
+                    class="relative border-2 border-solid border-black box-border w-16 h-16 flex justify-center items-center pb-2 before:absolute before:bg-zinc-200 before:-top-3.5 before:-left-3.5 before:w-16 before:h-16 before:-z-10 after:-top-10 after:left-auto after:-right-5 after:absolute box-phone after:w-16 after:h-16 after:-z-10"
                   >
                     <div class="text-black font-Jost-Font font-normal text-3xl">
                       <i class="fa-solid fa-code"></i>
@@ -799,7 +892,7 @@
 
                 <div class="pl-10 pt-1">
                   <p
-                    class="text-black uppercase font-Jost-Font font-medium text-base mb-2"
+                    class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
                   >
                     Web Development
                   </p>
@@ -811,7 +904,7 @@
                   </p>
 
                   <p
-                    class="text-black font-Jost-Font font-light text-base leading-8"
+                    class="text-black font-Jost-Font font-light text-lg leading-8"
                   >
                     It has survived not only five centuries, but also the leap
                     into electronic typesetting, remaining unchanged.
@@ -819,10 +912,10 @@
                 </div>
               </div>
 
-              <div class="flex mb-10 pr-14">
+              <div class="flex mb-10 2xl:pr-14 xl:pr-14">
                 <div class="flex justify-start items-start">
                   <div
-                    class="relative border-2 border-solid border-black box-border w-16 h-16 flex justify-center items-center pb-2 before:absolute before:bg-zinc-200 before:-top-3.5 before:-left-3.5 before:w-16 before:h-16 before:-z-10 after:-top-10 after:left-auto after:-right-5"
+                    class="relative border-2 border-solid border-black box-border w-16 h-16 flex justify-center items-center pb-2 before:absolute before:bg-zinc-200 before:-top-3.5 before:-left-3.5 before:w-16 before:h-16 before:-z-10 after:-top-10 after:left-auto after:-right-5 after:absolute box-phone after:w-16 after:h-16 after:-z-10"
                   >
                     <div class="text-black font-Jost-Font font-normal text-3xl">
                       <i class="fa-solid fa-palette"></i>
@@ -832,7 +925,7 @@
 
                 <div class="pl-10 pt-1">
                   <p
-                    class="text-black uppercase font-Jost-Font font-medium text-base mb-2"
+                    class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
                   >
                     Branding
                   </p>
@@ -844,7 +937,7 @@
                   </p>
 
                   <p
-                    class="text-black font-Jost-Font font-light text-base leading-8"
+                    class="text-black font-Jost-Font font-light text-lg leading-8"
                   >
                     It has survived not only five centuries, but also the leap
                     into electronic typesetting, remaining unchanged.
@@ -855,7 +948,7 @@
               <div class="flex mb-10">
                 <div class="flex justify-start items-start">
                   <div
-                    class="relative border-2 border-solid border-black box-border w-16 h-16 flex justify-center items-center pb-2 before:absolute before:bg-zinc-200 before:-top-3.5 before:-left-3.5 before:w-16 before:h-16 before:-z-10 after:-top-10 after:left-auto after:-right-5"
+                    class="relative border-2 border-solid border-black box-border w-16 h-16 flex justify-center items-center pb-2 before:absolute before:bg-zinc-200 before:-top-3.5 before:-left-3.5 before:w-16 before:h-16 before:-z-10 after:-top-10 after:left-auto after:-right-5 after:absolute box-phone after:w-16 after:h-16 after:-z-10"
                   >
                     <div class="text-black font-Jost-Font font-normal text-3xl">
                       <i class="fas fa-server"></i>
@@ -865,7 +958,7 @@
 
                 <div class="pl-10 pt-1">
                   <p
-                    class="text-black uppercase font-Jost-Font font-medium text-base mb-2"
+                    class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
                   >
                     Server Managment
                   </p>
@@ -877,7 +970,7 @@
                   </p>
 
                   <p
-                    class="text-black font-Jost-Font font-light text-base leading-8"
+                    class="text-black font-Jost-Font font-light text-lg leading-8"
                   >
                     It has survived not only five centuries, but also the leap
                     into electronic typesetting, remaining unchanged.
@@ -891,16 +984,290 @@
       <!-- Servicesn end -->
       <!-- End Section 6 -->
 
-      <!-- Section 8-->
+      <!-- Section 7 -->
+      <!-- Testimonials -->
       <div
         id="7"
+        class="mil-section relative fade fadeOut h-full w-full flex justify-center items-center 2xl:pt-8 xl:pt-8 pb-20"
+      >
+        <div
+          class="w-72 h-96 opacity-35 -rotate-12 absolute box-bg -bottom-1/4 right-20 -z-10 rounded-full before:w-24 before:h-36 before:absolute before:-left-28 before:rounded-full"
+        ></div>
+
+        <div class="container w-full mx-auto px-8">
+          <div class="2xl:text-center xl:text-center text-left">
+            <p
+              class="text-black uppercase font-Jost-Font font-semibold text-base mb-7 2xl:px-4 xl:px-4"
+            >
+              Result of my
+              <span class="text-orange-600"> Work </span>
+            </p>
+
+            <h2
+              class="text-black uppercase font-Jost-Font font-bold 2xl:text-6xl xl:text-6xl lg:text-5xl md:text-4xl sm:text-4xl text-3xl mb-14 text-shadow"
+            >
+              Testimonials
+            </h2>
+
+            <p
+              class="text-black font-Jost-Font font-light text-lg leading-8 mb-14"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor
+              <br />
+              incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+
+          <div
+            class="relative border-t-2 border-solic border-gray-300 w-full after:absolute after:border-t-2 after:border-solid after:border-black after:-left-2 after:-top-2 after:bottom-1 after:right-2 after:w-full"
+          ></div>
+
+          <div
+            class="flex 2xl:flex-row xl:flex-row flex-col relative w-full h-full box-content"
+          >
+            <div class="2xl:w-8/12 xl:w-8/12">
+              <div class="overflow-hidden touch-pan-y pt-14">
+                <div
+                  class="relative w-full h-full box-content flex transform duration-0"
+                >
+                  <div class="swiper-slide">
+                    <div
+                      class="flex mb-10 2xl:flex-row xl:flex-row lg:flex-row flex-col"
+                    >
+                      <div
+                        class="flex justify-start items-start 2xl:w-1/3 xl:w-1/3 lg:w-1/3 w-full"
+                      >
+                        <div
+                          class="relative after:border-2 after:border-solid after:box-border flex justify-center items-center pb-2 after:absolute after:border-black after:top-3.5 after:left-3.5 after:-right-3.5 after:-bottom-2 after:w-full"
+                        >
+                          <img
+                            src="https://html.bslthemes.com/treto/img/faces/clients/1.jpg"
+                            alt="client1"
+                            class="w-40 h-40 max-xl:h-32 max-xl:w-32"
+                          />
+                        </div>
+                      </div>
+
+                      <div
+                        class="2xl:w-2/3 xl:w-2/3 lg:w-2/3 w-full mr-20 2xl:mt-0 xl:mt-0 lg:mt-0 mt-10"
+                      >
+                        <p
+                          class="text-black font-Jost-Font font-light text-lg leading-8 mb-7 text-wrap"
+                        >
+                          It has survived not only five centuries, but also the
+                          leap into electronic typesetting, remaining
+                          essentially unchanged. It was popularised in the 1960s
+                          with the release of Letraset sheets containing Lorem
+                          Ipsum passages.
+                        </p>
+
+                        <p
+                          class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
+                        >
+                          Isabella
+                          <span class="text-orange-600"> Wilson </span>
+                        </p>
+
+                        <p
+                          class="text-black font-Jost-Font font-light text-lg leading-8 mb-7"
+                        >
+                          Director at Geands Hotel
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide hidden">
+                    <div
+                      class="flex mb-10 2xl:flex-row xl:flex-row lg:flex-row flex-col"
+                    >
+                      <div
+                        class="flex justify-start items-start 2xl:w-1/3 xl:w-1/3 lg:w-1/3 w-full"
+                      >
+                        <div
+                          class="relative after:border-2 after:border-solid after:box-border flex justify-center items-center pb-2 after:absolute after:border-black after:top-3.5 after:left-3.5 after:-right-3.5 after:-bottom-2 after:w-full"
+                        >
+                          <img
+                            src="https://html.bslthemes.com/treto/img/faces/clients/2.jpg"
+                            alt="client2"
+                            class="w-40 h-40"
+                          />
+                        </div>
+                      </div>
+
+                      <div
+                        class="2xl:w-2/3 xl:w-2/3 lg:w-2/3 w-full mr-20 2xl:mt-0 xl:mt-0 lg:mt-0 mt-10"
+                      >
+                        <p
+                          class="text-black font-Jost-Font font-light text-lg leading-8 mb-7 text-wrap"
+                        >
+                          It has survived not only five centuries, but also the
+                          leap into electronic typesetting, remaining
+                          essentially unchanged. It was popularised in the 1960s
+                          with the release of Letraset sheets containing Lorem
+                          Ipsum passages.
+                        </p>
+
+                        <p
+                          class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
+                        >
+                          Isabella
+                          <span class="text-orange-600"> Wilson </span>
+                        </p>
+
+                        <p
+                          class="text-black font-Jost-Font font-light text-lg leading-8 mb-7"
+                        >
+                          Director at Geands Hotel
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide hidden">
+                    <div
+                      class="flex mb-10 2xl:flex-row xl:flex-row lg:flex-row flex-col"
+                    >
+                      <div
+                        class="flex justify-start items-start 2xl:w-1/3 xl:w-1/3 lg:w-1/3 w-full"
+                      >
+                        <div
+                          class="relative after:border-2 after:border-solid after:box-border flex justify-center items-center pb-2 after:absolute after:border-black after:top-3.5 after:left-3.5 after:-right-3.5 after:-bottom-2 after:w-full"
+                        >
+                          <img
+                            src="https://html.bslthemes.com/treto/img/faces/clients/3.jpg"
+                            alt="client3"
+                            class="w-40 h-40"
+                          />
+                        </div>
+                      </div>
+
+                      <div
+                        class="2xl:w-2/3 xl:w-2/3 lg:w-2/3 w-full mr-20 2xl:mt-0 xl:mt-0 lg:mt-0 mt-10"
+                      >
+                        <p
+                          class="text-black font-Jost-Font font-light text-lg leading-8 mb-7 text-wrap"
+                        >
+                          It has survived not only five centuries, but also the
+                          leap into electronic typesetting, remaining
+                          essentially unchanged. It was popularised in the 1960s
+                          with the release of Letraset sheets containing Lorem
+                          Ipsum passages.
+                        </p>
+
+                        <p
+                          class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
+                        >
+                          Isabella
+                          <span class="text-orange-600"> Wilson </span>
+                        </p>
+
+                        <p
+                          class="text-black font-Jost-Font font-light text-lg leading-8 mb-7"
+                        >
+                          Director at Geands Hotel
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide hidden">
+                    <div
+                      class="flex mb-10 2xl:flex-row xl:flex-row lg:flex-row flex-col"
+                    >
+                      <div
+                        class="flex justify-start items-start 2xl:w-1/3 xl:w-1/3 lg:w-1/3 w-full"
+                      >
+                        <div
+                          class="relative after:border-2 after:border-solid after:box-border flex justify-center items-center pb-2 after:absolute after:border-black after:top-3.5 after:left-3.5 after:-right-3.5 after:-bottom-2 after:w-full"
+                        >
+                          <img
+                            src="https://html.bslthemes.com/treto/img/faces/clients/4.jpg"
+                            alt="client4"
+                            class="w-40 h-40"
+                          />
+                        </div>
+                      </div>
+
+                      <div
+                        class="2xl:w-2/3 xl:w-2/3 lg:w-2/3 w-full mr-20 2xl:mt-0 xl:mt-0 lg:mt-0 mt-10"
+                      >
+                        <p
+                          class="text-black font-Jost-Font font-light text-lg leading-8 mb-7 text-wrap"
+                        >
+                          It has survived not only five centuries, but also the
+                          leap into electronic typesetting, remaining
+                          essentially unchanged. It was popularised in the 1960s
+                          with the release of Letraset sheets containing Lorem
+                          Ipsum passages.
+                        </p>
+
+                        <p
+                          class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
+                        >
+                          Isabella
+                          <span class="text-orange-600"> Wilson </span>
+                        </p>
+
+                        <p
+                          class="text-black font-Jost-Font font-light text-lg leading-8 mb-7"
+                        >
+                          Director at Geands Hotel
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="2xl:w-4/12 xl:w-4/12 2xl:px-4 xl:px-4">
+              <div
+                class="relative 2xl:border-l-2 xl:border-l-2 2xl:block xl:block border-solic border-gray-300 h-full after:absolute 2xl:after:border-l-2 xl:after:border-l-2 after:border-t-2 after:border-solid after:border-black after:-left-2 after:-top-2 after:bottom-1 after:right-2 after:h-full"
+              >
+                <div>
+                  <div
+                    class="pt-14 pb-14 2xl:pl-14 xl:pl-14 flex 2xl:flex-col xl:flex-col justify-between"
+                  >
+                    <div class="flex items-center mb-7">
+                      <div
+                        class="flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-custom-dark hover:shadow-none duration-500 ease-custom-cubic mr-4"
+                      >
+                        <i class="fa-solid fa-chevron-left"></i>
+                      </div>
+                      <div
+                        class="flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-custom-dark hover:shadow-none duration-500 ease-custom-cubic mr-4"
+                      >
+                        <i class="fa-solid fa-chevron-right"></i>
+                      </div>
+                    </div>
+
+                    <div
+                      class="w-auto mr-7 mb-7 text-black uppercase font-Jost-Font font-semibold text-base"
+                    >
+                      <span>1</span> / <span>4</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Testimonials end -->
+      <!-- End Section 7 -->
+
+      <!-- Section 8-->
+      <div
+        id="8"
         class="mil-section fade fadeOut relative h-screen w-full flex justify-center items-center pt-8 max-lg:h-auto max-xl:text-3xl"
       >
         <div
           class="box-bg top-block w-[340px] h-[400px] absolute -z-10 -bottom-8 -right-12 origin-bottom -rotate-12 opacity-35 rounded-full bg-black"
         ></div>
         <div
-          class="box-bg w-[100px] h-[150px] absolute bottom-32 right-[22rem] -z-10 origin-bottom -rotate-12 opacity-35 rounded-full bg-black"
+          class="box-bg w-[100px] h-150px absolute bottom-32 right-[22rem] -z-10 origin-bottom -rotate-12 opacity-35 rounded-full bg-black"
         ></div>
 
         <div class="container max-w-7xl w-full px-12 mx-auto font-Jost-Font">
@@ -990,7 +1357,7 @@
                       ></span>
                     </label>
                     <button
-                      class="uppercase flex justify-center items-center text-sm h-14 px-10 border-solid border-2 border-orange-600 bg-orange-600 text-white font-semibold shadow-[7px_7px_0px_0px_rgba(250,71,41,0.18)] hover:shadow-none"
+                      class="uppercase flex justify-center items-center text-sm h-14 px-10 border-solid border-2 border-orange-600 bg-orange-600 text-white font-semibold shadow-custom-orange hover:shadow-none"
                     >
                       Submit
                     </button>
@@ -1004,6 +1371,132 @@
       <!-- End Section 8-->
     </div>
 
+    <!--pagination-->
+    <div
+      style="display: none"
+      class="max-xl:hidden mil-pagination z-50 flex-col flex fixed top-1/2 right-12 -translate-y-28 items-center before:absolute before:left-1/2 before:min-w-0.5 before:h-full before:bg-gray-300"
+    >
+      <div
+        class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
+      >
+        <a
+          href="#1"
+          id="tag1"
+          class="group active absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
+        >
+          <p
+            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
+          >
+            Home
+          </p>
+        </a>
+      </div>
+      <div
+        class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
+      >
+        <a
+          href="#2"
+          id="tag2"
+          class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
+        >
+          <p
+            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
+          >
+            About
+          </p>
+        </a>
+      </div>
+      <div
+        class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
+      >
+        <a
+          href="#3"
+          id="tag3"
+          class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
+        >
+          <p
+            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
+          >
+            Skills
+          </p>
+        </a>
+      </div>
+      <div
+        class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
+      >
+        <a
+          href="#4"
+          id="tag4"
+          class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
+        >
+          <p
+            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-12 right-4 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
+          >
+            Education
+          </p>
+        </a>
+      </div>
+      <div
+        class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
+      >
+        <a
+          href="#5"
+          id="tag5"
+          class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
+        >
+          <p
+            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
+          >
+            Experience
+          </p>
+        </a>
+      </div>
+      <div
+        class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
+      >
+        <a
+          href="#6"
+          id="tag6"
+          class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
+        >
+          <p
+            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
+          >
+            Services
+          </p>
+        </a>
+      </div>
+      <div
+        class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
+      >
+        <a
+          href="#7"
+          id="tag7"
+          class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
+        >
+          <p
+            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
+          >
+            Testimonials
+          </p>
+        </a>
+      </div>
+      <div class="mil-dot flex items-center relative w-4 h-4 cursor-pointer">
+        <a
+          href="#8"
+          id="tag8"
+          class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
+        >
+          <p
+            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
+          >
+            Contacts
+          </p>
+        </a>
+      </div>
+    </div>
+    <!--pagination- end-->
+
     <script type="module" src="/src/main.ts"></script>
     <!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -1016,8 +1509,25 @@
           var pageCount = $(".mil-section").length;
           var swipe = document.getElementsByTagName(".mil-section");
 
+          //Pagination Effect
+          for (var j = 1; j <= 8; j++) {
+            $("#tag" + j).click(
+              (function (page) {
+                return function () {
+                  currentPage = page;
+                  $("#tag" + page).addClass("active");
+                  for (var i = 1; i <= pageCount; i++) {
+                    if (i != page) {
+                      $("#tag" + i).removeClass("active");
+                    }
+                  }
+                };
+              })(j)
+            );
+          }
+          //Pagination Effect End
+
           $(document).on("mousewheel DOMMouseScroll", function (event) {
-            event.preventDefault();
             if (delay) return;
             delay = true;
             setTimeout(function () {
@@ -1026,18 +1536,17 @@
 
             var wd =
               event.originalEvent.wheelDelta || -event.originalEvent.detail;
-            console.log(wd);
-
             if (wd < 0) {
               if (currentPage < pageCount) {
                 currentPage++;
+                console.log(currentPage);
               }
             } else {
               if (1 < currentPage) {
                 currentPage--;
+                console.log(currentPage);
               }
             }
-
             $("html,body").animate(
               {
                 scrollTop: $("#" + currentPage).offset().top,

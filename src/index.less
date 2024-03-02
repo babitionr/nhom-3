@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
+@layer base {
+  body {
+    font-family: "Jost", sans-serif;
+    font-size: 18px;
+    line-height: 170%;
+  }
+}
+
 .text-shadow {
   text-shadow: 5px 5px 0 rgba(16, 16, 16, 0.18);
 }
@@ -18,6 +31,10 @@
   opacity: 1;
   transition: 2s;
   transform: translateY(1%);
+}
+
+.active {
+  border: 4px solid #ea580c;
 }
 
 .box-bg {
