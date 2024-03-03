@@ -17,11 +17,15 @@
       href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <!-- Link Swiper's CSS -->
     <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-  
+
+    <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet" href="src/magnific-popup.css" />
+
     <link rel="stylesheet" href="./src/output.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Treto - Personal Portfolio Resume HTML Template</title>
@@ -36,7 +40,8 @@
         class="mil-top-panel max-xl:bg-white max-md:bg-white col-span-2 flex items-center h-20 justify-between transition delay-0 pointer-events-auto"
       >
         <div class="col-start-1 w-full justify-start items-center flex h-full">
-          <a href="#"
+          <a
+            href="#"
             class="border-b-2 z-20 border-r-2 border-solid border-black mt-0.5 px-10 w-44 h-20 flex items-center relative -left-2 -right-2 bottom-2 before:w-9 before:left-2 before:border-solid before:border-gray-300 after:absolute after:border-r-2 after:h-20 after:border-b-2 after:border-solid after:border-gray-300 after:left-2 after:top-1.5 after:-bottom-2 after:-right-2"
           >
             <img
@@ -51,14 +56,22 @@
               class="z-10 flex font-Jost-Font font-bold text-sm whitespace-nowrap uppercase leading-10"
             >
               <li class="relative flex items-center mr-10">
-                <div class="group cursor-pointer hover:text-orange-600 duration-500"
-                  ><a>Home</a>
-                  <ul class="hidden group-hover:block bg-white duration-500 absolute top-20 -left-9 px-7 py-7 border-2 border-solid border-gray-300">
+                <div
+                  class="group cursor-pointer hover:text-orange-600 duration-500"
+                >
+                  <a>Home</a>
+                  <ul
+                    class="hidden group-hover:block bg-white duration-500 absolute top-20 -left-9 px-7 py-7 border-2 border-solid border-gray-300"
+                  >
                     <li>
-                      <a class="text-black hover:text-orange-600 duration-500">Type 1</a>
+                      <a class="text-black hover:text-orange-600 duration-500"
+                        >Type 1</a
+                      >
                     </li>
                     <li>
-                      <a class="text-black hover:text-orange-600 duration-500">Type 2</a>
+                      <a class="text-black hover:text-orange-600 duration-500"
+                        >Type 2</a
+                      >
                     </li>
                   </ul>
                 </div>
@@ -85,50 +98,65 @@
               </li>
             </ul>
           </nav>
-          <div class="hidden max-xl:block max-xl:absolute menu-toggle-btn p-4 border-2 border-solid border-black max-xl:top-0 max-xl:right-5 max-lg:text-white cursor-pointer z-50">
+          <div
+            class="hidden max-xl:block max-xl:absolute menu-toggle-btn p-4 border-2 border-solid border-black max-xl:top-0 max-xl:right-5 max-lg:text-white cursor-pointer z-50"
+          >
             <span></span>
             <span></span>
             <span></span>
-          </div>  
+          </div>
         </div>
-        
-        <nav class="hidden max-xl:w-full max-xl:mt-20 max-xl:right-3 max-xl:absolute max-xl:visible max-xl:block max-xl:flex-col">
-          <ul class="fixed hide-nav font-Jost-Font font-semibold uppercase text-sm bg-white text-center text-black w-full p-6">
-            <li class="navmb p-3 ">
-                <a class="group hover:animate-slideDown hover:text-orange-600 duration-500 cursor-pointer">
-                    Home
-                    <ul class="dropdown-m group-hover:block bg-gray-300 duration-500 top-full left-0 px-7 py-7">
-                        <li class="mb-5">
-                            <a class="text-black hover:text-orange-600 duration-500 cursor-pointer">Type 1</a>
-                        </li>
-                        <li>
-                            <a class="text-black hover:text-orange-600 duration-500 cursor-pointer">Type 2</a>
-                        </li>
-                    </ul>
-                </a>
+
+        <nav
+          class="hidden max-xl:w-full max-xl:mt-20 max-xl:right-3 max-xl:absolute max-xl:visible max-xl:block max-xl:flex-col"
+        >
+          <ul
+            class="fixed hide-nav font-Jost-Font font-semibold uppercase text-sm bg-white text-center text-black w-full p-6"
+          >
+            <li class="navmb p-3">
+              <a
+                class="group hover:animate-slideDown hover:text-orange-600 duration-500 cursor-pointer"
+              >
+                Home
+                <ul
+                  class="dropdown-m group-hover:block bg-gray-300 duration-500 top-full left-0 px-7 py-7"
+                >
+                  <li class="mb-5">
+                    <a
+                      class="text-black hover:text-orange-600 duration-500 cursor-pointer"
+                      >Type 1</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-black hover:text-orange-600 duration-500 cursor-pointer"
+                      >Type 2</a
+                    >
+                  </li>
+                </ul>
+              </a>
             </li>
             <li class="p-3">
-                <p class="hover:text-orange-600duration-500 cursor-pointer">
-                    Prices
-                </p>
+              <p class="hover:text-orange-600duration-500 cursor-pointer">
+                Prices
+              </p>
             </li>
             <li class="p-3">
-                <a class="hover:text-orange-600duration-500 cursor-pointer">
-                    Portfolio
-                </a>
+              <a class="hover:text-orange-600duration-500 cursor-pointer">
+                Portfolio
+              </a>
             </li>
             <li class="p-3">
-                <a class="hover:text-orange-600 duration-500 cursor-pointer">
-                    Blog
-                </a>
+              <a class="hover:text-orange-600 duration-500 cursor-pointer">
+                Blog
+              </a>
             </li>
             <li class="p-3">
-                <a class="hover:text-orange-600 duration-500 cursor-pointer">
-                    Contact me
-                </a>
+              <a class="hover:text-orange-600 duration-500 cursor-pointer">
+                Contact me
+              </a>
             </li>
-        </ul>
-        
+          </ul>
         </nav>
         <div
           class="max-xl:hidden col-start-3 px-28 w-1/12 justify-end items-center flex h-full border-b-2 border-solid border-black mt-0.5 relative -left-2 -right-2 bottom-2 before:w-10 before:left-2 before:border-solid before:border-gray-300 after:absolute after:h-20 after:border-b-2 after:border-solid after:border-gray-300 after:left-2 after:top-1.5 after:-bottom-2 after:right-0"
@@ -168,9 +196,8 @@
             </li>
           </ul>
         </div>
-        
       </div>
-      
+
       <!---footer-->
       <div
         class="mil-footer max-xl:hidden px-6 py-3 left-0 bottom-0 absolute border-t-2 border-solid border-gray-300 after:absolute after:border-t-2 after:border-solid after:border-black after:-left-2 after:-top-2 after:bottom-1 after:right-2 after:box-border after:w-full font-Jost-Font font-bold text-sm whitespace-nowrap uppercase leading-10"
@@ -185,7 +212,7 @@
     <!---frame-end-->
 
     <div id="main" class="mil-onepage">
-       <!-- 3 section đầu tiên -->
+      <!-- 3 section đầu tiên -->
 
       <!-- section 1 -->
       <div
@@ -518,14 +545,11 @@
 
       <!-- End 3 section đầu tiên -->
 
-      
       <!-- 3 Section tiếp theo (Uyên) -->
 
-           <!-- Section 4 -->
+      <!-- Section 4 -->
       <!-- Education -->
-      <div id="4"
-        class="mil-section relative fade fadeOut py-20 px-20"
-      >
+      <div id="4" class="mil-section relative fade fadeOut py-20 px-20">
         <div
           class="w-72 h-96 opacity-35 -rotate-12 absolute box-bg top-2/4 left-1/4 -z-10 rounded-full before:w-24 before:h-36 before:absolute before:-left-28 before:rounded-full"
         ></div>
@@ -672,8 +696,9 @@
 
       <!-- Section 5 -->
       <!-- Expirience -->
-      <div id="5"
-        class="mil-section relative fade fadeOut h-full w-full flex justify-center items-center 2xl:pt-8 xl:pt-8 pb-20"
+      <div
+        id="5"
+        class="mil-section relative fade fadeOut h-auto w-auto py-20 px-40 flex justify-center items-center max-2xl:pt-8 max-xl:pt-8"
       >
         <div
           class="w-72 h-96 opacity-35 -rotate-12 absolute box-bg bottom-3/4 right-1/4 -z-10 rounded-full before:w-24 before:h-36 before:absolute before:-left-28 before:rounded-full"
@@ -711,21 +736,22 @@
             <div class="2xl:w-6/12 xl:w-6/12 lg:w-6/12 2xl:px-4 xl:px-4">
               <div class="flex col-start-2 justify-end items-center">
                 <div
-                  class="w-auto mr-7 mb-7 text-black uppercase font-Jost-Font font-semibold text-base"
+                  class="w-auto mr-7 mb-7 text-black uppercase font-Jost-Font font-semibold text-base swiper-pag"
                 >
                   <span>1</span> / <span>2</span>
                 </div>
-                <div class="flex justify-between items-center mb-7">
-                  <div
-                    class="flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] hover:shadow-none duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] mr-4"
+
+                <div class="flex swiper-button1 items-center mb-7 relative">
+                  <a
+                    class="swiper-button-prev flex justify-center mr-20 items-center w-16 h-16 border-2 border-solid border-black box-border shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] hover:shadow-none duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] mr-4"
                   >
                     <i class="fa-solid fa-chevron-left"></i>
-                  </div>
-                  <div
-                    class="flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] hover:shadow-none duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] mr-4"
+                  </a>
+                  <a
+                    class="swiper-button-next flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] hover:shadow-none duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] mr-4"
                   >
                     <i class="fa-solid fa-chevron-right"></i>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -735,9 +761,11 @@
             ></div>
 
             <div class="max-w-full 2xl:px-4 xl:px-4">
-              <div class="pt-14 overflow-hidden touch-pan-y">
+              <div
+                class="swiper swiper-section-experience pt-14 overflow-hidden touch-pan-y"
+              >
                 <div
-                  class="relative flex w-full h-full box-content transform duration-0"
+                  class="swiper-wrapper relative flex w-full h-full box-content transform duration-0"
                 >
                   <div class="swiper-slide">
                     <div class="mr-10 mb-7 flex">
@@ -764,7 +792,7 @@
                     </div>
                   </div>
 
-                  <div class="swiper-slide 2xl:block xl:block lg:block hidden">
+                  <div class="swiper-slide">
                     <div class="mr-10 mb-7 flex">
                       <div class="w-full">
                         <p
@@ -789,7 +817,7 @@
                     </div>
                   </div>
 
-                  <div class="swiper-slide 2xl:block xl:block lg:block hidden">
+                  <div class="swiper-slide">
                     <div class="mr-10 mb-7 flex">
                       <div class="w-full">
                         <p
@@ -814,7 +842,7 @@
                     </div>
                   </div>
 
-                  <div class="swiper-slide hidden">
+                  <div class="swiper-slide">
                     <div class="mr-10 mb-7 flex">
                       <div class="w-full">
                         <p
@@ -849,7 +877,8 @@
 
       <!-- Section 6 -->
       <!-- Services -->
-      <div id="6"
+      <div
+        id="6"
         class="mil-section relative fade fadeOut h-full w-full flex justify-center items-center 2xl:pt-8 xl:pt-8 pb-20"
       >
         <div
@@ -987,8 +1016,9 @@
 
       <!-- Section 7 -->
       <!-- Testimonials -->
-      <div id="7"
-        class="mil-section fade fadeOut relative h-full w-full flex justify-center items-center 2xl:pt-8 xl:pt-8 pb-20"
+      <div
+        id="7"
+        class="mil-section relative flex justify-center items-center 2xl:pt-8 xl:pt-8 pb-20"
       >
         <div
           class="w-72 h-96 opacity-35 -rotate-12 absolute box-bg -bottom-1/4 right-20 -z-10 rounded-full before:w-24 before:h-36 before:absolute before:-left-28 before:rounded-full"
@@ -1027,9 +1057,11 @@
             class="flex 2xl:flex-row xl:flex-row flex-col relative w-full h-full box-content"
           >
             <div class="2xl:w-8/12 xl:w-8/12">
-              <div class="overflow-hidden touch-pan-y pt-14">
+              <div
+                class="swiper swiper-section-testimonials overflow-hidden touch-pan-y pt-14"
+              >
                 <div
-                  class="relative w-full h-full box-content flex transform duration-0"
+                  class="swiper-wrapper relative w-full h-full box-content flex transform duration-0"
                 >
                   <div class="swiper-slide">
                     <div
@@ -1078,7 +1110,7 @@
                     </div>
                   </div>
 
-                  <div class="swiper-slide hidden">
+                  <div class="swiper-slide">
                     <div
                       class="flex mb-10 2xl:flex-row xl:flex-row lg:flex-row flex-col"
                     >
@@ -1125,7 +1157,7 @@
                     </div>
                   </div>
 
-                  <div class="swiper-slide hidden">
+                  <div class="swiper-slide">
                     <div
                       class="flex mb-10 2xl:flex-row xl:flex-row lg:flex-row flex-col"
                     >
@@ -1172,7 +1204,7 @@
                     </div>
                   </div>
 
-                  <div class="swiper-slide hidden">
+                  <div class="swiper-slide">
                     <div
                       class="flex mb-10 2xl:flex-row xl:flex-row lg:flex-row flex-col"
                     >
@@ -1230,21 +1262,21 @@
                   <div
                     class="pt-14 pb-14 2xl:pl-14 xl:pl-14 flex 2xl:flex-col xl:flex-col justify-between"
                   >
-                    <div class="flex items-center mb-7">
-                      <div
-                        class="flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] hover:shadow-none duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] mr-4"
+                    <div class="flex swiper-button2 items-center mb-7 relative">
+                      <a
+                        class="swiper-button-prev flex justify-center mr-20 items-center w-16 h-16 border-2 border-solid border-black box-border shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] hover:shadow-none duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] mr-4"
                       >
                         <i class="fa-solid fa-chevron-left"></i>
-                      </div>
-                      <div
-                        class="flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] hover:shadow-none duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] mr-4"
+                      </a>
+                      <a
+                        class="swiper-button-next flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] hover:shadow-none duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] mr-4"
                       >
                         <i class="fa-solid fa-chevron-right"></i>
-                      </div>
+                      </a>
                     </div>
 
                     <div
-                      class="w-auto mr-7 mb-7 text-black uppercase font-Jost-Font font-semibold text-base"
+                      class="w-auto mr-7 2xl:mb-36 xl:mb-36 2xl:ml-16 xl:ml-16 text-black uppercase font-Jost-Font font-semibold text-base swiper-pagination"
                     >
                       <span>1</span> / <span>4</span>
                     </div>
@@ -1259,273 +1291,426 @@
       <!-- End Section 7 -->
 
       <!-- Section 8-->
-      <div id="8"
-            class="mil-section fade fadeOut relative h-screen w-full flex justify-center items-center pt-8 max-lg:h-auto max-xl:text-3xl"
+      <div
+        id="8"
+        class="mil-section fade fadeOut relative h-screen w-full flex justify-center items-center pt-8 max-lg:h-auto max-xl:text-3xl"
+      >
+        <div
+          class="box-bg top-block w-[340px] h-[400px] absolute -z-10 -bottom-8 -right-12 origin-bottom -rotate-12 opacity-35 rounded-full bg-black"
+        ></div>
+        <div
+          class="box-bg w-[100px] h-[150px] absolute bottom-32 right-[22rem] -z-10 origin-bottom -rotate-12 opacity-35 rounded-full bg-black"
+        ></div>
+
+        <div class="container max-w-7xl w-full px-12 mx-auto font-Jost-Font">
+          <p class="mb-7 text-base font-semibold text-black uppercase">
+            CONTACT <span class="text-orange-600">ME</span>
+          </p>
+          <h2
+            class="text-shadow mb-16 uppercase text-6xl font-semibold max-lg:text-3xl"
           >
-            <div
-              class="box-bg top-block w-[340px] h-[400px] absolute -z-10 -bottom-8 -right-12 origin-bottom -rotate-12 opacity-35 rounded-full bg-black"
-            ></div>
-            <div
-              class="box-bg w-[100px] h-[150px] absolute bottom-32 right-[22rem] -z-10 origin-bottom -rotate-12 opacity-35 rounded-full bg-black"
-            ></div>
-    
-            <div class="container max-w-7xl w-full px-12 mx-auto font-Jost-Font">
-              <p class="mb-7 text-base font-semibold text-black uppercase">
-                CONTACT <span class="text-orange-600">ME</span>
-              </p>
-              <h2
-                class="text-shadow mb-16 uppercase text-6xl font-semibold max-lg:text-3xl"
-              >
-                Let's get you an estimate
-              </h2>
+            Let's get you an estimate
+          </h2>
+          <div
+            class="flex flex-wrap justify-between text-base text-black max-lg:flex-col"
+          >
+            <div class="w-1/3 max-lg:w-full">
               <div
-                class="flex flex-wrap justify-between text-base text-black max-lg:flex-col"
+                class="box-email relative mb-7 p-7 border-solid border-2 border-black before:absolute before:left-1 before:-right-2 before:-bottom-2 before:top-1 before:border-2 before:border-solid before:border-zinc-300"
               >
-                <div class="w-1/3 max-lg:w-full">
-                  <div
-                    class="box-email relative mb-7 p-7 border-solid border-2 border-black before:absolute before:left-1 before:-right-2 before:-bottom-2 before:top-1 before:border-2 before:border-solid before:border-zinc-300"
-                  >
-                    <p class="uppercase font-semibold mb-5">Email</p>
-                    <p>
-                      <a href="" class="text-lg">hello@treto.co</a><br />
-                      <a href="" class="text-lg">projects@treto.co</a>
-                    </p>
-                  </div>
-                  <div
-                    class="box-phone relative mb-7 p-7 border-solid border-2 border-black before:absolute before:left-1 before:-right-2 before:-bottom-2 before:top-1 before:border-2 before:border-solid before:border-zinc-300"
-                  >
-                    <p class="uppercase font-semibold mb-5">PHONE</p>
-                    <p>
-                      <a href="" class="text-lg">+ 56 3636 60 60 </a><br />
-                      <a href="" class="text-lg">+ 56 6363 06 06</a>
-                    </p>
-                  </div>
-                </div>
-                <div class="w-7/12 max-lg:w-full">
-                  <form action="">
-                    <div
-                      class="flex flex-wrap text-base text-black font-semibold max-lg:flex-col"
-                    >
-                      <div class="w-1/2 uppercase px-4 max-lg:w-full max-lg:px-0">
-                        <label for="" class="block mb-4"
-                          >Your full name
-                          <span class="text-orange-600">*</span></label
-                        >
-                        <input
-                          type="text"
-                          class="w-full mb-7 px-7 bg-zinc-100 h-16 outline-none"
-                        />
-                      </div>
-                      <div class="w-1/2 uppercase px-4 max-lg:w-full max-lg:px-0">
-                        <label for="" class="block mb-4"
-                          >Your email address
-                          <span class="text-orange-600">*</span></label
-                        >
-                        <input
-                          type="text"
-                          class="w-full mb-7 px-7 bg-zinc-100 h-16 outline-none"
-                        />
-                      </div>
-                      <div class="w-full uppercase px-4 max-lg:px-0">
-                        <label for="" class="block mb-4"
-                          >Your email address
-                          <span class="text-orange-600">*</span></label
-                        >
-                        <input
-                          type="text"
-                          class="w-full mb-7 px-7 py-4 bg-zinc-100 h-32 outline-none"
-                        />
-                      </div>
-                      <div
-                        class="w-full flex justify-between items-center font-normal text-lg px-4 max-lg:px-0 max-lg:h-auto"
-                      >
-                        <label
-                          for=""
-                          class="block cursor-pointer relative pl-10 mb-7"
-                        >
-                          by sending, I accept the
-                          <a class="text-orange-600 underline decoration-solid"
-                            >terms and conditions</a
-                          ><input
-                            type="checkbox"
-                            class="cursor-pointer absolute h-0 w-0 opacity-0"
-                          />
-                          <span
-                            class="check-box absolute top-0 left-0 h-6 w-6 bg-zinc-200"
-                            onclick="toggleBackground()"
-                          ></span>
-                        </label>
-                        <button
-                          class="uppercase flex justify-center items-center text-sm h-14 px-10 border-solid border-2 border-orange-600 bg-orange-600 text-white font-semibold shadow-[7px_7px_0px_0px_rgba(250,71,41,0.18)] hover:shadow-none"
-                        >
-                          Submit
-                        </button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
+                <p class="uppercase font-semibold mb-5">Email</p>
+                <p>
+                  <a href="" class="text-lg">hello@treto.co</a><br />
+                  <a href="" class="text-lg">projects@treto.co</a>
+                </p>
+              </div>
+              <div
+                class="box-phone relative mb-7 p-7 border-solid border-2 border-black before:absolute before:left-1 before:-right-2 before:-bottom-2 before:top-1 before:border-2 before:border-solid before:border-zinc-300"
+              >
+                <p class="uppercase font-semibold mb-5">PHONE</p>
+                <p>
+                  <a href="" class="text-lg">+ 56 3636 60 60 </a><br />
+                  <a href="" class="text-lg">+ 56 6363 06 06</a>
+                </p>
               </div>
             </div>
+            <div class="w-7/12 max-lg:w-full">
+              <form action="">
+                <div
+                  class="flex flex-wrap text-base text-black font-semibold max-lg:flex-col"
+                >
+                  <div class="w-1/2 uppercase px-4 max-lg:w-full max-lg:px-0">
+                    <label for="" class="block mb-4"
+                      >Your full name
+                      <span class="text-orange-600">*</span></label
+                    >
+                    <input
+                      type="text"
+                      class="w-full mb-7 px-7 bg-zinc-100 h-16 outline-none"
+                    />
+                  </div>
+                  <div class="w-1/2 uppercase px-4 max-lg:w-full max-lg:px-0">
+                    <label for="" class="block mb-4"
+                      >Your email address
+                      <span class="text-orange-600">*</span></label
+                    >
+                    <input
+                      type="text"
+                      class="w-full mb-7 px-7 bg-zinc-100 h-16 outline-none"
+                    />
+                  </div>
+                  <div class="w-full uppercase px-4 max-lg:px-0">
+                    <label for="" class="block mb-4"
+                      >Your email address
+                      <span class="text-orange-600">*</span></label
+                    >
+                    <input
+                      type="text"
+                      class="w-full mb-7 px-7 py-4 bg-zinc-100 h-32 outline-none"
+                    />
+                  </div>
+                  <div
+                    class="w-full flex justify-between items-center font-normal text-lg px-4 max-lg:px-0 max-lg:h-auto"
+                  >
+                    <label
+                      for=""
+                      class="block cursor-pointer relative pl-10 mb-7"
+                    >
+                      by sending, I accept the
+                      <a class="text-orange-600 underline decoration-solid"
+                        >terms and conditions</a
+                      ><input
+                        type="checkbox"
+                        class="cursor-pointer absolute h-0 w-0 opacity-0"
+                      />
+                      <span
+                        class="check-box absolute top-0 left-0 h-6 w-6 bg-zinc-200"
+                        onclick="toggleBackground()"
+                      ></span>
+                    </label>
+                    <button
+                      class="uppercase flex justify-center items-center text-sm h-14 px-10 border-solid border-2 border-orange-600 bg-orange-600 text-white font-semibold shadow-[7px_7px_0px_0px_rgba(250,71,41,0.18)] hover:shadow-none"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- End Section 8-->
     </div>
-    
+
     <!--pagination-->
-    <div class="mil-pagination max-xl:hidden z-50 flex-col flex fixed top-1/2 right-12 -translate-y-28 items-center before:absolute before:left-1/2 before:min-w-0.5 before:h-full before:bg-gray-300">
-      <div class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4">
-        <a href="#1" id="tag1" class="group active absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex">
-          <p class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45">Home</p>
+    <div
+      class="mil-pagination max-xl:hidden z-50 flex-col flex fixed top-1/2 right-12 -translate-y-28 items-center before:absolute before:left-1/2 before:min-w-0.5 before:h-full before:bg-gray-300"
+    >
+      <div
+        class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
+      >
+        <a
+          href="#1"
+          id="tag1"
+          class="group active absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
+        >
+          <p
+            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
+          >
+            Home
+          </p>
         </a>
       </div>
-      <div class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4">
-        <a href="#2" id="tag2" class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex">
-          <p class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45">About</p>
+      <div
+        class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
+      >
+        <a
+          href="#2"
+          id="tag2"
+          class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
+        >
+          <p
+            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
+          >
+            About
+          </p>
         </a>
       </div>
-      <div class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4">
-        <a href="#3" id="tag3" class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex">
-          <p class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45">Skills</p>
+      <div
+        class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
+      >
+        <a
+          href="#3"
+          id="tag3"
+          class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
+        >
+          <p
+            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
+          >
+            Skills
+          </p>
         </a>
       </div>
-      <div class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4">
-        <a href="#4" id="tag4" class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex">
-          <p class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-10 right-3 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45">Education</p>
+      <div
+        class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
+      >
+        <a
+          href="#4"
+          id="tag4"
+          class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
+        >
+          <p
+            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-10 right-3 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
+          >
+            Education
+          </p>
         </a>
       </div>
-      <div class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4">
-        <a href="#5" id="tag5" class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex">
-          <p class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-12 right-4 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45">Experience</p>
+      <div
+        class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
+      >
+        <a
+          href="#5"
+          id="tag5"
+          class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
+        >
+          <p
+            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-12 right-4 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
+          >
+            Experience
+          </p>
         </a>
       </div>
-      <div class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4">
-        <a href="#6" id="tag6" class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex">
-          <p class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-10 right-4 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45">Services</p>
+      <div
+        class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
+      >
+        <a
+          href="#6"
+          id="tag6"
+          class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
+        >
+          <p
+            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-10 right-4 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
+          >
+            Services
+          </p>
         </a>
       </div>
-      <div class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4">
-        <a href="#7" id="tag7" class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex">
-          <p class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-12 right-1 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45">Testimonials</p>
+      <div
+        class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
+      >
+        <a
+          href="#7"
+          id="tag7"
+          class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
+        >
+          <p
+            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-12 right-1 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
+          >
+            Testimonials
+          </p>
         </a>
       </div>
-      <div class="mil-dot flex items-center relative w-4 h-4 cursor-pointer ">
-        <a href="#8" id="tag8" class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex">
-          <p class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-10 right-3 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45">Contacts</p>
+      <div class="mil-dot flex items-center relative w-4 h-4 cursor-pointer">
+        <a
+          href="#8"
+          id="tag8"
+          class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
+        >
+          <p
+            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-10 right-3 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
+          >
+            Contacts
+          </p>
         </a>
       </div>
-      
     </div>
     <!--pagination- end-->
-    
+
     <script type="module" src="/src/main.ts"></script>
     <!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Magnific Popup core JS file -->
+    <script src="src/magnific-popup.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".image-link").magnificPopup({ type: "image" });
+      });
+    </script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".swiper-section-experience", {
+        ewind: true,
+        hashNavigation: true,
+        pagination: {
+          el: ".swiper-pag",
+          type: "fraction",
+        },
+        centeredSlides: true,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        slidesPerView: 3,
+        breakpoints: {
+          1366: {
+            slidesPerView: 3,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+          768: {
+            slidesPerView: 1,
+          },
+          500: {
+            slidesPerView: 1,
+          },
+        },
+      });
+
+      new Swiper(".swiper-section-testimonials", {
+        rewind: true,
+        hashNavigation: true,
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+        centeredSlides: true,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        slidesPerView: 1,
+      });
+    </script>
+
     <!--Scroll effect-->
     <script>
-    if ($(window).width() >= 1280) {
-     $(document).ready(function() {
-      var delay = false;
-      var currentPage = 1;
-      var pageCount = $(".mil-section").length;
-      var swipe = document.getElementsByTagName('.mil-section');
-      
-      //Pagination Effect
-      for (var j = 1; j <= 8; j++) {
-          $('#tag' + j).click((function(page) {
-              return function() {
+      if ($(window).width() >= 1280) {
+        $(document).ready(function () {
+          var delay = false;
+          var currentPage = 1;
+          var pageCount = $(".mil-section").length;
+          var swipe = document.getElementsByTagName(".mil-section");
+
+          //Pagination Effect
+          for (var j = 1; j <= 8; j++) {
+            $("#tag" + j).click(
+              (function (page) {
+                return function () {
                   currentPage = page;
-                  $('#tag' + page).addClass('active');
+                  $("#tag" + page).addClass("active");
                   for (var i = 1; i <= pageCount; i++) {
-                      if (i != page) {
-                          $('#tag' + i).removeClass('active');
-                      }
+                    if (i != page) {
+                      $("#tag" + i).removeClass("active");
+                    }
                   }
-              };
-          })(j));
-      }
-      //Pagination Effect End
-      
-    if ($(window).width() >= 1280) {
-      $(document).on('mousewheel DOMMouseScroll', function(event) {
-        if (delay) return;
-        delay = true;
-        setTimeout(function() { delay = false }, 600)
+                };
+              })(j)
+            );
+          }
+          //Pagination Effect End
 
-        var wd = event.originalEvent.wheelDelta || -event.originalEvent.detail;
-        if (wd < 0) {
-            if (currentPage < pageCount) {
-              currentPage++;
-              console.log(currentPage);
-            }
-        } else {
-            if (1 < currentPage) {
-                currentPage--;
-                console.log(currentPage);
-            }
-        }
-        $('html,body').animate({
-            scrollTop: $('#' + currentPage).offset().top
-        }, 700);
-        
-        
-        $('#tag' + currentPage).addClass('active');
-        for (var i = 1; i <= pageCount; i++) {
-            if (i != currentPage) {
-                $('#tag' + i).removeClass('active');
-            }
-        }
-      });
+          if ($(window).width() >= 1280) {
+            $(document).on("mousewheel DOMMouseScroll", function (event) {
+              if (delay) return;
+              delay = true;
+              setTimeout(function () {
+                delay = false;
+              }, 600);
 
-    }
-      });
-    }
+              var wd =
+                event.originalEvent.wheelDelta || -event.originalEvent.detail;
+              if (wd < 0) {
+                if (currentPage < pageCount) {
+                  currentPage++;
+                  console.log(currentPage);
+                }
+              } else {
+                if (1 < currentPage) {
+                  currentPage--;
+                  console.log(currentPage);
+                }
+              }
+              $("html,body").animate(
+                {
+                  scrollTop: $("#" + currentPage).offset().top,
+                },
+                700
+              );
 
-    </script>
-    <!--Scroll effect end-->
-
-
-    <!--Fade Effect-->
-    <script> 
-    if ($(window).width() >= 1280) {
-      const observerOptions = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.7
-      };
-      function observerCallback(entries, observer) {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            // fade in observed elements that are in view
-            entry.target.classList.replace('fadeOut', 'fadeIn');
-          } else {
-            // fade out observed elements that are not in view
-            entry.target.classList.replace('fadeIn', 'fadeOut');
+              $("#tag" + currentPage).addClass("active");
+              for (var i = 1; i <= pageCount; i++) {
+                if (i != currentPage) {
+                  $("#tag" + i).removeClass("active");
+                }
+              }
+            });
           }
         });
       }
-      const observer = new IntersectionObserver(observerCallback, observerOptions);
-      const fadeElms = document.querySelectorAll('.fade');
-      fadeElms.forEach(el => observer.observe(el));
-    }
+    </script>
+    <!--Scroll effect end-->
+
+    <!--Fade Effect-->
+    <script>
+      if ($(window).width() >= 1280) {
+        const observerOptions = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.7,
+        };
+        function observerCallback(entries, observer) {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              // fade in observed elements that are in view
+              entry.target.classList.replace("fadeOut", "fadeIn");
+            } else {
+              // fade out observed elements that are not in view
+              entry.target.classList.replace("fadeIn", "fadeOut");
+            }
+          });
+        }
+        const observer = new IntersectionObserver(
+          observerCallback,
+          observerOptions
+        );
+        const fadeElms = document.querySelectorAll(".fade");
+        fadeElms.forEach((el) => observer.observe(el));
+      }
     </script>
     <!--Fade Effect End-->
     <!--navbutton effect-->
     <script>
-      $(".menu-toggle-btn").click(function() {
-			  $(this).toggleClass("open");
-		  });
-      $(".menu-toggle-btn").click(function() {
-			  if($(".hide-nav").hasClass("display-nav")) {
-        $(".hide-nav").removeClass("display-nav"); // Ẩn nếu đã hiển thị
-    } else {
-        $(".hide-nav").addClass("display-nav"); // Hiển thị nếu đã ẩn
-    }
-		  });
-      $(document).ready(function(){
-      $(".navmb").hover(function(){
-              $('.dropdown-m').addClass("nav-respons");
-          }, function(){
-              $('.dropdown-m').removeClass("nav-respons");
-          });
+      $(".menu-toggle-btn").click(function () {
+        $(this).toggleClass("open");
+      });
+      $(".menu-toggle-btn").click(function () {
+        if ($(".hide-nav").hasClass("display-nav")) {
+          $(".hide-nav").removeClass("display-nav"); // Ẩn nếu đã hiển thị
+        } else {
+          $(".hide-nav").addClass("display-nav"); // Hiển thị nếu đã ẩn
+        }
+      });
+      $(document).ready(function () {
+        $(".navmb").hover(
+          function () {
+            $(".dropdown-m").addClass("nav-respons");
+          },
+          function () {
+            $(".dropdown-m").removeClass("nav-respons");
+          }
+        );
       });
     </script>
     <!--navbutton effect end-->
