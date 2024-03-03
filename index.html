@@ -222,7 +222,7 @@
       <!-- Section 1 -->
       <!-- Graphic Developer -->
       <div
-        id="1"
+        id="section1"
         class="mil-section fade fadeOut relative z-10 w-full h-screen md:max-xl:h-auto max-xl:pt-16 max-xl:mb-14"
       >
         <div class="h-full">
@@ -295,7 +295,7 @@
       <!-- Section 2 -->
       <!-- Hello -->
       <div
-        id="2"
+        id="section2"
         class="mil-section fade fadeOut relative z-10 w-full h-screen flex justify-center items-center max-xl:h-auto max-xl:pb-24 max-md:pt-64"
       >
         <div
@@ -364,7 +364,7 @@
       <!-- Section 3 -->
       <!-- Skills -->
       <div
-        id="3"
+        id="section3"
         class="mil-section fade fadeOut relative z-10 w-full h-screen flex justify-center items-center max-xl:h-auto"
       >
         <div
@@ -613,7 +613,7 @@
       <!-- Section 4 -->
       <!-- Education -->
       <div
-        id="4"
+        id="section4"
         class="mil-section fade fadeOut relative z-10 w-full h-screen flex justify-center items-center max-xl:h-auto 2xl:pt-10 xl:pt-10 pb-20"
       >
         <div
@@ -763,7 +763,7 @@
       <!-- Section 5 -->
       <!-- Expirience -->
       <div
-        id="5"
+        id="section5"
         class="mil-section fade fadeOut relative z-10 w-full h-screen flex justify-center items-center max-xl:h-auto 2xl:pt-28 xl:pt-28 pb-32"
       >
         <div
@@ -809,16 +809,18 @@
                 <div
                   class="flex swiper-button1 justify-between items-center mb-7"
                 >
-                  <a
+                  <button
+                    id="prevPage"
                     class="swiper-button-prev flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] hover:shadow-none mr-4"
                   >
                     <i class="fa-solid fa-chevron-left"></i>
-                  </a>
-                  <a
+                  </button>
+                  <button
+                    id="nextPage"
                     class="swiper-button-next flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] hover:shadow-none mr-4"
                   >
                     <i class="fa-solid fa-chevron-right"></i>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -945,7 +947,7 @@
       <!-- Section 6 -->
       <!-- Services -->
       <div
-        id="6"
+        id="section6"
         class="mil-section fade fadeOut relative z-10 w-full h-screen flex justify-center items-center max-xl:h-auto 2xl:pt-28 xl:pt-28 pb-32"
       >
         <div
@@ -1084,7 +1086,7 @@
       <!-- Section 7 -->
       <!-- Testimonials -->
       <div
-        id="7"
+        id="section7"
         class="mil-section fade fadeOut relative z-10 w-full h-screen flex justify-center items-center max-xl:h-auto 2xl:pt-28 xl:pt-28 pb-20"
       >
         <div
@@ -1332,11 +1334,13 @@
                     class="flex swiper-button2 relative items-center mb-7 mt-6"
                   >
                     <button
+                      id="prevPage"
                       class="swiper-button-prev flex justify-center items-center cursor-pointer w-16 h-16 border-2 border-solid border-black box-border shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] hover:shadow-none mr-4 2xl:left-0 xl:left-0 left-1/4 absolute"
                     >
                       <i class="fa-solid fa-chevron-left"></i>
                     </button>
                     <button
+                      id="nextPage"
                       class="swiper-button-next flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] hover:shadow-none mr-4 2xl:right-1/2 xl:right-1/2 left-20 absolute"
                     >
                       <i class="fa-solid fa-chevron-right"></i>
@@ -1360,7 +1364,7 @@
       <!-- Section 8 -->
       <!-- Contact -->
       <div
-        id="8"
+        id="section8"
         class="mil-section fade fadeOut relative h-screen w-full flex justify-center items-center pt-8 max-lg:h-auto max-xl:text-3xl"
       >
         <div
@@ -1512,9 +1516,8 @@
         class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
       >
         <a
-          href="#1"
-          id="tag1"
-          class="group active absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
+          id="scrollToSection1"
+          class="group active1 absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
             class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 text-black uppercase font-Jost-Font font-semibold text-base opacity-0 -rotate-45"
@@ -1527,8 +1530,7 @@
         class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
       >
         <a
-          href="#2"
-          id="tag2"
+          id="scrollToSection2"
           class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
@@ -1542,8 +1544,7 @@
         class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
       >
         <a
-          href="#3"
-          id="tag3"
+          id="scrollToSection3"
           class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
@@ -1557,8 +1558,7 @@
         class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
       >
         <a
-          href="#4"
-          id="tag4"
+          id="scrollToSection4"
           class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
@@ -1572,8 +1572,7 @@
         class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
       >
         <a
-          href="#5"
-          id="tag5"
+          id="scrollToSection5"
           class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
@@ -1587,8 +1586,7 @@
         class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
       >
         <a
-          href="#6"
-          id="tag6"
+          id="scrollToSection6"
           class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
@@ -1602,8 +1600,7 @@
         class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
       >
         <a
-          href="#7"
-          id="tag7"
+          id="scrollToSection7"
           class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
@@ -1615,8 +1612,7 @@
       </div>
       <div class="mil-dot flex items-center relative w-4 h-4 cursor-pointer">
         <a
-          href="#8"
-          id="tag8"
+          id="scrollToSection8"
           class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
@@ -1648,14 +1644,16 @@
     <!-- Initialize Swiper -->
     <script>
       var swiper = new Swiper(".swiper-section-experience", {
-        ewind: true,
+        rewind: true,
         hashNavigation: true,
+        spaceBetween: 30,
+        speed: 800,
+        parallax: !0,
         pagination: {
           el: ".swiper-pag",
           type: "fraction",
+          clickable: !0,
         },
-        centeredSlides: true,
-        spaceBetween: 30,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
@@ -1681,12 +1679,14 @@
       new Swiper(".swiper-section-testimonials", {
         rewind: true,
         hashNavigation: true,
+        spaceBetween: 30,
+        speed: 800,
+        parallax: !0,
         pagination: {
           el: ".swiper-pagination",
           type: "fraction",
+          clickable: !0,
         },
-        centeredSlides: true,
-        spaceBetween: 30,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
@@ -1695,6 +1695,68 @@
         slidesPerView: 1,
       });
     </script>
+    <!-- Initialize Swiper end -->
+
+    <!-- Disabled button swiper -->
+    <script>
+      $(document).ready(function () {
+        // Hàm quản lý trang
+        function managePage(totalPage) {
+          let currentPage = 1; // Trang hiện tại
+
+          // Hàm kiểm tra và cập nhật trạng thái của nút
+          function updateButtonState() {
+            let prevButton = $("#prevPage");
+            let nextButton = $("#nextPage");
+
+            // Nếu ở trang đầu, mờ nút bên trái
+            if (currentPage === 1) {
+              prevButton.addClass("disabled-button");
+            } else {
+              prevButton.removeClass("disabled-button");
+            }
+
+            // Nếu ở trang cuối, mờ nút bên phải
+            if (currentPage === totalPage) {
+              nextButton.addClass("disabled-button");
+            } else {
+              nextButton.removeClass("disabled-button");
+            }
+          }
+
+          // Hàm chuyển trang
+          function changePage(direction) {
+            let newPage = currentPage + direction;
+
+            // Kiểm tra giới hạn trang
+            if (newPage >= 1 && newPage <= totalPage) {
+              currentPage = newPage;
+              // Cập nhật trạng thái nút sau khi chuyển trang
+              updateButtonState();
+            }
+          }
+
+          // Bắt đầu cập nhật trạng thái của nút
+          updateButtonState();
+
+          // Lắng nghe sự kiện khi nhấn vào nút Previous
+          $("#prevPage").on("click", function () {
+            changePage(-1);
+          });
+
+          // Lắng nghe sự kiện khi nhấn vào nút Next
+          $("#nextPage").on("click", function () {
+            changePage(1);
+          });
+        }
+
+        // Gọi hàm với số lượng trang mong muốn
+        managePage(4); // Đối với 3 trang
+        // hoặc
+        // managePage(2); // Đối với 4 trang
+      });
+    </script>
+    <!-- Disabled button swiper end -->
 
     <!--Scroll effect-->
     <script>
@@ -1706,21 +1768,21 @@
           var swipe = document.getElementsByTagName(".mil-section");
 
           //Pagination Effect
-          for (var j = 1; j <= 8; j++) {
-            $("#tag" + j).click(
-              (function (page) {
-                return function () {
-                  currentPage = page;
-                  $("#tag" + page).addClass("active");
-                  for (var i = 1; i <= pageCount; i++) {
-                    if (i != page) {
-                      $("#tag" + i).removeClass("active");
-                    }
-                  }
-                };
-              })(j)
-            );
-          }
+          // for (var j = 1; j <= 8; j++) {
+          //   $("#tag" + j).click(
+          //     (function (page) {
+          //       return function () {
+          //         currentPage = page;
+          //         $("#tag" + page).addClass("active1");
+          //         for (var i = 1; i <= pageCount; i++) {
+          //           if (i != page) {
+          //             $("#tag" + i).removeClass("active1");
+          //           }
+          //         }
+          //       };
+          //     })(j)
+          //   );
+          // }
           //Pagination Effect End
 
           if ($(window).width() >= 1280) {
@@ -1746,17 +1808,36 @@
               }
               $("html,body").animate(
                 {
-                  scrollTop: $("#" + currentPage).offset().top,
+                  scrollTop: $("#section" + currentPage).offset().top,
                 },
                 700
               );
-
-              $("#tag" + currentPage).addClass("active");
+              $("#scrollToSection" + currentPage).addClass("active1");
               for (var i = 1; i <= pageCount; i++) {
                 if (i != currentPage) {
-                  $("#tag" + i).removeClass("active");
+                  $("#scrollToSection" + i).removeClass("active1");
                 }
               }
+            });
+          }
+        });
+        $(document).ready(function () {
+          for (let i = 1; i <= 8; i++) {
+            $(`#scrollToSection${i}`).click(function (event) {
+              event.preventDefault();
+
+              // Loại bỏ lớp 'active' từ tất cả các nút
+              $(`[id^='scrollToSection']`).removeClass("active1");
+
+              // Thêm lớp 'active' vào nút được nhấn
+              $(this).addClass("active1");
+
+              $("html, body").animate(
+                {
+                  scrollTop: $(`#section${i}`).offset().top,
+                },
+                0
+              );
             });
           }
         });
@@ -1792,6 +1873,7 @@
       }
     </script>
     <!--Fade Effect End-->
+
     <!--navbutton effect-->
     <script>
       $(".menu-toggle-btn").click(function () {
