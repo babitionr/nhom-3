@@ -216,7 +216,7 @@
 
       <!-- section 1 -->
       <div
-        id="1"
+        id="section1"
         class="mil-section fade fadeOut relative z-10 w-full h-screen md:max-xl:h-auto max-xl:pt-16 max-xl:mb-14"
       >
         <div class="h-full">
@@ -283,7 +283,7 @@
 
       <!-- section 2 -->
       <div
-        id="2"
+        id="section2"
         class="mil-section fade fadeOut relative z-10 w-full h-screen flex justify-center items-center max-xl:h-auto max-xl:pb-24 max-md:pt-64"
       >
         <div
@@ -344,7 +344,7 @@
 
       <!-- section 3 -->
       <div
-        id="3"
+        id="section3"
         class="mil-section fade fadeOut relative z-10 w-full h-screen flex justify-center items-center max-xl:h-auto"
       >
         <div
@@ -549,7 +549,7 @@
 
       <!-- Section 4 -->
       <!-- Education -->
-      <div id="4" class="mil-section relative fade fadeOut py-20 px-20">
+      <div id="section4" class="mil-section relative fade fadeOut py-20 px-20">
         <div
           class="w-72 h-96 opacity-35 -rotate-12 absolute box-bg top-2/4 left-1/4 -z-10 rounded-full before:w-24 before:h-36 before:absolute before:-left-28 before:rounded-full"
         ></div>
@@ -697,7 +697,7 @@
       <!-- Section 5 -->
       <!-- Expirience -->
       <div
-        id="5"
+        id="section5"
         class="mil-section relative fade fadeOut h-auto w-auto py-20 px-40 flex justify-center items-center max-2xl:pt-8 max-xl:pt-8"
       >
         <div
@@ -878,7 +878,7 @@
       <!-- Section 6 -->
       <!-- Services -->
       <div
-        id="6"
+        id="section6"
         class="mil-section relative fade fadeOut h-full w-full flex justify-center items-center 2xl:pt-8 xl:pt-8 pb-20"
       >
         <div
@@ -1017,7 +1017,7 @@
       <!-- Section 7 -->
       <!-- Testimonials -->
       <div
-        id="7"
+        id="section7"
         class="mil-section relative flex justify-center items-center 2xl:pt-8 xl:pt-8 pb-20"
       >
         <div
@@ -1292,7 +1292,7 @@
 
       <!-- Section 8-->
       <div
-        id="8"
+        id="section8"
         class="mil-section fade fadeOut relative h-screen w-full flex justify-center items-center pt-8 max-lg:h-auto max-xl:text-3xl"
       >
         <div
@@ -1411,9 +1411,8 @@
         class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
       >
         <a
-          href="#1"
-          id="tag1"
-          class="group active absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
+          id="scrollToSection1"
+          class="group active1 absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
             class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
@@ -1426,8 +1425,7 @@
         class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
       >
         <a
-          href="#2"
-          id="tag2"
+          id="scrollToSection2"
           class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
@@ -1441,8 +1439,7 @@
         class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
       >
         <a
-          href="#3"
-          id="tag3"
+          id="scrollToSection3"
           class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
@@ -1456,8 +1453,7 @@
         class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
       >
         <a
-          href="#4"
-          id="tag4"
+          id="scrollToSection4"
           class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
@@ -1471,8 +1467,7 @@
         class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
       >
         <a
-          href="#5"
-          id="tag5"
+          id="scrollToSection5"
           class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
@@ -1486,8 +1481,7 @@
         class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
       >
         <a
-          href="#6"
-          id="tag6"
+          id="scrollToSection6"
           class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
@@ -1501,8 +1495,7 @@
         class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
       >
         <a
-          href="#7"
-          id="tag7"
+          id="scrollToSection7"
           class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
@@ -1514,8 +1507,7 @@
       </div>
       <div class="mil-dot flex items-center relative w-4 h-4 cursor-pointer">
         <a
-          href="#8"
-          id="tag8"
+          id="scrollToSection8"
           class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
@@ -1604,21 +1596,21 @@
           var swipe = document.getElementsByTagName(".mil-section");
 
           //Pagination Effect
-          for (var j = 1; j <= 8; j++) {
-            $("#tag" + j).click(
-              (function (page) {
-                return function () {
-                  currentPage = page;
-                  $("#tag" + page).addClass("active");
-                  for (var i = 1; i <= pageCount; i++) {
-                    if (i != page) {
-                      $("#tag" + i).removeClass("active");
-                    }
-                  }
-                };
-              })(j)
-            );
-          }
+          // for (var j = 1; j <= 8; j++) {
+          //   $("#tag" + j).click(
+          //     (function (page) {
+          //       return function () {
+          //         currentPage = page;
+          //         $("#tag" + page).addClass("active1");
+          //         for (var i = 1; i <= pageCount; i++) {
+          //           if (i != page) {
+          //             $("#tag" + i).removeClass("active1");
+          //           }
+          //         }
+          //       };
+          //     })(j)
+          //   );
+          // }
           //Pagination Effect End
 
           if ($(window).width() >= 1280) {
@@ -1644,17 +1636,36 @@
               }
               $("html,body").animate(
                 {
-                  scrollTop: $("#" + currentPage).offset().top,
+                  scrollTop: $("#section" + currentPage).offset().top,
                 },
                 700
               );
-
-              $("#tag" + currentPage).addClass("active");
+              $("#scrollToSection" + currentPage).addClass("active1");
               for (var i = 1; i <= pageCount; i++) {
                 if (i != currentPage) {
-                  $("#tag" + i).removeClass("active");
+                  $("#scrollToSection" + i).removeClass("active1");
                 }
               }
+            });
+          }
+        });
+        $(document).ready(function () {
+          for (let i = 1; i <= 8; i++) {
+            $(`#scrollToSection${i}`).click(function (event) {
+              event.preventDefault();
+
+              // Loại bỏ lớp 'active' từ tất cả các nút
+              $(`[id^='scrollToSection']`).removeClass("active1");
+
+              // Thêm lớp 'active' vào nút được nhấn
+              $(this).addClass("active1");
+
+              $("html, body").animate(
+                {
+                  scrollTop: $(`#section${i}`).offset().top,
+                },
+                0
+              );
             });
           }
         });
