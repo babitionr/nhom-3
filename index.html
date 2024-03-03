@@ -1506,7 +1506,7 @@
 
     <!-- Pagination -->
     <div
-      class="mil-pagination z-50 flex-col flex fixed top-1/2 right-12 -translate-y-28 items-center before:absolute before:left-1/2 before:min-w-0.5 before:h-full before:bg-gray-300"
+      class="mil-pagination max-xl:hidden z-50 flex-col flex fixed top-1/2 right-12 -translate-y-28 items-center before:absolute before:left-1/2 before:min-w-0.5 before:h-full before:bg-gray-300"
     >
       <div
         class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
@@ -1698,94 +1698,124 @@
 
     <!--Scroll effect-->
     <script>
-      $(document).ready(function () {
-        var delay = false;
-        var currentPage = 1;
-        var pageCount = $(".mil-section").length;
-        var swipe = document.getElementsByTagName(".mil-section");
+      if ($(window).width() >= 1280) {
+        $(document).ready(function () {
+          var delay = false;
+          var currentPage = 1;
+          var pageCount = $(".mil-section").length;
+          var swipe = document.getElementsByTagName(".mil-section");
 
-        //Pagination Effect
-        for (var j = 1; j <= 8; j++) {
-          $("#tag" + j).click(
-            (function (page) {
-              return function () {
-                currentPage = page;
-                $("#tag" + page).addClass("active");
-                for (var i = 1; i <= pageCount; i++) {
-                  if (i != page) {
-                    $("#tag" + i).removeClass("active");
+          //Pagination Effect
+          for (var j = 1; j <= 8; j++) {
+            $("#tag" + j).click(
+              (function (page) {
+                return function () {
+                  currentPage = page;
+                  $("#tag" + page).addClass("active");
+                  for (var i = 1; i <= pageCount; i++) {
+                    if (i != page) {
+                      $("#tag" + i).removeClass("active");
+                    }
                   }
-                }
-              };
-            })(j)
-          );
-        }
-        //Pagination Effect End
-
-        $(document).on("mousewheel DOMMouseScroll", function (event) {
-          if (delay) return;
-          delay = true;
-          setTimeout(function () {
-            delay = false;
-          }, 600);
-
-          var wd =
-            event.originalEvent.wheelDelta || -event.originalEvent.detail;
-          if (wd < 0) {
-            if (currentPage < pageCount) {
-              currentPage++;
-              console.log(currentPage);
-            }
-          } else {
-            if (1 < currentPage) {
-              currentPage--;
-              console.log(currentPage);
-            }
+                };
+              })(j)
+            );
           }
-          $("html,body").animate(
-            {
-              scrollTop: $("#" + currentPage).offset().top,
-            },
-            700
-          );
+          //Pagination Effect End
 
-          $("#tag" + currentPage).addClass("active");
-          for (var i = 1; i <= pageCount; i++) {
-            if (i != currentPage) {
-              $("#tag" + i).removeClass("active");
-            }
+          if ($(window).width() >= 1280) {
+            $(document).on("mousewheel DOMMouseScroll", function (event) {
+              if (delay) return;
+              delay = true;
+              setTimeout(function () {
+                delay = false;
+              }, 600);
+
+              var wd =
+                event.originalEvent.wheelDelta || -event.originalEvent.detail;
+              if (wd < 0) {
+                if (currentPage < pageCount) {
+                  currentPage++;
+                  console.log(currentPage);
+                }
+              } else {
+                if (1 < currentPage) {
+                  currentPage--;
+                  console.log(currentPage);
+                }
+              }
+              $("html,body").animate(
+                {
+                  scrollTop: $("#" + currentPage).offset().top,
+                },
+                700
+              );
+
+              $("#tag" + currentPage).addClass("active");
+              for (var i = 1; i <= pageCount; i++) {
+                if (i != currentPage) {
+                  $("#tag" + i).removeClass("active");
+                }
+              }
+            });
           }
         });
-      });
+      }
     </script>
     <!--Scroll effect end-->
 
     <!--Fade Effect-->
     <script>
-      const observerOptions = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.7,
-      };
-      function observerCallback(entries, observer) {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            // fade in observed elements that are in view
-            entry.target.classList.replace("fadeOut", "fadeIn");
-          } else {
-            // fade out observed elements that are not in view
-            entry.target.classList.replace("fadeIn", "fadeOut");
-          }
-        });
+      if ($(window).width() >= 1280) {
+        const observerOptions = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.7,
+        };
+        function observerCallback(entries, observer) {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              // fade in observed elements that are in view
+              entry.target.classList.replace("fadeOut", "fadeIn");
+            } else {
+              // fade out observed elements that are not in view
+              entry.target.classList.replace("fadeIn", "fadeOut");
+            }
+          });
+        }
+        const observer = new IntersectionObserver(
+          observerCallback,
+          observerOptions
+        );
+        const fadeElms = document.querySelectorAll(".fade");
+        fadeElms.forEach((el) => observer.observe(el));
       }
-      const observer = new IntersectionObserver(
-        observerCallback,
-        observerOptions
-      );
-      const fadeElms = document.querySelectorAll(".fade");
-      fadeElms.forEach((el) => observer.observe(el));
     </script>
     <!--Fade Effect End-->
+    <!--navbutton effect-->
+    <script>
+      $(".menu-toggle-btn").click(function () {
+        $(this).toggleClass("open");
+      });
+      $(".menu-toggle-btn").click(function () {
+        if ($(".hide-nav").hasClass("display-nav")) {
+          $(".hide-nav").removeClass("display-nav"); // Ẩn nếu đã hiển thị
+        } else {
+          $(".hide-nav").addClass("display-nav"); // Hiển thị nếu đã ẩn
+        }
+      });
+      $(document).ready(function () {
+        $(".navmb").hover(
+          function () {
+            $(".dropdown-m").addClass("nav-respons");
+          },
+          function () {
+            $(".dropdown-m").removeClass("nav-respons");
+          }
+        );
+      });
+    </script>
+    <!--navbutton effect end-->
 
     <!-- Check box section 8 -->
     <script>
