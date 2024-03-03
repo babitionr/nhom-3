@@ -25,32 +25,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script type="module">
-      import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
-      const swiper = new Swiper(".swiper", {
-        // Optional parameters
-        loop: true,
-
-        // If we need pagination
-        pagination: {
-          el: ".swiper-pagination",
-          bulletActiveClass: ".swiper-pagination-bullet-active",
-        },
-
-        // Navigation arrows
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-
-        // And if we need scrollbar
-        scrollbar: {
-          el: ".swiper-scrollbar",
-          // dragClass: "swiper-scrollbar-drag",
-        },
-      });
-    </script>
-
     <link rel="stylesheet" href="./src/output.css" />
     <link rel="stylesheet" href="./src/full-page-scroll.css" />
     <script src="./src/full-page-scroll.js"></script>
@@ -60,16 +34,16 @@
   <body class="bg-white overflow-hidden max-xl:overflow-auto">
     <!---frame-->
     <div
-      style="display: none"
-      class="m-2.5 fixed z-20 pointer-events-none left-1.5 -right-1 top-2 -bottom-1.5 border-2 border-solid border-gray-300 after:absolute after:border-2 after:border-solid after:border-black after:-left-2 after:-top-2 after:bottom-1 after:right-2 after:box-border after:w-full"
+      class="m-2.5 max-xl:my-0 max-md:my-0 fixed z-20 pointer-events-none left-1.5 -right-1 top-2 -bottom-1.5 border-2 border-solid border-gray-300 after:absolute after:border-2 after:border-solid after:border-black after:-left-2 after:-top-2 after:bottom-1 after:right-2 after:box-border after:w-full"
     >
       <!---top-panel-->
       <div
-        class="mil-top-panel col-span-2 flex items-center h-20 justify-between transition delay-0 pointer-events-auto max-xl:bg-white max-xl:fixed"
+        class="mil-top-panel max-xl:bg-white max-md:bg-white col-span-2 flex items-center h-20 justify-between transition delay-0 pointer-events-auto"
       >
         <div class="col-start-1 w-full justify-start items-center flex h-full">
           <a
-            class="border-b-2 border-r-2 border-solid border-black mt-0.5 px-10 w-44 h-20 flex items-center relative -left-2 -right-2 bottom-2 before:w-9 before:left-2 before:border-solid before:border-gray-300 after:absolute after:border-r-2 after:h-20 after:border-b-2 after:border-solid after:border-gray-300 after:left-2 after:top-1.5 after:-bottom-2 after:-right-2"
+            href="#"
+            class="border-b-2 z-20 border-r-2 border-solid border-black mt-0.5 px-10 w-44 h-20 flex items-center relative -left-2 -right-2 bottom-2 before:w-9 before:left-2 before:border-solid before:border-gray-300 after:absolute after:border-r-2 after:h-20 after:border-b-2 after:border-solid after:border-gray-300 after:left-2 after:top-1.5 after:-bottom-2 after:-right-2"
           >
             <img
               src="https://html.bslthemes.com/treto/img/logo.png"
@@ -77,7 +51,7 @@
             />
           </a>
           <nav
-            class="border-b-2 border-solid border-black mt-0.5 h-20 flex items-center relative -left-2 -right-2 bottom-2 before:w-10 before:left-2 before:border-solid before:border-gray-300 after:absolute after:h-20 after:border-b-2 after:border-solid after:border-gray-300 after:-left-1 after:top-1.5 after:-bottom-2 after:-right-1.5"
+            class="max-xl:hidden border-b-2 border-solid border-black mt-0.5 h-20 flex items-center relative -left-2 -right-2 bottom-2 before:w-10 before:left-2 before:border-solid before:border-gray-300 after:absolute after:h-20 after:border-b-2 after:border-solid after:border-gray-300 after:-left-1 after:top-1.5 after:-bottom-2 after:-right-1.5"
           >
             <ul
               class="z-10 flex font-Jost-Font font-bold text-sm whitespace-nowrap uppercase leading-10"
@@ -88,7 +62,7 @@
                 >
                   <a>Home</a>
                   <ul
-                    class="opacity-0 group-hover:opacity-100 bg-white duration-500 absolute top-20 -left-9 px-7 py-7 border-2 border-solid border-gray-300"
+                    class="hidden group-hover:block bg-white duration-500 absolute top-20 -left-9 px-7 py-7 border-2 border-solid border-gray-300"
                   >
                     <li>
                       <a class="text-black hover:text-orange-600 duration-500"
@@ -125,9 +99,68 @@
               </li>
             </ul>
           </nav>
+          <div
+            class="hidden max-xl:block max-xl:absolute menu-toggle-btn p-4 border-2 border-solid border-black max-xl:top-0 max-xl:right-5 max-lg:text-white cursor-pointer z-50"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
+
+        <nav
+          class="hidden max-xl:w-full max-xl:mt-20 max-xl:right-3 max-xl:absolute max-xl:visible max-xl:block max-xl:flex-col"
+        >
+          <ul
+            class="fixed hide-nav font-Jost-Font font-semibold uppercase text-sm bg-white text-center text-black w-full p-6"
+          >
+            <li class="navmb p-3">
+              <a
+                class="group hover:animate-slideDown hover:text-orange-600 duration-500 cursor-pointer"
+              >
+                Home
+                <ul
+                  class="dropdown-m group-hover:block bg-gray-300 duration-500 top-full left-0 px-7 py-7"
+                >
+                  <li class="mb-5">
+                    <a
+                      class="text-black hover:text-orange-600 duration-500 cursor-pointer"
+                      >Type 1</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-black hover:text-orange-600 duration-500 cursor-pointer"
+                      >Type 2</a
+                    >
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li class="p-3">
+              <p class="hover:text-orange-600duration-500 cursor-pointer">
+                Prices
+              </p>
+            </li>
+            <li class="p-3">
+              <a class="hover:text-orange-600duration-500 cursor-pointer">
+                Portfolio
+              </a>
+            </li>
+            <li class="p-3">
+              <a class="hover:text-orange-600 duration-500 cursor-pointer">
+                Blog
+              </a>
+            </li>
+            <li class="p-3">
+              <a class="hover:text-orange-600 duration-500 cursor-pointer">
+                Contact me
+              </a>
+            </li>
+          </ul>
+        </nav>
         <div
-          class="col-start-3 px-28 w-1/12 justify-end items-center flex h-full border-b-2 border-solid border-black mt-0.5 relative -left-2 -right-2 bottom-2 before:w-10 before:left-2 before:border-solid before:border-gray-300 after:absolute after:h-20 after:border-b-2 after:border-solid after:border-gray-300 after:left-2 after:top-1.5 after:-bottom-2 after:right-0"
+          class="max-xl:hidden col-start-3 px-28 w-1/12 justify-end items-center flex h-full border-b-2 border-solid border-black mt-0.5 relative -left-2 -right-2 bottom-2 before:w-10 before:left-2 before:border-solid before:border-gray-300 after:absolute after:h-20 after:border-b-2 after:border-solid after:border-gray-300 after:left-2 after:top-1.5 after:-bottom-2 after:right-0"
         >
           <ul class="z-10 flex absolute left-10 justify-center bottom-7">
             <li class="list-none mr-6 mt-10">
@@ -165,9 +198,10 @@
           </ul>
         </div>
       </div>
+
       <!---footer-->
       <div
-        class="mil-footer px-6 py-3 left-0 bottom-0 absolute border-t-2 border-solid border-gray-300 after:absolute after:border-t-2 after:border-solid after:border-black after:-left-2 after:-top-2 after:bottom-1 after:right-2 after:box-border after:w-full font-Jost-Font font-bold text-sm whitespace-nowrap uppercase leading-10"
+        class="mil-footer max-xl:hidden px-6 py-3 left-0 bottom-0 absolute border-t-2 border-solid border-gray-300 after:absolute after:border-t-2 after:border-solid after:border-black after:-left-2 after:-top-2 after:bottom-1 after:right-2 after:box-border after:w-full font-Jost-Font font-bold text-sm whitespace-nowrap uppercase leading-10"
       >
         <p class="mil-upper mil-upper-sm mb-2">
           © 2024 <span class="mil-accent text-orange-600">Treto.</span> All
@@ -183,9 +217,8 @@
 
       <!-- section 1 -->
       <div
-        id="1"
+        id="section1"
         class="mil-section fade fadeOut relative z-10 w-full h-screen md:max-xl:h-auto max-xl:pt-16 max-xl:mb-14"
-        style="display: none"
       >
         <div class="h-full">
           <div
@@ -251,9 +284,8 @@
 
       <!-- section 2 -->
       <div
-        id="2"
+        id="section2"
         class="mil-section fade fadeOut relative z-10 w-full h-screen flex justify-center items-center max-xl:h-auto max-xl:pb-24 max-md:pt-64"
-        style="display: none"
       >
         <div
           class="box-bg top-block w-400px h-460px absolute -z-10 -top-[30%] right-40 origin-bottom -rotate-12 opacity-35 rounded-full bg-black"
@@ -313,9 +345,8 @@
 
       <!-- section 3 -->
       <div
-        id="3"
+        id="section3"
         class="mil-section fade fadeOut relative z-10 w-full h-screen flex justify-center items-center max-xl:h-auto"
-        style="display: none"
       >
         <div
           class="box-bg top-block w-400px h-460px absolute -z-10 -top-32 right-80 origin-bottom -rotate-12 opacity-35 rounded-full bg-black"
@@ -331,7 +362,7 @@
             <p class="mb-8">
               my great <span class="text-orange-600">work</span>
             </p>
-            <h2 class="text-6xl mb-16">ABILITY OR SKILL</h2>
+            <h2 class="text-6xl mb-16 max-lg:text-3xl">ABILITY OR SKILL</h2>
           </div>
 
           <div class="flex flex-wrap -mx-3">
@@ -522,8 +553,7 @@
       <!-- Section 4 -->
       <!-- Education -->
       <div
-        id="4"
-        style="display: none"
+        id="section4"
         class="mil-section relative fade fadeOut h-full w-full flex justify-center items-center 2xl:pt-8 xl:pt-8 pb-20"
       >
         <div
@@ -675,9 +705,8 @@
       <!-- Section 5 -->
       <!-- Expirience -->
       <div
-        id="5"
-        style="display: none"
-        class="mil-section relative fade fadeOut h-full w-full flex justify-center items-center 2xl:pt-8 xl:pt-8 pb-20"
+        id="section5"
+        class="mil-section relative fade fadeOut h-auto w-auto py-20 px-8 mx-auto max-w-6xl flex justify-center items-center max-2xl:pt-8 max-xl:pt-8 max-lg:px-8"
       >
         <div
           class="w-72 h-96 opacity-35 -rotate-12 absolute box-bg bottom-3/4 right-1/4 -z-10 rounded-full before:w-24 before:h-36 before:absolute before:-left-28 before:rounded-full"
@@ -713,20 +742,23 @@
             </div>
 
             <div class="2xl:w-6/12 xl:w-6/12 lg:w-6/12 2xl:px-4 xl:px-4">
-              <div class="flex col-start-2 justify-end items-center">
+              <div
+                class="flex col-start-2 justify-between items-center max-xl:justify-start"
+              >
                 <div
-                  class="w-auto mr-7 mb-7 text-black uppercase font-Jost-Font font-semibold text-base"
+                  class="w-auto mr-7 mb-7 text-black uppercase font-Jost-Font font-semibold text-base swiper-pag max-xl: mt-4"
                 >
-                  <span>1</span> / <span>2</span>
+                  <span>1</span> / <span>4</span>
                 </div>
-                <div class="flex justify-between items-center mb-7">
+
+                <div class="flex swiper-button1 items-center mb-7 relative">
                   <div
-                    class="flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-custom-dark hover:shadow-none duration-500 ease-custom-cubic mr-4"
+                    class="swiper-button-prev flex justify-center mr-20 items-center w-16 h-16 border-2 border-solid border-black box-border shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] hover:shadow-none duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] mr-4"
                   >
                     <i class="fa-solid fa-chevron-left"></i>
                   </div>
                   <div
-                    class="flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-custom-dark hover:shadow-none duration-500 ease-custom-cubic mr-4"
+                    class="swiper-button-next flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] hover:shadow-none duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] mr-4"
                   >
                     <i class="fa-solid fa-chevron-right"></i>
                   </div>
@@ -735,16 +767,18 @@
             </div>
 
             <div
-              class="relative border-t-2 border-solic border-gray-300 w-full after:absolute after:border-t-2 after:border-solid after:border-black after:-left-2 after:-top-2 after:bottom-1 after:right-2 after:w-full"
+              class="relative border-t-2 border-solic border-gray-300 w-full max-xl:mt-9 after:absolute after:border-t-2 after:border-solid after:border-black after:-left-2 after:-top-2 after:bottom-1 after:right-2 after:w-full"
             ></div>
 
             <div class="max-w-full 2xl:px-4 xl:px-4">
-              <div class="pt-14 overflow-hidden touch-pan-y">
+              <div
+                class="swiper swiper-section-experience pt-14 overflow-hidden touch-pan-y"
+              >
                 <div
-                  class="relative flex w-full h-full box-content transform duration-0"
+                  class="swiper-wrapper relative flex w-full h-full box-content transform duration-0"
                 >
                   <div class="swiper-slide">
-                    <div class="mr-10 mb-7 flex">
+                    <div class="mr-10 mb-7 flex max-xl:flex-col">
                       <div class="w-full">
                         <p
                           class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
@@ -768,7 +802,7 @@
                     </div>
                   </div>
 
-                  <div class="swiper-slide 2xl:block xl:block lg:block hidden">
+                  <div class="swiper-slide">
                     <div class="mr-10 mb-7 flex">
                       <div class="w-full">
                         <p
@@ -793,7 +827,7 @@
                     </div>
                   </div>
 
-                  <div class="swiper-slide 2xl:block xl:block lg:block hidden">
+                  <div class="swiper-slide">
                     <div class="mr-10 mb-7 flex">
                       <div class="w-full">
                         <p
@@ -818,7 +852,7 @@
                     </div>
                   </div>
 
-                  <div class="swiper-slide hidden">
+                  <div class="swiper-slide">
                     <div class="mr-10 mb-7 flex">
                       <div class="w-full">
                         <p
@@ -854,8 +888,7 @@
       <!-- Section 6 -->
       <!-- Services -->
       <div
-        id="6"
-        style="display: none"
+        id="section6"
         class="mil-section relative fade fadeOut h-full w-full flex justify-center items-center 2xl:pt-8 xl:pt-8 pb-20"
       >
         <div
@@ -993,15 +1026,14 @@
       <!-- Section 7 -->
       <!-- Testimonials -->
       <div
-        id="7"
-        style="display: none"
-        class="mil-section relative fade fadeOut h-full w-full flex justify-center items-center 2xl:pt-8 xl:pt-8 pb-20"
+        id="section7"
+        class="mil-section fade fadeOut relative z-10 w-full h-screen flex justify-center items-center max-xl:h-auto 2xl:pt-28 xl:pt-28 pb-20 max-xl:pb-0"
       >
         <div
           class="w-72 h-96 opacity-35 -rotate-12 absolute box-bg -bottom-1/4 right-20 -z-10 rounded-full before:w-24 before:h-36 before:absolute before:-left-28 before:rounded-full"
         ></div>
 
-        <div class="container w-full mx-auto px-8">
+        <div class="container w-full mx-auto px-8 max-w-7xl">
           <div class="2xl:text-center xl:text-center text-left">
             <p
               class="text-black uppercase font-Jost-Font font-semibold text-base mb-7 2xl:px-4 xl:px-4"
@@ -1034,194 +1066,198 @@
             class="flex 2xl:flex-row xl:flex-row flex-col relative w-full h-full box-content"
           >
             <div class="2xl:w-8/12 xl:w-8/12">
-              <div class="overflow-hidden touch-pan-y pt-14">
+              <div class="flex col-start-1 justify-start max-xl:mb-12">
                 <div
-                  class="relative w-full h-full box-content flex transform duration-0"
+                  class="swiper swiper-section-testimonials overflow-hidden touch-pan-y pt-14 max-xl:!w-full max-xl:!h-auto"
                 >
-                  <div class="swiper-slide">
-                    <div
-                      class="flex mb-10 2xl:flex-row xl:flex-row lg:flex-row flex-col"
-                    >
+                  <div
+                    class="swiper-wrapper relative w-full h-full box-content flex transform duration-0"
+                  >
+                    <div class="swiper-slide">
                       <div
-                        class="flex justify-start items-start 2xl:w-1/3 xl:w-1/3 lg:w-1/3 w-full"
+                        class="flex mb-10 2xl:flex-row xl:flex-row lg:flex-row flex-col"
                       >
                         <div
-                          class="relative after:border-2 after:border-solid after:box-border flex justify-center items-center pb-2 after:absolute after:border-black after:top-3.5 after:left-3.5 after:-right-3.5 after:-bottom-2 after:w-full"
+                          class="flex justify-start items-start 2xl:w-1/3 xl:w-1/3 lg:w-1/3 w-full"
                         >
-                          <img
-                            src="https://html.bslthemes.com/treto/img/faces/clients/1.jpg"
-                            alt="client1"
-                            class="w-40 h-40 max-xl:h-32 max-xl:w-32"
-                          />
+                          <div
+                            class="relative after:border-2 after:border-solid after:box-border flex justify-center items-center pb-2 after:absolute after:border-black after:top-3.5 after:left-3.5 after:-right-3.5 after:-bottom-2 after:w-full"
+                          >
+                            <img
+                              src="https://html.bslthemes.com/treto/img/faces/clients/1.jpg"
+                              alt="client1"
+                              class="w-40 h-40"
+                            />
+                          </div>
                         </div>
-                      </div>
 
-                      <div
-                        class="2xl:w-2/3 xl:w-2/3 lg:w-2/3 w-full mr-20 2xl:mt-0 xl:mt-0 lg:mt-0 mt-10"
-                      >
-                        <p
-                          class="text-black font-Jost-Font font-light text-lg leading-8 mb-7 text-wrap"
+                        <div
+                          class="2xl:w-2/3 xl:w-2/3 lg:w-2/3 w-full mr-20 2xl:mt-0 xl:mt-0 lg:mt-0 mt-10"
                         >
-                          It has survived not only five centuries, but also the
-                          leap into electronic typesetting, remaining
-                          essentially unchanged. It was popularised in the 1960s
-                          with the release of Letraset sheets containing Lorem
-                          Ipsum passages.
-                        </p>
+                          <p
+                            class="text-black font-Jost-Font font-light text-lg leading-8 mb-7 text-wrap"
+                          >
+                            It has survived not only five centuries, but also
+                            the leap into electronic typesetting, remaining
+                            essentially unchanged. It was popularised in the
+                            1960s with the release of Letraset sheets containing
+                            Lorem Ipsum passages.
+                          </p>
 
-                        <p
-                          class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
-                        >
-                          Isabella
-                          <span class="text-orange-600"> Wilson </span>
-                        </p>
+                          <p
+                            class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
+                          >
+                            Isabella
+                            <span class="text-orange-600"> Wilson </span>
+                          </p>
 
-                        <p
-                          class="text-black font-Jost-Font font-light text-lg leading-8 mb-7"
-                        >
-                          Director at Geands Hotel
-                        </p>
+                          <p
+                            class="text-black font-Jost-Font font-light text-lg leading-8 mb-7"
+                          >
+                            Director at Geands Hotel
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div class="swiper-slide hidden">
-                    <div
-                      class="flex mb-10 2xl:flex-row xl:flex-row lg:flex-row flex-col"
-                    >
+                    <div class="swiper-slide">
                       <div
-                        class="flex justify-start items-start 2xl:w-1/3 xl:w-1/3 lg:w-1/3 w-full"
+                        class="flex mb-10 2xl:flex-row xl:flex-row lg:flex-row flex-col"
                       >
                         <div
-                          class="relative after:border-2 after:border-solid after:box-border flex justify-center items-center pb-2 after:absolute after:border-black after:top-3.5 after:left-3.5 after:-right-3.5 after:-bottom-2 after:w-full"
+                          class="flex justify-start items-start 2xl:w-1/3 xl:w-1/3 lg:w-1/3 w-full"
                         >
-                          <img
-                            src="https://html.bslthemes.com/treto/img/faces/clients/2.jpg"
-                            alt="client2"
-                            class="w-40 h-40"
-                          />
+                          <div
+                            class="relative after:border-2 after:border-solid after:box-border flex justify-center items-center pb-2 after:absolute after:border-black after:top-3.5 after:left-3.5 after:-right-3.5 after:-bottom-2 after:w-full"
+                          >
+                            <img
+                              src="https://html.bslthemes.com/treto/img/faces/clients/2.jpg"
+                              alt="client2"
+                              class="w-40 h-40"
+                            />
+                          </div>
                         </div>
-                      </div>
 
-                      <div
-                        class="2xl:w-2/3 xl:w-2/3 lg:w-2/3 w-full mr-20 2xl:mt-0 xl:mt-0 lg:mt-0 mt-10"
-                      >
-                        <p
-                          class="text-black font-Jost-Font font-light text-lg leading-8 mb-7 text-wrap"
+                        <div
+                          class="2xl:w-2/3 xl:w-2/3 lg:w-2/3 w-full mr-20 2xl:mt-0 xl:mt-0 lg:mt-0 mt-10"
                         >
-                          It has survived not only five centuries, but also the
-                          leap into electronic typesetting, remaining
-                          essentially unchanged. It was popularised in the 1960s
-                          with the release of Letraset sheets containing Lorem
-                          Ipsum passages.
-                        </p>
+                          <p
+                            class="text-black font-Jost-Font font-light text-lg leading-8 mb-7 text-wrap"
+                          >
+                            It has survived not only five centuries, but also
+                            the leap into electronic typesetting, remaining
+                            essentially unchanged. It was popularised in the
+                            1960s with the release of Letraset sheets containing
+                            Lorem Ipsum passages.
+                          </p>
 
-                        <p
-                          class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
-                        >
-                          Isabella
-                          <span class="text-orange-600"> Wilson </span>
-                        </p>
+                          <p
+                            class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
+                          >
+                            Isabella
+                            <span class="text-orange-600"> Wilson </span>
+                          </p>
 
-                        <p
-                          class="text-black font-Jost-Font font-light text-lg leading-8 mb-7"
-                        >
-                          Director at Geands Hotel
-                        </p>
+                          <p
+                            class="text-black font-Jost-Font font-light text-lg leading-8 mb-7"
+                          >
+                            Director at Geands Hotel
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div class="swiper-slide hidden">
-                    <div
-                      class="flex mb-10 2xl:flex-row xl:flex-row lg:flex-row flex-col"
-                    >
+                    <div class="swiper-slide">
                       <div
-                        class="flex justify-start items-start 2xl:w-1/3 xl:w-1/3 lg:w-1/3 w-full"
+                        class="flex mb-10 2xl:flex-row xl:flex-row lg:flex-row flex-col"
                       >
                         <div
-                          class="relative after:border-2 after:border-solid after:box-border flex justify-center items-center pb-2 after:absolute after:border-black after:top-3.5 after:left-3.5 after:-right-3.5 after:-bottom-2 after:w-full"
+                          class="flex justify-start items-start 2xl:w-1/3 xl:w-1/3 lg:w-1/3 w-full"
                         >
-                          <img
-                            src="https://html.bslthemes.com/treto/img/faces/clients/3.jpg"
-                            alt="client3"
-                            class="w-40 h-40"
-                          />
+                          <div
+                            class="relative after:border-2 after:border-solid after:box-border flex justify-center items-center pb-2 after:absolute after:border-black after:top-3.5 after:left-3.5 after:-right-3.5 after:-bottom-2 after:w-full"
+                          >
+                            <img
+                              src="https://html.bslthemes.com/treto/img/faces/clients/3.jpg"
+                              alt="client3"
+                              class="w-40 h-40"
+                            />
+                          </div>
                         </div>
-                      </div>
 
-                      <div
-                        class="2xl:w-2/3 xl:w-2/3 lg:w-2/3 w-full mr-20 2xl:mt-0 xl:mt-0 lg:mt-0 mt-10"
-                      >
-                        <p
-                          class="text-black font-Jost-Font font-light text-lg leading-8 mb-7 text-wrap"
+                        <div
+                          class="2xl:w-2/3 xl:w-2/3 lg:w-2/3 w-full mr-20 2xl:mt-0 xl:mt-0 lg:mt-0 mt-10"
                         >
-                          It has survived not only five centuries, but also the
-                          leap into electronic typesetting, remaining
-                          essentially unchanged. It was popularised in the 1960s
-                          with the release of Letraset sheets containing Lorem
-                          Ipsum passages.
-                        </p>
+                          <p
+                            class="text-black font-Jost-Font font-light text-lg leading-8 mb-7 text-wrap"
+                          >
+                            It has survived not only five centuries, but also
+                            the leap into electronic typesetting, remaining
+                            essentially unchanged. It was popularised in the
+                            1960s with the release of Letraset sheets containing
+                            Lorem Ipsum passages.
+                          </p>
 
-                        <p
-                          class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
-                        >
-                          Isabella
-                          <span class="text-orange-600"> Wilson </span>
-                        </p>
+                          <p
+                            class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
+                          >
+                            Isabella
+                            <span class="text-orange-600"> Wilson </span>
+                          </p>
 
-                        <p
-                          class="text-black font-Jost-Font font-light text-lg leading-8 mb-7"
-                        >
-                          Director at Geands Hotel
-                        </p>
+                          <p
+                            class="text-black font-Jost-Font font-light text-lg leading-8 mb-7"
+                          >
+                            Director at Geands Hotel
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div class="swiper-slide hidden">
-                    <div
-                      class="flex mb-10 2xl:flex-row xl:flex-row lg:flex-row flex-col"
-                    >
+                    <div class="swiper-slide">
                       <div
-                        class="flex justify-start items-start 2xl:w-1/3 xl:w-1/3 lg:w-1/3 w-full"
+                        class="flex mb-10 2xl:flex-row xl:flex-row lg:flex-row flex-col"
                       >
                         <div
-                          class="relative after:border-2 after:border-solid after:box-border flex justify-center items-center pb-2 after:absolute after:border-black after:top-3.5 after:left-3.5 after:-right-3.5 after:-bottom-2 after:w-full"
+                          class="flex justify-start items-start 2xl:w-1/3 xl:w-1/3 lg:w-1/3 w-full"
                         >
-                          <img
-                            src="https://html.bslthemes.com/treto/img/faces/clients/4.jpg"
-                            alt="client4"
-                            class="w-40 h-40"
-                          />
+                          <div
+                            class="relative after:border-2 after:border-solid after:box-border flex justify-center items-center pb-2 after:absolute after:border-black after:top-3.5 after:left-3.5 after:-right-3.5 after:-bottom-2 after:w-full"
+                          >
+                            <img
+                              src="https://html.bslthemes.com/treto/img/faces/clients/4.jpg"
+                              alt="client4"
+                              class="w-40 h-40"
+                            />
+                          </div>
                         </div>
-                      </div>
 
-                      <div
-                        class="2xl:w-2/3 xl:w-2/3 lg:w-2/3 w-full mr-20 2xl:mt-0 xl:mt-0 lg:mt-0 mt-10"
-                      >
-                        <p
-                          class="text-black font-Jost-Font font-light text-lg leading-8 mb-7 text-wrap"
+                        <div
+                          class="2xl:w-2/3 xl:w-2/3 lg:w-2/3 w-full mr-20 2xl:mt-0 xl:mt-0 lg:mt-0 mt-10"
                         >
-                          It has survived not only five centuries, but also the
-                          leap into electronic typesetting, remaining
-                          essentially unchanged. It was popularised in the 1960s
-                          with the release of Letraset sheets containing Lorem
-                          Ipsum passages.
-                        </p>
+                          <p
+                            class="text-black font-Jost-Font font-light text-lg leading-8 mb-7 text-wrap"
+                          >
+                            It has survived not only five centuries, but also
+                            the leap into electronic typesetting, remaining
+                            essentially unchanged. It was popularised in the
+                            1960s with the release of Letraset sheets containing
+                            Lorem Ipsum passages.
+                          </p>
 
-                        <p
-                          class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
-                        >
-                          Isabella
-                          <span class="text-orange-600"> Wilson </span>
-                        </p>
+                          <p
+                            class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
+                          >
+                            Isabella
+                            <span class="text-orange-600"> Wilson </span>
+                          </p>
 
-                        <p
-                          class="text-black font-Jost-Font font-light text-lg leading-8 mb-7"
-                        >
-                          Director at Geands Hotel
-                        </p>
+                          <p
+                            class="text-black font-Jost-Font font-light text-lg leading-8 mb-7"
+                          >
+                            Director at Geands Hotel
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1230,31 +1266,29 @@
             </div>
 
             <div class="2xl:w-4/12 xl:w-4/12 2xl:px-4 xl:px-4">
-              <div
-                class="relative 2xl:border-l-2 xl:border-l-2 2xl:block xl:block border-solic border-gray-300 h-full after:absolute 2xl:after:border-l-2 xl:after:border-l-2 after:border-t-2 after:border-solid after:border-black after:-left-2 after:-top-2 after:bottom-1 after:right-2 after:h-full"
-              >
-                <div>
+              <div class="flex col-start-2 justify-end h-full">
+                <div
+                  class="flex w-full pt-14 pb-14 2xl:pl-14 xl:pl-14 relative 2xl:border-l-2 xl:border-l-2 2xl:block xl:block border-solic border-gray-300 h-full after:absolute 2xl:after:border-l-2 xl:after:border-l-2 after:border-t-2 after:border-solid after:border-black after:-left-2 after:-top-2 after:bottom-1 after:right-2 after:h-full"
+                >
                   <div
-                    class="pt-14 pb-14 2xl:pl-14 xl:pl-14 flex 2xl:flex-col xl:flex-col justify-between"
+                    class="flex swiper-button2 relative items-center mb-7 mt-6"
                   >
-                    <div class="flex items-center mb-7">
-                      <div
-                        class="flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-custom-dark hover:shadow-none duration-500 ease-custom-cubic mr-4"
-                      >
-                        <i class="fa-solid fa-chevron-left"></i>
-                      </div>
-                      <div
-                        class="flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-custom-dark hover:shadow-none duration-500 ease-custom-cubic mr-4"
-                      >
-                        <i class="fa-solid fa-chevron-right"></i>
-                      </div>
-                    </div>
-
-                    <div
-                      class="w-auto mr-7 mb-7 text-black uppercase font-Jost-Font font-semibold text-base"
+                    <button
+                      class="swiper-button-prev flex justify-center items-center cursor-pointer w-16 h-16 border-2 border-solid border-black box-border shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] hover:shadow-none mr-4 2xl:left-0 xl:left-0 left-1/4 absolute"
                     >
-                      <span>1</span> / <span>4</span>
-                    </div>
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button
+                      class="swiper-button-next flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] hover:shadow-none mr-4 2xl:right-1/2 xl:right-1/2 left-20 absolute max-xl:!ml-24"
+                    >
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                  </div>
+
+                  <div
+                    class="pr-7 mr-7 2xl:mb-32 xl:mb-32 my-14 2xl:ml-16 xl:ml-16 text-black uppercase font-Jost-Font font-semibold text-base swiper-pagination 2xl:text-left xl:text-left text-right"
+                  >
+                    <span>1</span> / <span>4</span>
                   </div>
                 </div>
               </div>
@@ -1267,7 +1301,7 @@
 
       <!-- Section 8-->
       <div
-        id="8"
+        id="section8"
         class="mil-section fade fadeOut relative h-screen w-full flex justify-center items-center pt-8 max-lg:h-auto max-xl:pb-24 max-xl:text-3xl"
       >
         <div
@@ -1380,16 +1414,14 @@
 
     <!--pagination-->
     <div
-      style="display: none"
-      class="max-xl:hidden mil-pagination z-50 flex-col flex fixed top-1/2 right-12 -translate-y-28 items-center before:absolute before:left-1/2 before:min-w-0.5 before:h-full before:bg-gray-300"
+      class="mil-pagination max-xl:hidden z-50 flex-col flex fixed top-1/2 right-12 -translate-y-28 items-center before:absolute before:left-1/2 before:min-w-0.5 before:h-full before:bg-gray-300"
     >
       <div
         class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
       >
         <a
-          href="#1"
-          id="tag1"
-          class="group active absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
+          id="scrollToSection1"
+          class="group active1 absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
             class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
@@ -1402,8 +1434,7 @@
         class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
       >
         <a
-          href="#2"
-          id="tag2"
+          id="scrollToSection2"
           class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
@@ -1417,8 +1448,7 @@
         class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
       >
         <a
-          href="#3"
-          id="tag3"
+          id="scrollToSection3"
           class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
@@ -1432,12 +1462,11 @@
         class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
       >
         <a
-          href="#4"
-          id="tag4"
+          id="scrollToSection4"
           class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
-            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-12 right-4 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
+            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-10 right-3 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
           >
             Education
           </p>
@@ -1447,12 +1476,11 @@
         class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
       >
         <a
-          href="#5"
-          id="tag5"
+          id="scrollToSection5"
           class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
-            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
+            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-12 right-4 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
           >
             Experience
           </p>
@@ -1462,12 +1490,11 @@
         class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
       >
         <a
-          href="#6"
-          id="tag6"
+          id="scrollToSection6"
           class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
-            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
+            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-10 right-4 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
           >
             Services
           </p>
@@ -1477,12 +1504,11 @@
         class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
       >
         <a
-          href="#7"
-          id="tag7"
+          id="scrollToSection7"
           class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
-            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
+            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-12 right-1 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
           >
             Testimonials
           </p>
@@ -1490,12 +1516,11 @@
       </div>
       <div class="mil-dot flex items-center relative w-4 h-4 cursor-pointer">
         <a
-          href="#8"
-          id="tag8"
+          id="scrollToSection8"
           class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
-            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
+            class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-10 right-3 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
           >
             Contacts
           </p>
@@ -1507,6 +1532,73 @@
     <script type="module" src="/src/main.ts"></script>
     <!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Magnific Popup core JS file -->
+    <script src="src/magnific-popup.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".image-link").magnificPopup({ type: "image" });
+      });
+    </script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".swiper-section-experience", {
+        rewind: true,
+        hashNavigation: true,
+        spaceBetween: 30,
+        speed: 800,
+        parallax: !0,
+        pagination: {
+          el: ".swiper-pag",
+          type: "fraction",
+          clickable: !0,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        slidesPerView: 1,
+        breakpoints: {
+          1366: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+          768: {
+            slidesPerView: 1,
+          },
+          500: {
+            slidesPerView: 1,
+          },
+        },
+      });
+
+      new Swiper(".swiper-section-testimonials", {
+        rewind: true,
+        hashNavigation: true,
+        spaceBetween: 30,
+        speed: 800,
+        parallax: !0,
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+          clickable: !0,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        slidesPerView: 1,
+      });
+    </script>
+
     <!--Scroll effect-->
     <script>
       if ($(window).width() >= 1280) {
@@ -1517,93 +1609,135 @@
           var swipe = document.getElementsByTagName(".mil-section");
 
           //Pagination Effect
-          for (var j = 1; j <= 8; j++) {
-            $("#tag" + j).click(
-              (function (page) {
-                return function () {
-                  currentPage = page;
-                  $("#tag" + page).addClass("active");
-                  for (var i = 1; i <= pageCount; i++) {
-                    if (i != page) {
-                      $("#tag" + i).removeClass("active");
-                    }
-                  }
-                };
-              })(j)
-            );
-          }
+          // for (var j = 1; j <= 8; j++) {
+          //   $("#tag" + j).click(
+          //     (function (page) {
+          //       return function () {
+          //         currentPage = page;
+          //         $("#tag" + page).addClass("active1");
+          //         for (var i = 1; i <= pageCount; i++) {
+          //           if (i != page) {
+          //             $("#tag" + i).removeClass("active1");
+          //           }
+          //         }
+          //       };
+          //     })(j)
+          //   );
+          // }
           //Pagination Effect End
 
-          $(document).on("mousewheel DOMMouseScroll", function (event) {
-            if (delay) return;
-            delay = true;
-            setTimeout(function () {
-              delay = false;
-            }, 600);
+          if ($(window).width() >= 1280) {
+            $(document).on("mousewheel DOMMouseScroll", function (event) {
+              if (delay) return;
+              delay = true;
+              setTimeout(function () {
+                delay = false;
+              }, 600);
 
-            var wd =
-              event.originalEvent.wheelDelta || -event.originalEvent.detail;
-            if (wd < 0) {
-              if (currentPage < pageCount) {
-                currentPage++;
-                console.log(currentPage);
+              var wd =
+                event.originalEvent.wheelDelta || -event.originalEvent.detail;
+              if (wd < 0) {
+                if (currentPage < pageCount) {
+                  currentPage++;
+                  console.log(currentPage);
+                }
+              } else {
+                if (1 < currentPage) {
+                  currentPage--;
+                  console.log(currentPage);
+                }
               }
-            } else {
-              if (1 < currentPage) {
-                currentPage--;
-                console.log(currentPage);
+              $("html,body").animate(
+                {
+                  scrollTop: $("#section" + currentPage).offset().top,
+                },
+                700
+              );
+              $("#scrollToSection" + currentPage).addClass("active1");
+              for (var i = 1; i <= pageCount; i++) {
+                if (i != currentPage) {
+                  $("#scrollToSection" + i).removeClass("active1");
+                }
               }
-            }
-            $("html,body").animate(
-              {
-                scrollTop: $("#" + currentPage).offset().top,
-              },
-              700
-            );
+            });
+          }
+        });
+        $(document).ready(function () {
+          for (let i = 1; i <= 8; i++) {
+            $(`#scrollToSection${i}`).click(function (event) {
+              event.preventDefault();
 
-            $("#tag" + currentPage).addClass("active");
-            for (var i = 1; i <= pageCount; i++) {
-              if (i != currentPage) {
-                $("#tag" + i).removeClass("active");
-              }
-            }
-          });
-        }); // Hiển thị mảng các số đã trích xuất trong console
-      }
-    </script>
-    <!--Scroll effect end-->
-    <!-- </script> -->
-    <script>
-      const observerOptions = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.7,
-      };
-      function observerCallback(entries, observer) {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            // fade in observed elements that are in view
-            entry.target.classList.replace("fadeOut", "fadeIn");
-          } else {
-            // fade out observed elements that are not in view
-            entry.target.classList.replace("fadeIn", "fadeOut");
+              // Loại bỏ lớp 'active' từ tất cả các nút
+              $(`[id^='scrollToSection']`).removeClass("active1");
+
+              // Thêm lớp 'active' vào nút được nhấn
+              $(this).addClass("active1");
+
+              $("html, body").animate(
+                {
+                  scrollTop: $(`#section${i}`).offset().top,
+                },
+                0
+              );
+            });
           }
         });
       }
-      const observer = new IntersectionObserver(
-        observerCallback,
-        observerOptions
-      );
-      const fadeElms = document.querySelectorAll(".fade");
-      fadeElms.forEach((el) => observer.observe(el));
     </script>
+    <!--Scroll effect end-->
 
-    <!-- Check box section 8 -->
+    <!--Fade Effect-->
     <script>
-      function toggleBackground() {
-        const checkBox = document.getElementsByClassName("check-box");
-        checkBox[0].classList.toggle("checked");
+      if ($(window).width() >= 1280) {
+        const observerOptions = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.7,
+        };
+        function observerCallback(entries, observer) {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              // fade in observed elements that are in view
+              entry.target.classList.replace("fadeOut", "fadeIn");
+            } else {
+              // fade out observed elements that are not in view
+              entry.target.classList.replace("fadeIn", "fadeOut");
+            }
+          });
+        }
+        const observer = new IntersectionObserver(
+          observerCallback,
+          observerOptions
+        );
+        const fadeElms = document.querySelectorAll(".fade");
+        fadeElms.forEach((el) => observer.observe(el));
       }
     </script>
+    <!--Fade Effect End-->
+    <!--navbutton effect-->
+    <script>
+      $(".menu-toggle-btn").click(function () {
+        $(this).toggleClass("open");
+      });
+      $(".menu-toggle-btn").click(function () {
+        if ($(".hide-nav").hasClass("display-nav")) {
+          $(".hide-nav").removeClass("display-nav"); // Ẩn nếu đã hiển thị
+        } else {
+          $(".hide-nav").addClass("display-nav"); // Hiển thị nếu đã ẩn
+        }
+      });
+      $(document).ready(function () {
+        $(".navmb").hover(
+          function () {
+            $(".dropdown-m").addClass("nav-respons");
+          },
+          function () {
+            $(".dropdown-m").removeClass("nav-respons");
+          }
+        );
+      });
+    </script>
+    <!--navbutton effect end-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>
