@@ -894,7 +894,7 @@
             </div>
 
             <div
-              class="relative border-t-2 border-solic border-gray-300 w-full"
+              class="relative border-t-2 border-solic border-gray-300 w-full 2xl:mt-0 xl:mt-0 mt-20"
             >
               <div
                 class="absolute border-t-2 border-solid border-black -left-2 -top-2 bottom-1 right-2 w-full"
@@ -1435,7 +1435,7 @@
             <div class="2xl:w-4/12 xl:w-4/12 2xl:px-4 xl:px-4">
               <div class="flex col-start-2 justify-end h-full">
                 <div
-                  class="flex w-full pt-14 pb-14 2xl:pl-14 xl:pl-14 relative 2xl:border-l-2 xl:border-l-2 2xl:block xl:block border-solic border-gray-300 h-full"
+                  class="flex w-full pt-14 pb-14 2xl:pl-14 xl:pl-14 relative 2xl:border-l-2 xl:border-l-2 2xl:block xl:block border-solic border-gray-300"
                 >
                   <div
                     class="absolute 2xl:border-l-2 xl:border-l-2 border-t-2 border-solid border-black -left-2 -top-2 bottom-1 right-2 h-full"
@@ -1458,7 +1458,7 @@
                   </div>
 
                   <div
-                    class="pr-7 mr-7 2xl:mb-32 xl:mb-32 my-14 2xl:ml-16 xl:ml-16 text-black uppercase font-Jost-Font font-semibold text-base swiper-pagination 2xl:text-left xl:text-left text-right"
+                    class="pr-7 mr-7 2xl:pb-28 xl:pb-28 2xl:my-0 xl:my-0 my-14 2xl:ml-16 xl:ml-16 text-black uppercase font-Jost-Font font-semibold text-base swiper-pagination 2xl:text-left xl:text-left text-right"
                   >
                     <span>1</span> / <span>4</span>
                   </div>
@@ -1812,7 +1812,7 @@
     </script>
     <!-- Initialize Swiper end -->
 
-    <!--Scroll effect-->
+    <!--Scroll and pagination effect-->
     <script>
       if ($(window).width() >= 1280) {
         $(document).ready(function () {
@@ -1822,21 +1822,30 @@
           var swipe = document.getElementsByTagName(".mil-section");
 
           //Pagination Effect
-          // for (var j = 1; j <= 8; j++) {
-          //   $("#tag" + j).click(
-          //     (function (page) {
-          //       return function () {
-          //         currentPage = page;
-          //         $("#tag" + page).addClass("active1");
-          //         for (var i = 1; i <= pageCount; i++) {
-          //           if (i != page) {
-          //             $("#tag" + i).removeClass("active1");
-          //           }
-          //         }
-          //       };
-          //     })(j)
-          //   );
-          // }
+          $(document).ready(function () {
+            for (let i = 1; i <= 8; i++) {
+              $(`#scrollToSection${i}`).click(function (event) {
+                event.preventDefault();
+
+                // Loại bỏ lớp 'active' từ tất cả các nút
+                $(`[id^='scrollToSection']`).removeClass("active1");
+
+                // Thêm lớp 'active' vào nút được nhấn
+                $(this).addClass("active1");
+
+                $("html, body").animate(
+                  {
+                    scrollTop: $(`#section${i}`).offset().top,
+                  },
+                  0,
+                  function () {
+                    currentPage = i;
+                    console.log("lalala", currentPage);
+                  }
+                );
+              });
+            }
+          });
           //Pagination Effect End
 
           if ($(window).width() >= 1280) {
@@ -1875,29 +1884,9 @@
             });
           }
         });
-        $(document).ready(function () {
-          for (let i = 1; i <= 8; i++) {
-            $(`#scrollToSection${i}`).click(function (event) {
-              event.preventDefault();
-
-              // Loại bỏ lớp 'active' từ tất cả các nút
-              $(`[id^='scrollToSection']`).removeClass("active1");
-
-              // Thêm lớp 'active' vào nút được nhấn
-              $(this).addClass("active1");
-
-              $("html, body").animate(
-                {
-                  scrollTop: $(`#section${i}`).offset().top,
-                },
-                0
-              );
-            });
-          }
-        });
       }
     </script>
-    <!--Scroll effect end-->
+    <!--Scroll and pagination effect end-->
 
     <!--Fade Effect-->
     <script>
@@ -1910,10 +1899,8 @@
         function observerCallback(entries, observer) {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              // fade in observed elements that are in view
               entry.target.classList.replace("fadeOut", "fadeIn");
             } else {
-              // fade out observed elements that are not in view
               entry.target.classList.replace("fadeIn", "fadeOut");
             }
           });
