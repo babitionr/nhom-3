@@ -811,13 +811,13 @@
                 >
                   <button
                     id="prevPage"
-                    class="swiper-button-prev flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] hover:shadow-none mr-4"
+                    class="pagination-button swiper-button-prev flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] hover:shadow-none mr-4"
                   >
                     <i class="fa-solid fa-chevron-left"></i>
                   </button>
                   <button
                     id="nextPage"
-                    class="swiper-button-next flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] hover:shadow-none mr-4"
+                    class="pagination-button swiper-button-next flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] hover:shadow-none mr-4"
                   >
                     <i class="fa-solid fa-chevron-right"></i>
                   </button>
@@ -1335,13 +1335,15 @@
                   >
                     <button
                       id="prevPage"
-                      class="swiper-button-prev flex justify-center items-center cursor-pointer w-16 h-16 border-2 border-solid border-black box-border shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] hover:shadow-none mr-4 2xl:left-0 xl:left-0 left-1/4 absolute"
+                      data-total-page="4"
+                      class="pagination-button swiper-button-prev flex justify-center items-center cursor-pointer w-16 h-16 border-2 border-solid border-black box-border shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] hover:shadow-none mr-4 2xl:left-0 xl:left-0 left-1/4 absolute"
                     >
                       <i class="fa-solid fa-chevron-left"></i>
                     </button>
                     <button
                       id="nextPage"
-                      class="swiper-button-next flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] hover:shadow-none mr-4 2xl:right-1/2 xl:right-1/2 left-20 absolute"
+                      data-total-page="4"
+                      class="pagination-button swiper-button-next flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-[7px_7px_0px_0px_rgba(16,16,16,0.18)] duration-500 ease-[cubic-bezier(0, 0, 0.3642, 1)] hover:shadow-none mr-4 2xl:right-1/2 xl:right-1/2 left-20 absolute"
                     >
                       <i class="fa-solid fa-chevron-right"></i>
                     </button>
@@ -1700,23 +1702,19 @@
     <!-- Disabled button swiper -->
     <script>
       $(document).ready(function () {
-        // Hàm quản lý trang
         function managePage(totalPage) {
-          let currentPage = 1; // Trang hiện tại
+          let currentPage = 1;
 
-          // Hàm kiểm tra và cập nhật trạng thái của nút
           function updateButtonState() {
-            let prevButton = $("#prevPage");
-            let nextButton = $("#nextPage");
+            let prevButton = $(".pagination-button#prevPage");
+            let nextButton = $(".pagination-button#nextPage");
 
-            // Nếu ở trang đầu, mờ nút bên trái
             if (currentPage === 1) {
               prevButton.addClass("disabled-button");
             } else {
               prevButton.removeClass("disabled-button");
             }
 
-            // Nếu ở trang cuối, mờ nút bên phải
             if (currentPage === totalPage) {
               nextButton.addClass("disabled-button");
             } else {
@@ -1724,36 +1722,27 @@
             }
           }
 
-          // Hàm chuyển trang
           function changePage(direction) {
             let newPage = currentPage + direction;
 
-            // Kiểm tra giới hạn trang
             if (newPage >= 1 && newPage <= totalPage) {
               currentPage = newPage;
-              // Cập nhật trạng thái nút sau khi chuyển trang
               updateButtonState();
             }
           }
 
-          // Bắt đầu cập nhật trạng thái của nút
           updateButtonState();
 
-          // Lắng nghe sự kiện khi nhấn vào nút Previous
-          $("#prevPage").on("click", function () {
+          $(".pagination-button#prevPage").on("click", function () {
             changePage(-1);
           });
 
-          // Lắng nghe sự kiện khi nhấn vào nút Next
-          $("#nextPage").on("click", function () {
+          $(".pagination-button#nextPage").on("click", function () {
             changePage(1);
           });
         }
 
-        // Gọi hàm với số lượng trang mong muốn
-        managePage(4); // Đối với 3 trang
-        // hoặc
-        // managePage(2); // Đối với 4 trang
+        managePage(3);
       });
     </script>
     <!-- Disabled button swiper end -->
