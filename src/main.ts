@@ -1,6 +1,94 @@
 import "./index.less";
 import Handlebars from "handlebars";
 
+// Handlebars Skills
+const skills = [
+  {
+    name: "FIGMA",
+    complete: "60%",
+    icon: "fa-brands fa-figma",
+    width: "w-3/5",
+  },
+  {
+    name: "PHP / C++",
+    complete: "80%",
+    icon: "fa-brands fa-php",
+    width: "w-4/5",
+  },
+  {
+    name: "JAVESCRIPT",
+    complete: "75%",
+    icon: "fa-brands fa-js",
+    width: "w-3/4",
+  },
+  {
+    name: "REACT / NEST.JS",
+    complete: "75%",
+    icon: "fa-brands fa-react",
+    width: "w-3/4",
+  },
+  {
+    name: "HTML5 / CSS3",
+    complete: "90%",
+    icon: "fa-brands fa-html5",
+    width: "w-11/12",
+  },
+  {
+    name: "VUE.JS",
+    complete: "55%",
+    icon: "fa-brands fa-vuejs",
+    width: "w-7/12",
+  },
+];
+
+const skillsElement: HTMLElement | null = document.getElementById("skills");
+
+if (skillsElement) {
+  const source = `<div class="w-1/2 mb-10 pl-3 pr-5 max-xl:w-full">
+  <div class="box-icon flex justify-between">
+    <div class="flex">
+      <div
+        class="relative border-2 border-solid border-black box-border w-16 h-16 flex justify-center items-center pb-2"
+      >
+        <div
+          class="absolute bg-zinc-200 -top-3.5 -left-3.5 w-16 h-16 -z-10"
+        ></div>
+
+        <div
+          class="text-black font-Jost-Font font-normal text-3xl"
+        >
+          <i class="{{icon}}"></i>
+        </div>
+      </div>
+    </div>
+    <div class="w-calc-100-minus-90">
+      <span
+        class="text-black uppercase font-Jost-Font font-semibold text-base mb-7"
+        >{{name}}</span
+      >
+      <div
+        class="border-b-2 border-solid border-b-gray-300 py-1 ml-2"
+      >
+        <div
+          class="{{width}} relative -left-2 h-3 border-b-2 border-r-2 border-orange-600"
+        >
+          <span
+            class="absolute top-0 right-0 translate-x-4 -translate-y-6 uppercase font-Jost-Font font-semibold text-sm text-orange-600"
+            >{{complete}}</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>`;
+
+  const template = Handlebars.compile(source);
+  const skillsHTML = skills.map((skill) => template(skill)).join("");
+
+  skillsElement.innerHTML = skillsHTML;
+}
+// Handlebars Skills end
+
 // Handlebars Education
 const edu = [
   {
@@ -302,3 +390,164 @@ if (testimonialsElement) {
   testimonialsElement.innerHTML = contentTesHTML;
 }
 // Handlebars Testimonials end
+
+// Handlebars Contacts
+const contacts = [
+  {
+    method: "EMAIL",
+    elements: ["hello@treto.co", "projects@treto.co"],
+  },
+  { method: "PHONE", elements: ["+ 56 3636 60 60 ", "+ 56 6363 06 06"] },
+];
+
+const contactsElement: HTMLElement | null =
+  document.getElementById("container-contact");
+console.log(contactsElement);
+
+if (contactsElement) {
+  const source = `<div
+  class="box-email relative mb-7 p-7 border-2 border-solic border-black"
+>
+  <div
+    class="absolute border-2 border-solid border-gray-300 left-1 -right-2 -bottom-2 top-1 -z-10"
+  ></div>
+  <p class="text-black uppercase font-Jost-Font font-semibold text-base mb-7">{{method}}</p>
+  <p>
+    {{# each elements}}<a class="text-black font-Jost-Font font-light text-lg leading-8 mb-14">{{this}}</a> </br> {{/each}}
+
+  </p>
+</div>`;
+
+  const template = Handlebars.compile(source);
+
+  const contactsHTML = contacts.map((contact) => template(contact)).join("");
+  // console.log(contactsHTML);
+  contactsElement.innerHTML = contactsHTML;
+}
+// Handlebars Contacts end
+
+// Handlebars Navbar
+const navDatas = [
+  {
+    name: "Home",
+    childrens: [
+      { name: "Type1", chil: [] },
+      { name: "Type2", chil: [] },
+    ],
+  },
+  {
+    name: "Prices",
+    childrens: [],
+  },
+  {
+    name: "Portfolio",
+    childrens: [],
+  },
+  {
+    name: "Blog",
+    childrens: [],
+  },
+  {
+    name: "Contact me",
+    childrens: [],
+  },
+];
+
+const navDeskTop: HTMLElement | null = document.getElementById("nav-desktop");
+
+if (navDeskTop) {
+  const source = `
+  {{#if childrens}}
+  <li
+  class="group hover:text-orange-600 relative flex items-center mr-10"
+>
+  <div class="cursor-pointer duration-500">
+    <a>{{name}}</a>
+    <ul
+      class="hidden group-hover:block bg-white duration-500 absolute top-20 -left-9 px-7 py-7 border-2 border-solid border-gray-300"
+    >
+    {{#each childrens}}
+    <li class="group-hover:block">
+      <a class="text-black hover:text-orange-600 duration-500"
+        >{{name}}</a
+      >
+    </li>
+    {{/each}}
+
+    </ul>
+  </div>
+</li>
+{{else}}
+<li class="h-20 relative flex items-center mr-10">
+  <a class="cursor-pointer hover:text-orange-600 duration-500"
+    >{{name}}</a>
+</li>
+{{/if}}
+  `;
+  const template = Handlebars.compile(source);
+  const navDeskHTML = navDatas.map((nav) => template(nav)).join("");
+
+  navDeskTop.innerHTML = navDeskHTML;
+}
+
+const navRespone: HTMLElement | null = document.getElementById("nav-respon");
+
+if (navRespone) {
+  const source = `
+  {{#if childrens}}
+  <li class="navmb p-3">
+    <a
+      class="group hover:animate-slideDown hover:text-orange-600 duration-500 cursor-pointer"
+    >
+      {{name}}
+      <ul
+        class="dropdown-m group-hover:block bg-gray-300 duration-500 top-full left-0 px-7 py-7"
+      >
+        {{#each childrens}}
+        <li class="mb-5">
+          <a
+            class="text-black hover:text-orange-600 duration-500 cursor-pointer"
+          >{{name}}</a>
+        </li>
+        {{/each}}
+      </ul>
+    </a>
+  </li>
+
+  {{else}}
+  <li class="p-3">
+    <p class="hover:text-orange-600duration-500 cursor-pointer">
+      {{name}}
+     </p>
+  </li>
+  {{/if}}
+  `;
+  const template = Handlebars.compile(source);
+  const navResponeHTML = navDatas.map((nav) => template(nav)).join("");
+
+  navRespone.innerHTML = navResponeHTML;
+}
+
+const navIcons = [
+  { icon: "fa-brands fa-facebook" },
+  { icon: "fa-brands fa-instagram" },
+  { icon: "fa-brands fa-linkedin" },
+  { icon: "fa-brands fa-youtube" },
+];
+
+const navIcon: HTMLElement | null = document.getElementById("nav-icon");
+if (navIcon) {
+  const source = `<li class="list-none mr-6 mt-10">
+  <a
+    href="#"
+    class="social-icon hover:text-orange-600 duration-500"
+  >
+    <i class="{{icon}} text-lg"></i>
+  </a>
+</li>`;
+
+  const template = Handlebars.compile(source);
+  const navIconHTML = navIcons.map((item) => template(item)).join("");
+  navIcon.innerHTML = navIconHTML;
+}
+// Handlebars Navbar end

@@ -72,50 +72,9 @@
             ></div>
 
             <ul
+              id="nav-desktop"
               class="z-10 flex font-Jost-Font font-bold text-sm whitespace-nowrap uppercase leading-10"
-            >
-              <li class="relative flex items-center mr-10">
-                <div
-                  class="group cursor-pointer hover:text-orange-600 duration-500"
-                >
-                  <a>Home</a>
-                  <ul
-                    class="hidden group-hover:block bg-white duration-500 absolute top-20 -left-9 px-7 py-7 border-2 border-solid border-gray-300"
-                  >
-                    <li>
-                      <a class="text-black hover:text-orange-600 duration-500"
-                        >Type 1</a
-                      >
-                    </li>
-                    <li>
-                      <a class="text-black hover:text-orange-600 duration-500"
-                        >Type 2</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="h-20 relative flex items-center mr-10">
-                <a class="cursor-pointer hover:text-orange-600 duration-500"
-                  >Prices</a
-                >
-              </li>
-              <li class="h-20 relative flex items-center mr-10">
-                <a class="cursor-pointer hover:text-orange-600 duration-500"
-                  >Portfolio</a
-                >
-              </li>
-              <li class="h-20 relative flex items-center mr-10">
-                <a class="cursor-pointer hover:text-orange-600 duration-500"
-                  >Blog</a
-                >
-              </li>
-              <li class="h-20 relative flex items-center mr-10">
-                <a class="cursor-pointer hover:text-orange-600 duration-500"
-                  >Contact me</a
-                >
-              </li>
-            </ul>
+            ></ul>
           </nav>
           <div
             class="hidden max-xl:block max-xl:absolute menu-toggle-btn p-4 border-2 border-solid border-black max-xl:top-0 max-xl:right-5 max-lg:text-white cursor-pointer z-50"
@@ -131,54 +90,10 @@
           class="hidden max-xl:w-full max-xl:mt-20 max-xl:right-3 max-xl:absolute max-xl:visible max-xl:block max-xl:flex-col"
         >
           <ul
+            id="nav-respon"
             class="fixed hide-nav font-Jost-Font font-semibold uppercase text-sm bg-white text-center text-black w-full p-6"
-          >
-            <li class="navmb p-3">
-              <a
-                class="group hover:animate-slideDown hover:text-orange-600 duration-500 cursor-pointer"
-              >
-                <ul
-                  class="dropdown-m group-hover:block bg-gray-300 duration-500 top-full left-0 px-7 py-7"
-                >
-                  <li class="mb-5">
-                    <a
-                      class="text-black hover:text-orange-600 duration-500 cursor-pointer"
-                      >Type 1</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-black hover:text-orange-600 duration-500 cursor-pointer"
-                      >Type 2</a
-                    >
-                  </li>
-                </ul>
-              </a>
-            </li>
-            <li class="p-3">
-              <p class="hover:text-orange-600duration-500 cursor-pointer">
-                Prices
-              </p>
-            </li>
-            <li class="p-3">
-              <a class="hover:text-orange-600duration-500 cursor-pointer">
-                Portfolio
-              </a>
-            </li>
-            <li class="p-3">
-              <a class="hover:text-orange-600 duration-500 cursor-pointer">
-                Blog
-              </a>
-            </li>
-            <li class="p-3">
-              <a class="hover:text-orange-600 duration-500 cursor-pointer">
-                Contact me
-              </a>
-            </li>
-          </ul>
+          ></ul>
         </nav>
-
-        <div id="text"></div>
 
         <div
           class="max-xl:hidden col-start-3 px-28 w-1/12 justify-end items-center flex h-full border-b-2 border-solid border-black mt-0.5 relative -left-2 -right-2 bottom-2"
@@ -188,40 +103,10 @@
             class="absolute h-20 border-b-2 border-solid border-gray-300 left-2 top-1.5 -bottom-2 right-0"
           ></div>
 
-          <ul class="z-10 flex absolute left-10 justify-center bottom-7">
-            <li class="list-none mr-6 mt-10">
-              <a
-                href="#"
-                class="social-icon hover:text-orange-600 duration-500"
-              >
-                <i class="fa-brands fa-facebook text-lg"></i>
-              </a>
-            </li>
-            <li class="list-none mr-6 mt-10">
-              <a
-                href="#"
-                class="social-icon hover:text-orange-600 duration-500"
-              >
-                <i class="fa-brands fa-instagram text-lg"></i>
-              </a>
-            </li>
-            <li class="list-none mr-6 mt-10">
-              <a
-                href="#"
-                class="social-icon hover:text-orange-600 duration-500"
-              >
-                <i class="fa-brands fa-linkedin-in text-lg"></i>
-              </a>
-            </li>
-            <li class="list-none mr-6 mt-10">
-              <a
-                href="#"
-                class="social-icon hover:text-orange-600 duration-500"
-              >
-                <i class="fa-brands fa-youtube text-lg"></i>
-              </a>
-            </li>
-          </ul>
+          <ul
+            id="nav-icon"
+            class="z-10 flex absolute left-10 justify-center bottom-7"
+          ></ul>
         </div>
       </div>
 
@@ -275,7 +160,7 @@
                       Web Developer
                     </p>
                     <h1
-                      class="text-shadow text-7xl mb-10 uppercase font-semibold max-lg:text-4xl"
+                      class="text-shadow text-7xl mb-10 uppercase font-bold max-lg:text-5xl"
                     >
                       Sophie Miller
                     </h1>
@@ -424,230 +309,7 @@
           <div class="flex flex-wrap -mx-3">
             <div class="w-2/12 px-3 max-xl:hidden"></div>
             <div class="w-10/12 px-3 max-xl:w-full">
-              <div class="flex flex-wrap max-xl:!flex-col">
-                <div class="w-1/2 mb-10 pl-3 pr-5 max-xl:w-full">
-                  <div class="box-icon flex justify-between">
-                    <div class="flex">
-                      <div
-                        class="relative border-2 border-solid border-black box-border w-16 h-16 flex justify-center items-center pb-2"
-                      >
-                        <div
-                          class="absolute bg-zinc-200 -top-3.5 -left-3.5 w-16 h-16 -z-10"
-                        ></div>
-
-                        <div
-                          class="text-black font-Jost-Font font-normal text-3xl"
-                        >
-                          <i class="fa-brands fa-figma"></i>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w-calc-100-minus-90">
-                      <span
-                        class="text-black uppercase font-Jost-Font font-semibold text-base mb-7"
-                        >figma</span
-                      >
-                      <div
-                        class="border-b-2 border-solid border-b-gray-300 py-1 ml-2"
-                      >
-                        <div
-                          class="w-3/5 relative -left-2 h-3 border-b-2 border-r-2 border-orange-600"
-                        >
-                          <span
-                            class="absolute top-0 right-0 translate-x-4 -translate-y-6 uppercase font-Jost-Font font-semibold text-sm text-orange-600"
-                            >60%</span
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="w-1/2 mb-10 pl-3 pr-5 max-xl:w-full">
-                  <div class="box-icon flex justify-between">
-                    <div class="flex">
-                      <div
-                        class="relative border-2 border-solid border-black box-border w-16 h-16 flex justify-center items-center pb-2"
-                      >
-                        <div
-                          class="absolute bg-zinc-200 -top-3.5 -left-3.5 w-16 h-16 -z-10"
-                        ></div>
-                        <div
-                          class="text-black font-Jost-Font font-normal text-3xl"
-                        >
-                          <i class="fa-brands fa-php"></i>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w-calc-100-minus-90">
-                      <span
-                        class="text-black uppercase font-Jost-Font font-semibold text-base mb-7"
-                        >PHP / C++</span
-                      >
-                      <div
-                        class="border-b-2 border-solid border-b-gray-300 py-1 ml-2"
-                      >
-                        <div
-                          class="w-4/5 relative -left-2 h-3 border-b-2 border-r-2 border-orange-600"
-                        >
-                          <span
-                            class="absolute top-0 right-0 translate-x-4 -translate-y-6 uppercase font-Jost-Font font-semibold text-sm text-orange-600"
-                            >80%</span
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="w-1/2 mb-10 pl-3 pr-5 max-xl:w-full">
-                  <div class="box-icon flex justify-between">
-                    <div class="flex">
-                      <div
-                        class="relative border-2 border-solid border-black box-border w-16 h-16 flex justify-center items-center pb-2"
-                      >
-                        <div
-                          class="absolute bg-zinc-200 -top-3.5 -left-3.5 w-16 h-16 -z-10"
-                        ></div>
-                        <div
-                          class="text-black font-Jost-Font font-normal text-3xl"
-                        >
-                          <i class="fa-brands fa-js"></i>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w-calc-100-minus-90">
-                      <span
-                        class="text-black uppercase font-Jost-Font font-semibold text-base mb-7"
-                        >JAVASCRIPT</span
-                      >
-                      <div
-                        class="border-b-2 border-solid border-b-gray-300 py-1 ml-2"
-                      >
-                        <div
-                          class="w-3/4 relative -left-2 h-3 border-b-2 border-r-2 border-orange-600"
-                        >
-                          <span
-                            class="absolute top-0 right-0 translate-x-4 -translate-y-6 uppercase font-Jost-Font font-semibold text-sm text-orange-600"
-                            >75%</span
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="w-1/2 mb-10 pl-3 pr-5 max-xl:w-full">
-                  <div class="box-icon flex justify-between">
-                    <div class="flex">
-                      <div
-                        class="relative border-2 border-solid border-black box-border w-16 h-16 flex justify-center items-center pb-2"
-                      >
-                        <div
-                          class="absolute bg-zinc-200 -top-3.5 -left-3.5 w-16 h-16 -z-10"
-                        ></div>
-                        <div
-                          class="text-black font-Jost-Font font-normal text-3xl"
-                        >
-                          <i class="fa-brands fa-react"></i>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w-calc-100-minus-90">
-                      <span
-                        class="text-black uppercase font-Jost-Font font-semibold text-base mb-7"
-                        >REACT / NEXT.JS</span
-                      >
-                      <div
-                        class="border-b-2 border-solid border-b-gray-300 py-1 ml-2"
-                      >
-                        <div
-                          class="w-3/4 relative -left-2 h-3 border-b-2 border-r-2 border-orange-600"
-                        >
-                          <span
-                            class="absolute top-0 right-0 translate-x-4 -translate-y-6 uppercase font-Jost-Font font-semibold text-sm text-orange-600"
-                            >75%</span
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="w-1/2 mb-10 pl-3 pr-5 max-xl:w-full">
-                  <div class="box-icon flex justify-between">
-                    <div class="flex">
-                      <div
-                        class="relative border-2 border-solid border-black box-border w-16 h-16 flex justify-center items-center pb-2"
-                      >
-                        <div
-                          class="absolute bg-zinc-200 -top-3.5 -left-3.5 w-16 h-16 -z-10"
-                        ></div>
-                        <div
-                          class="text-black font-Jost-Font font-normal text-3xl"
-                        >
-                          <i class="fa-brands fa-html5"></i>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w-calc-100-minus-90">
-                      <span
-                        class="text-black uppercase font-Jost-Font font-semibold text-base mb-7"
-                        >HTML5 / CSS3</span
-                      >
-                      <div
-                        class="border-b-2 border-solid border-b-gray-300 py-1 ml-2"
-                      >
-                        <div
-                          class="w-11/12 relative -left-2 h-3 border-b-2 border-r-2 border-orange-600"
-                        >
-                          <span
-                            class="absolute top-0 right-0 translate-x-4 -translate-y-6 uppercase font-Jost-Font font-semibold text-sm text-orange-600"
-                            >90%</span
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="w-1/2 mb-10 pl-3 pr-5 max-xl:w-full">
-                  <div class="box-icon flex justify-between">
-                    <div class="flex">
-                      <div
-                        class="relative border-2 border-solid border-black box-border w-16 h-16 flex justify-center items-center pb-2"
-                      >
-                        <div
-                          class="absolute bg-zinc-200 -top-3.5 -left-3.5 w-16 h-16 -z-10"
-                        ></div>
-                        <div
-                          class="text-black font-Jost-Font font-normal text-3xl"
-                        >
-                          <i class="fa-brands fa-vuejs"></i>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w-calc-100-minus-90">
-                      <span
-                        class="text-black uppercase font-Jost-Font font-semibold text-base mb-7"
-                        >VUE.JS</span
-                      >
-                      <div
-                        class="border-b-2 border-solid border-b-gray-300 py-1 ml-2"
-                      >
-                        <div
-                          class="w-7/12 relative -left-2 h-3 border-b-2 border-r-2 border-orange-600"
-                        >
-                          <span
-                            class="absolute top-0 right-0 translate-x-4 -translate-y-6 uppercase font-Jost-Font font-semibold text-sm text-orange-600"
-                            >55%</span
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div id="skills" class="flex flex-wrap max-xl:!flex-col"></div>
             </div>
           </div>
         </div>
@@ -791,107 +453,7 @@
                 <div
                   id="content-exp"
                   class="swiper-wrapper relative flex w-full h-full box-content transform duration-0"
-                >
-                  <!-- <div class="swiper-slide">
-                    <div class="mr-10 mb-7 flex">
-                      <div class="w-full">
-                        <p
-                          class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
-                        >
-                          Freelance
-                        </p>
-
-                        <p
-                          class="text-black uppercase font-Jost-Font font-medium text-sm mb-5"
-                        >
-                          <span class="text-orange-600"> TODAY </span>
-                        </p>
-
-                        <p
-                          class="text-black font-Jost-Font font-light text-lg leading-8"
-                        >
-                          It has survived not only five centuries, but also the
-                          leap into electronic typesetting.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <div class="mr-10 mb-7 flex">
-                      <div class="w-full">
-                        <p
-                          class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
-                        >
-                          Agency Macll
-                        </p>
-
-                        <p
-                          class="text-black uppercase font-Jost-Font font-medium text-sm mb-5"
-                        >
-                          2019 <span class="text-orange-600"> to </span> 2022
-                        </p>
-
-                        <p
-                          class="text-black font-Jost-Font font-light text-lg leading-8"
-                        >
-                          It has survived not only five centuries, but also the
-                          leap into electronic typesetting.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <div class="mr-10 mb-7 flex">
-                      <div class="w-full">
-                        <p
-                          class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
-                        >
-                          Envato
-                        </p>
-
-                        <p
-                          class="text-black uppercase font-Jost-Font font-medium text-sm mb-5"
-                        >
-                          2017 <span class="text-orange-600"> to </span> 2019
-                        </p>
-
-                        <p
-                          class="text-black font-Jost-Font font-light text-lg leading-8"
-                        >
-                          It has survived not only five centuries, but also the
-                          leap into electronic typesetting.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <div class="mr-10 mb-7 flex">
-                      <div class="w-full">
-                        <p
-                          class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
-                        >
-                          Themeforest
-                        </p>
-
-                        <p
-                          class="text-black uppercase font-Jost-Font font-medium text-sm mb-5"
-                        >
-                          2014 <span class="text-orange-600"> to </span> 2017
-                        </p>
-
-                        <p
-                          class="text-black font-Jost-Font font-light text-lg leading-8"
-                        >
-                          It has survived not only five centuries, but also the
-                          leap into electronic typesetting.
-                        </p>
-                      </div>
-                    </div>
-                  </div> -->
-                </div>
+                ></div>
               </div>
             </div>
           </div>
@@ -1067,56 +629,7 @@
           <div
             class="flex flex-wrap justify-between text-base text-black max-lg:flex-col"
           >
-            <div class="w-1/3 max-lg:w-full">
-              <div
-                class="box-email relative mb-7 p-7 border-2 border-solic border-black"
-              >
-                <div
-                  class="absolute border-2 border-solid border-gray-300 left-1 -right-2 -bottom-2 top-1 -z-10"
-                ></div>
-                <p
-                  class="text-black uppercase font-Jost-Font font-semibold text-base mb-7"
-                >
-                  Email
-                </p>
-                <p>
-                  <a
-                    href=""
-                    class="text-black font-Jost-Font font-light text-lg leading-8 mb-14"
-                    >hello@treto.co</a
-                  ><br />
-                  <a
-                    href=""
-                    class="text-black font-Jost-Font font-light text-lg leading-8 mb-14"
-                    >projects@treto.co</a
-                  >
-                </p>
-              </div>
-              <div
-                class="box-phone relative mb-7 p-7 border-2 border-solic border-black"
-              >
-                <div
-                  class="absolute border-2 border-solid border-gray-300 left-1 -right-2 -bottom-2 top-1 -z-10"
-                ></div>
-                <p
-                  class="text-black uppercase font-Jost-Font font-semibold text-base mb-7"
-                >
-                  PHONE
-                </p>
-                <p>
-                  <a
-                    href=""
-                    class="text-black font-Jost-Font font-light text-lg leading-8 mb-14"
-                    >+ 56 3636 60 60 </a
-                  ><br />
-                  <a
-                    href=""
-                    class="text-black font-Jost-Font font-light text-lg leading-8 mb-14"
-                    >+ 56 6363 06 06</a
-                  >
-                </p>
-              </div>
-            </div>
+            <div id="container-contact" class="w-1/3 max-lg:w-full"></div>
             <div class="w-7/12 max-lg:w-full">
               <form action="">
                 <div
