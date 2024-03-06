@@ -17,25 +17,25 @@
       href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-
+    <!-- Link Swiper's CSS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet" href="src/magnific-popup.css" />
 
     <link rel="stylesheet" href="./src/output.css" />
-    <link rel="stylesheet" href="./src/full-page-scroll.css" />
-    <script src="./src/full-page-scroll.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Treto - Personal Portfolio Resume HTML Template</title>
   </head>
-  <body class="bg-white overflow-hidden max-xl:overflow-auto">
+  <body class="bg-white overflow-hidden max-xl:overflow-y-auto">
     <!-- handlebars 4 -->
     <script src="https://cdn.jsdelivr.net/npm/handlebars@4/dist/handlebars.js"></script>
-    <!---frame-->
     <div
       class="m-2.5 max-xl:my-0 max-md:my-0 fixed z-20 pointer-events-none left-1.5 -right-1 top-2 -bottom-1.5 border-2 border-solid border-gray-300 after:absolute after:border-2 after:border-solid after:border-black after:-left-2 after:-top-2 after:bottom-1 after:right-2 after:box-border after:w-full"
     >
@@ -59,49 +59,7 @@
             <ul
               id="nav-desktop"
               class="z-10 flex font-Jost-Font font-bold text-sm whitespace-nowrap uppercase leading-10"
-            >
-              <!-- <li
-                class="group hover:text-orange-600 relative flex items-center mr-10"
-              >
-                <div class="cursor-pointer duration-500">
-                  <a>Home</a>
-                  <ul
-                    class="hidden group-hover:block bg-white duration-500 absolute top-20 -left-9 px-7 py-7 border-2 border-solid border-gray-300"
-                  >
-                    <li class="group-hover:block">
-                      <a class="text-black hover:text-orange-600 duration-500"
-                        >Type 1</a
-                      >
-                    </li>
-                    <li class="group-hover:block">
-                      <a class="text-black hover:text-orange-600 duration-500"
-                        >Type 2</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="h-20 relative flex items-center mr-10">
-                <a class="cursor-pointer hover:text-orange-600 duration-500"
-                  >Prices</a
-                >
-              </li>
-              <li class="h-20 relative flex items-center mr-10">
-                <a class="cursor-pointer hover:text-orange-600 duration-500"
-                  >Portfolio</a
-                >
-              </li>
-              <li class="h-20 relative flex items-center mr-10">
-                <a class="cursor-pointer hover:text-orange-600 duration-500"
-                  >Blog</a
-                >
-              </li>
-              <li class="h-20 relative flex items-center mr-10">
-                <a class="cursor-pointer hover:text-orange-600 duration-500"
-                  >Contact me</a
-                >
-              </li> -->
-            </ul>
+            ></ul>
           </nav>
           <div
             class="hidden max-xl:block max-xl:absolute menu-toggle-btn p-4 border-2 border-solid border-black max-xl:top-0 max-xl:right-5 max-lg:text-white cursor-pointer z-50"
@@ -118,51 +76,7 @@
           <ul
             id="nav-respon"
             class="fixed hide-nav font-Jost-Font font-semibold uppercase text-sm bg-white text-center text-black w-full p-6"
-          >
-            <!-- <li class="navmb p-3">
-              <a
-                class="group hover:animate-slideDown hover:text-orange-600 duration-500 cursor-pointer"
-              >
-                Home
-                <ul
-                  class="dropdown-m group-hover:block bg-gray-300 duration-500 top-full left-0 px-7 py-7"
-                >
-                  <li class="mb-5">
-                    <a
-                      class="text-black hover:text-orange-600 duration-500 cursor-pointer"
-                      >Type 1</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="text-black hover:text-orange-600 duration-500 cursor-pointer"
-                      >Type 2</a
-                    >
-                  </li>
-                </ul>
-              </a>
-            </li>
-            <li class="p-3">
-              <p class="hover:text-orange-600duration-500 cursor-pointer">
-                Prices
-              </p>
-            </li>
-            <li class="p-3">
-              <a class="hover:text-orange-600duration-500 cursor-pointer">
-                Portfolio
-              </a>
-            </li>
-            <li class="p-3">
-              <a class="hover:text-orange-600 duration-500 cursor-pointer">
-                Blog
-              </a>
-            </li>
-            <li class="p-3">
-              <a class="hover:text-orange-600 duration-500 cursor-pointer">
-                Contact me
-              </a>
-            </li> -->
-          </ul>
+          ></ul>
         </nav>
         <div
           class="max-xl:hidden col-start-3 px-28 w-1/12 justify-end items-center flex h-full border-b-2 border-solid border-black mt-0.5 relative -left-2 -right-2 bottom-2 before:w-10 before:left-2 before:border-solid before:border-gray-300 after:absolute after:h-20 after:border-b-2 after:border-solid after:border-gray-300 after:left-2 after:top-1.5 after:-bottom-2 after:right-0"
@@ -170,40 +84,7 @@
           <ul
             id="nav-icon"
             class="z-10 flex absolute left-10 justify-center bottom-7"
-          >
-            <!-- <li class="list-none mr-6 mt-10">
-              <a
-                href="#"
-                class="social-icon hover:text-orange-600 duration-500"
-              >
-                <i class="fa-brands fa-facebook text-lg"></i>
-              </a>
-            </li>
-            <li class="list-none mr-6 mt-10">
-              <a
-                href="#"
-                class="social-icon hover:text-orange-600 duration-500"
-              >
-                <i class="fa-brands fa-instagram text-lg"></i>
-              </a>
-            </li>
-            <li class="list-none mr-6 mt-10">
-              <a
-                href="#"
-                class="social-icon hover:text-orange-600 duration-500"
-              >
-                <i class="fa-brands fa-linkedin-in text-lg"></i>
-              </a>
-            </li>
-            <li class="list-none mr-6 mt-10">
-              <a
-                href="#"
-                class="social-icon hover:text-orange-600 duration-500"
-              >
-                <i class="fa-brands fa-youtube text-lg"></i>
-              </a>
-            </li> -->
-          </ul>
+          ></ul>
         </div>
       </div>
 
@@ -220,12 +101,12 @@
     </div>
     <!---frame-end-->
 
-    <div id="main" class="mil-onepage font-Jost-Font">
+    <div id="main" class="mil-onepage">
       <!-- 3 section đầu tiên -->
 
       <!-- section 1 -->
-      <div
-        id="section1"
+      <section
+        data-set="1"
         class="mil-section fade fadeOut relative z-10 w-full h-screen md:max-xl:h-auto max-xl:pt-16 max-xl:mb-14"
       >
         <div class="h-full">
@@ -240,10 +121,7 @@
                   class="relative w-full pr-28 pl-56 mill-banner max-xl:px-8 max-xl:py-16 max-xl:text-center"
                 >
                   <div
-                    class="w-full opacity-35 h-150px absolute box-bg t-0 -left-4/5 -z-10"
-                  ></div>
-                  <div
-                    class="w-full h-150px opacity-35 absolute box-bg left-3/4 -z-10"
+                    class="w-full opacity-35 absolute box-bg h-36 t-0 -left-3/4 -z-10 before:w-full before:h-full before:absolute before:left-[150%]"
                   ></div>
                   <div>
                     <p class="mb-8 text-base font-bold uppercase">
@@ -252,7 +130,7 @@
                       Web Developer
                     </p>
                     <h1
-                      class="text-shadow text-7xl mb-10 uppercase font-semibold max-lg:text-4xl"
+                      class="text-shadow text-7xl mb-10 uppercase font-bold max-lg:text-4xl"
                     >
                       Sophie Miller
                     </h1>
@@ -267,12 +145,12 @@
                       >
                         <a
                           href=""
-                          class="flex font-semibold z-30 items-center justify-center text-sm h-14 border-solid border-2 border-black duration-500 ease-custom-cubic mr-4 pl-10 pr-10 uppercase rounded-sm shadow-custom-dark hover:shadow-none max-lg:mb-4 max-lg:w-full"
+                          class="flex font-semibold z-30 items-center justify-center text-sm h-14 border-solid border-2 border-black duration-500 ease-custom-cubic-bezier mr-4 pl-10 pr-10 uppercase rounded-sm shadow-custom-button hover:shadow-none max-lg:mb-4 max-lg:w-full"
                           >Portfolio</a
                         >
                         <a
                           href=""
-                          class="flex font-semibold z-30 items-center justify-center text-sm h-14 duration-500 ease-custom-cubic pl-10 pr-10 uppercase !bg-orange-600 text-white shadow-custom-orange hover:shadow-none"
+                          class="flex font-semibold z-30 items-center justify-center text-sm h-14 duration-500 ease-custom-cubic-bezier pl-10 pr-10 uppercase !bg-orange-600 text-white shadow-custom-button hover:shadow-none"
                           >Contact me</a
                         >
                       </div>
@@ -284,66 +162,64 @@
                 <img
                   src="https://html.bslthemes.com/treto/img/faces/5.jpg"
                   alt=""
-                  class="h-full w-full object-cover object-center align-top max-xl:h-60vh"
+                  class="h-full w-full object-cover object-center align-top max-xl:h-3/5"
                 />
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <!-- End section 1 -->
 
       <!-- section 2 -->
-      <div
-        id="section2"
+      <section
+        data-set="2"
         class="mil-section fade fadeOut relative z-10 w-full h-screen flex justify-center items-center max-xl:h-auto max-xl:pb-24 max-md:pt-64"
       >
         <div
-          class="box-bg top-block w-400px h-460px absolute -z-10 -top-30% right-40 origin-bottom -rotate-12 opacity-35 rounded-full bg-black"
+          class="box-bg top-block w-96 h-96 absolute -z-10 -top-1/4 right-40 origin-bottom -rotate-12 opacity-35 rounded-full bg-black"
         ></div>
-        <div class="container px-30px mx-auto w-full max-w-7xl">
+        <div class="container px-8 mx-auto w-full max-w-7xl">
           <div
             class="flex justify-between items-center max-xl:justify-center max-xl:items-center"
           >
             <div class="w-4/12 max-xl:hidden">
-              <div class="w-full relative">
-                <div
-                  class="absolute border-2 border-solid border-black left-3 top-3 -bottom-3 right-1"
-                ></div>
+              <div
+                class="w-full relative after:absolute after:border-2 after:border-solid after:border-black after:left-3 after:top-3 after:-bottom-3 after:-right-3"
+              >
                 <img
                   src="https://html.bslthemes.com/treto/img/faces/1.jpg"
-                  alt=""
-                  class="h-500px"
+                  alt="vaytaycuoi"
                 />
               </div>
             </div>
-            <div class="w-7/12 max-xl:w-11/12">
+            <div class="w-7/12 max-xl:w-4/5">
               <div class="flex flex-wrap font-Jost-Font">
                 <div class="w-full px-4">
-                  <p class="pb-30px uppercase text-xs font-semibold">
+                  <p class="pb-7 uppercase text-xs font-semibold">
                     <span class="text-orange-600">Hello</span>
                     , my name is
                   </p>
                   <h2
-                    class="pb-16 uppercase text-6xl font-semibold text-shadow font-Jost-Font max-xl:text-3xl"
+                    class="pb-14 uppercase text-6xl font-semibold text-shadow font-Jost-Font max-xl:text-3xl"
                   >
                     Sophie Miller
                   </h2>
-                  <p class="pb-30px text-lg font-medium font-Jost-Font">
+                  <p class="pb-7 text-lg font-medium font-Jost-Font">
                     From France, Paris. I have rich experience in web design,
                     also I am good at React, Vue.js. I love to talk with you
                     about our unique. I have been studying UI UX Design since
                     October 2020. I like creating a cool design project.
                   </p>
-                  <p class="pb-30px text-lg font-medium font-Jost-Font">
+                  <p class="pb-7 text-lg font-medium font-Jost-Font">
                     Over 6+ years of IT experience which includes 2+ years of a
                     React JS Developer and 3 years of Experience as a UI/UX
                     Developer and 1 years of Experience as software Developer.
                   </p>
-                  <div class="flex justify-center">
+                  <div class="relative flex justify-center">
                     <a
                       href=""
-                      class="h-14 flex text-sm items-center justify-center duration-500 ease-custom-cubic pr-10 pl-10 uppercase !border-transparent !bg-orange-600 border-black shadow-custom-orange text-white hover:shadow-none max-lg:w-full"
+                      class="absolute left-0 h-14 flex text-sm font-semibold items-center justify-center duration-500 ease-custom-cubic-bezier pr-10 pl-10 uppercase !border-transparent !bg-orange-600 border-black shadow-custom-button text-white hover:shadow-none max-lg:w-full"
                       >Download CV</a
                     >
                   </div>
@@ -352,49 +228,242 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <!-- End section 2 -->
 
       <!-- section 3 -->
-      <div
-        id="section3"
+      <section
+        data-set="3"
         class="mil-section fade fadeOut relative z-10 w-full h-screen flex justify-center items-center max-xl:h-auto"
       >
         <div
-          class="box-bg top-block w-400px h-460px absolute -z-10 -top-32 right-80 origin-bottom -rotate-12 opacity-35 rounded-full bg-black"
+          class="box-bg top-block w-96 h-96 absolute -z-10 -top-32 right-80 origin-bottom -rotate-12 opacity-35 rounded-full bg-black"
         ></div>
         <div
-          class="box-bg w-80 h-420px absolute -z-10 origin-top-left rotate-6 bottom-32 left-36 opacity-35 rounded-full"
+          class="box-bg w-80 h-96 absolute -z-10 origin-top-left rotate-6 bottom-32 left-36 opacity-35 rounded-full"
         ></div>
         <div
-          class="box-bg w-24 h-150px absolute top-32 left-16 -z-10 origin-top-left rotate-6 bottom-32 opacity-35 rounded-full bg-black"
+          class="box-bg w-24 h-36 absolute top-32 left-16 -z-10 origin-top-left rotate-6 bottom-32 opacity-35 rounded-full bg-black"
         ></div>
         <div class="px-8 max-w-7xl w-full mx-auto">
           <div class="uppercase font-semibold font-Jost-Font text-black">
             <p class="mb-8">
               my great <span class="text-orange-600">work</span>
             </p>
-            <h2 class="text-6xl mb-16 max-lg:text-3xl">ABILITY OR SKILL</h2>
+            <h2 class="text-6xl mb-16">ABILITY OR SKILL</h2>
           </div>
 
           <div class="flex flex-wrap -mx-3">
             <div class="w-2/12 px-3 max-xl:hidden"></div>
             <div class="w-10/12 px-3 max-xl:w-full">
-              <div id="skills" class="flex flex-wrap max-xl:!flex-col"></div>
+              <div class="flex flex-wrap max-xl:!flex-col">
+                <div class="w-1/2 mb-10 px-3 max-xl:w-full">
+                  <div class="box-icon flex justify-between">
+                    <div class="flex">
+                      <div
+                        class="flex relative w-16 h-16 text-3xl border-solid border-2 border-black pb-1 justify-center items-center before:absolute before:-left-2 before:-top-2 before:bg-gray-200 before:w-full before:h-full before:-z-10"
+                      >
+                        <i class="fa-brands fa-figma"></i>
+                      </div>
+                    </div>
+                    <div class="w-96 max-xl:w-full max-xl:mx-5">
+                      <span class="font-semibold text-base uppercase"
+                        >figma</span
+                      >
+                      <div
+                        class="border-b-2 border-solid border-b-gray-300 py-1 ml-2"
+                      >
+                        <div
+                          class="w-3/5 relative -left-2 h-3 border-b-2 border-r-2 border-orange-600"
+                        >
+                          <span
+                            class="absolute top-0 right-0 translate-x-4 -translate-y-6"
+                            ><p
+                              class="text-orange-600 font-medium font-Jost-Font"
+                            >
+                              60%
+                            </p></span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-1/2 mb-10 px-3 max-xl:w-full">
+                  <div class="box-icon flex justify-between">
+                    <div class="flex">
+                      <div
+                        class="flex relative w-16 h-16 text-3xl border-solid border-2 border-black pb-1 justify-center items-center before:absolute before:-left-2 before:-top-2 before:bg-gray-200 before:w-full before:h-full before:-z-10"
+                      >
+                        <i class="fa-brands fa-php"></i>
+                      </div>
+                    </div>
+                    <div class="w-96 max-xl:w-full max-xl:mx-5">
+                      <span class="font-semibold text-base uppercase"
+                        >PHP / C++</span
+                      >
+                      <div
+                        class="border-b-2 border-solid border-b-gray-300 py-1 ml-2"
+                      >
+                        <div
+                          class="w-4/5 relative -left-2 h-3 border-b-2 border-r-2 border-orange-600"
+                        >
+                          <span
+                            class="absolute top-0 right-0 translate-x-4 -translate-y-6"
+                            ><p
+                              class="text-orange-600 font-medium font-Jost-Font"
+                            >
+                              80%
+                            </p></span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-1/2 mb-10 px-3 max-xl:w-full">
+                  <div class="box-icon flex justify-between">
+                    <div class="flex">
+                      <div
+                        class="flex relative w-16 h-16 text-3xl border-solid border-2 border-black pb-1 justify-center items-center before:absolute before:-left-2 before:-top-2 before:bg-gray-200 before:w-full before:h-full before:-z-10"
+                      >
+                        <i class="fa-brands fa-js"></i>
+                      </div>
+                    </div>
+                    <div class="w-96 max-xl:w-full max-xl:mx-5">
+                      <span class="font-semibold text-base uppercase"
+                        >JAVASCRIPT</span
+                      >
+                      <div
+                        class="border-b-2 border-solid border-b-gray-300 py-1 ml-2"
+                      >
+                        <div
+                          class="w-3/4 relative -left-2 h-3 border-b-2 border-r-2 border-orange-600"
+                        >
+                          <span
+                            class="absolute top-0 right-0 translate-x-4 -translate-y-6"
+                            ><p
+                              class="text-orange-600 font-medium font-Jost-Font"
+                            >
+                              75%
+                            </p></span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-1/2 mb-10 px-3 max-xl:w-full">
+                  <div class="box-icon flex justify-between">
+                    <div class="flex">
+                      <div
+                        class="flex relative w-16 h-16 text-3xl border-solid border-2 border-black pb-1 justify-center items-center before:absolute before:-left-2 before:-top-2 before:bg-gray-200 before:w-full before:h-full before:-z-10"
+                      >
+                        <i class="fa-brands fa-react"></i>
+                      </div>
+                    </div>
+                    <div class="w-96 max-xl:w-full max-xl:mx-5">
+                      <span class="font-semibold text-base uppercase"
+                        >REACT / NEXT.JS</span
+                      >
+                      <div
+                        class="border-b-2 border-solid border-b-gray-300 py-1 ml-2"
+                      >
+                        <div
+                          class="w-3/4 relative -left-2 h-3 border-b-2 border-r-2 border-orange-600"
+                        >
+                          <span
+                            class="absolute top-0 right-0 translate-x-4 -translate-y-6"
+                            ><p
+                              class="text-orange-600 font-medium font-Jost-Font"
+                            >
+                              75%
+                            </p></span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-1/2 mb-10 px-3 max-xl:w-full">
+                  <div class="box-icon flex justify-between">
+                    <div class="flex">
+                      <div
+                        class="flex relative w-16 h-16 text-3xl border-solid border-2 border-black pb-1 justify-center items-center before:absolute before:-left-2 before:-top-2 before:bg-gray-200 before:w-full before:h-full before:-z-10"
+                      >
+                        <i class="fa-brands fa-html5"></i>
+                      </div>
+                    </div>
+                    <div class="w-96 max-xl:w-full max-xl:mx-5">
+                      <span class="font-semibold text-base uppercase"
+                        >HTML5 / CSS3</span
+                      >
+                      <div
+                        class="border-b-2 border-solid border-b-gray-300 py-1 ml-2"
+                      >
+                        <div
+                          class="w-11/12 relative -left-2 h-3 border-b-2 border-r-2 border-orange-600"
+                        >
+                          <span
+                            class="absolute top-0 right-0 translate-x-4 -translate-y-6"
+                            ><p
+                              class="text-orange-600 font-medium font-Jost-Font"
+                            >
+                              90%
+                            </p></span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-1/2 mb-10 px-3 max-xl:w-full">
+                  <div class="box-icon flex justify-between">
+                    <div class="flex">
+                      <div
+                        class="flex relative w-16 h-16 text-3xl border-solid border-2 border-black pb-1 justify-center items-center before:absolute before:-left-2 before:-top-2 before:bg-gray-200 before:w-full before:h-full before:-z-10"
+                      >
+                        <i class="fa-brands fa-vuejs"></i>
+                      </div>
+                    </div>
+                    <div class="w-96 max-xl:w-full max-xl:mx-5">
+                      <span class="font-semibold text-base uppercase"
+                        >VUE.JS</span
+                      >
+                      <div
+                        class="border-b-2 border-solid border-b-gray-300 py-1 ml-2"
+                      >
+                        <div
+                          class="w-7/12 relative -left-2 h-3 border-b-2 border-r-2 border-orange-600"
+                        >
+                          <span
+                            class="absolute top-0 right-0 translate-x-4 -translate-y-6"
+                            ><p
+                              class="text-orange-600 font-medium font-Jost-Font"
+                            >
+                              55%
+                            </p></span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <!-- End section 3 -->
 
       <!-- End 3 section đầu tiên -->
 
-      <!-- 3 Section tiếp theo -->
+      <!-- 3 Section tiếp theo (Uyên) -->
 
       <!-- Section 4 -->
       <!-- Education -->
-      <div
-        id="section4"
+      <section
+        data-set="4"
         class="mil-section relative fade fadeOut py-20 px-20 max-xl:h-auto max-xl:p-0 max-2xl:px-8"
       >
         <div
@@ -426,22 +495,21 @@
                 </p>
               </div>
             </div>
-
             <div
               id="content-edu"
               class="w-full 2xl:col-start-2 2xl:justify-end flex-col 2xl:ml-24 xl:ml-24 mt-10"
             ></div>
           </div>
         </div>
-      </div>
+      </section>
       <!-- Education end -->
       <!-- End Section 4 -->
 
       <!-- Section 5 -->
       <!-- Expirience -->
-      <div
-        id="section5"
-        class="mil-section relative fade fadeOut h-auto w-auto py-20 px-8 mx-auto max-w-6xl flex justify-center items-center max-2xl:pt-8 max-xl:pt-8 max-lg:px-8"
+      <section
+        data-set="5"
+        class="mil-section relative fade fadeOut h-auto w-auto py-20 pl-28 pr-64 flex justify-center items-center max-2xl:pt-8 max-xl:p-0"
       >
         <div
           class="w-72 h-96 opacity-35 -rotate-12 absolute box-bg bottom-3/4 right-1/4 -z-10 rounded-full before:w-24 before:h-36 before:absolute before:-left-28 before:rounded-full"
@@ -451,7 +519,7 @@
           class="w-72 h-96 opacity-35 -rotate-12 absolute box-bg top-1/3 -left-0 -z-10 rounded-full"
         ></div>
 
-        <div class="container w-full mx-auto px-8 mt-10 max-xl:mt-0">
+        <div class="container w-full mx-auto px-8 mt-10 max-2xl:p-8">
           <p
             class="text-black uppercase font-Jost-Font font-semibold text-base mb-7 2xl:px-4 xl:px-4"
           >
@@ -468,7 +536,7 @@
             <div class="2xl:w-6/12 xl:w-6/12 lg:w-6/12 2xl:px-4 xl:px-4">
               <div class="flex col-start-1 justify-start items-center">
                 <p
-                  class="text-black font-Jost-Font font-light text-lg leading-8 mb-16"
+                  class="text-black font-Jost-Font font-normal text-lg leading-8 mb-16"
                 >
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -476,35 +544,35 @@
               </div>
             </div>
 
-            <div class="2xl:w-6/12 xl:w-6/12 lg:w-6/12 2xl:px-4 xl:px-4">
+            <div
+              class="relative 2xl:w-6/12 max-xl:w-6/12 max-xl:pb-16 max-xl:mt-5 lg:w-6/12 2xl:px-4"
+            >
               <div
-                class="flex col-start-2 justify-between items-center max-xl:justify-start"
+                class="flex col-start-2 max-xl:absolute max-xl:left-4 justify-end items-center"
               >
                 <div
-                  class="w-auto mr-7 mb-7 text-black uppercase font-Jost-Font font-semibold text-base swiper-pag max-xl: mt-4"
+                  class="w-auto mr-7 mb-1 text-black uppercase font-Jost-Font font-semibold text-base swiper-pag"
                 >
-                  <span>1</span> / <span>4</span>
+                  <span>1</span> / <span>2</span>
                 </div>
 
                 <div class="flex swiper-button1 items-center mb-7 relative">
-                  <div
-                    id="prevPage"
-                    class="swiper-button-prev flex justify-center mr-20 items-center w-16 h-16 border-2 border-solid border-black box-border shadow-custom-dark hover:shadow-none duration-500 ease-custom-cubic mr-4"
+                  <a
+                    class="swiper-button-prev flex justify-center mr-20 items-center w-16 h-16 border-2 border-solid border-black box-border shadow-custom-button hover:shadow-none duration-500 ease-custom-cubic-bezier"
                   >
                     <i class="fa-solid fa-chevron-left"></i>
-                  </div>
-                  <div
-                    id="nextPage"
-                    class="swiper-button-next flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-custom-dark hover:shadow-none duration-500 ease-custom-cubic mr-4"
+                  </a>
+                  <a
+                    class="swiper-button-next flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-custom-button hover:shadow-none duration-500 ease-custom-cubic-bezier mr-4"
                   >
                     <i class="fa-solid fa-chevron-right"></i>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
 
             <div
-              class="relative border-t-2 border-solic border-gray-300 w-full max-xl:mt-9 after:absolute after:border-t-2 after:border-solid after:border-black after:-left-2 after:-top-2 after:bottom-1 after:right-2 after:w-full"
+              class="relative border-t-2 border-solic border-gray-300 w-full after:absolute after:border-t-2 after:border-solid after:border-black after:-left-2 after:-top-2 after:bottom-1 after:right-2 after:w-full"
             ></div>
 
             <div class="max-w-full 2xl:px-4 xl:px-4">
@@ -514,119 +582,19 @@
                 <div
                   id="content-exp"
                   class="swiper-wrapper relative flex w-full h-full box-content transform duration-0"
-                >
-                  <!-- <div class="swiper-slide">
-                    <div class="mr-10 mb-7 flex max-xl:flex-col">
-                      <div class="w-full">
-                        <p
-                          class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
-                        >
-                          Freelance
-                        </p>
-
-                        <p
-                          class="text-black uppercase font-Jost-Font font-medium text-sm mb-5"
-                        >
-                          <span class="text-orange-600"> TODAY </span>
-                        </p>
-
-                        <p
-                          class="text-black font-Jost-Font font-light text-lg leading-8"
-                        >
-                          It has survived not only five centuries, but also the
-                          leap into electronic typesetting.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <div class="mr-10 mb-7 flex">
-                      <div class="w-full">
-                        <p
-                          class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
-                        >
-                          Agency Macll
-                        </p>
-
-                        <p
-                          class="text-black uppercase font-Jost-Font font-medium text-sm mb-5"
-                        >
-                          2019 <span class="text-orange-600"> to </span> 2022
-                        </p>
-
-                        <p
-                          class="text-black font-Jost-Font font-light text-lg leading-8"
-                        >
-                          It has survived not only five centuries, but also the
-                          leap into electronic typesetting.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <div class="mr-10 mb-7 flex">
-                      <div class="w-full">
-                        <p
-                          class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
-                        >
-                          Envato
-                        </p>
-
-                        <p
-                          class="text-black uppercase font-Jost-Font font-medium text-sm mb-5"
-                        >
-                          2017 <span class="text-orange-600"> to </span> 2019
-                        </p>
-
-                        <p
-                          class="text-black font-Jost-Font font-light text-lg leading-8"
-                        >
-                          It has survived not only five centuries, but also the
-                          leap into electronic typesetting.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <div class="mr-10 mb-7 flex">
-                      <div class="w-full">
-                        <p
-                          class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
-                        >
-                          Themeforest
-                        </p>
-
-                        <p
-                          class="text-black uppercase font-Jost-Font font-medium text-sm mb-5"
-                        >
-                          2014 <span class="text-orange-600"> to </span> 2017
-                        </p>
-
-                        <p
-                          class="text-black font-Jost-Font font-light text-lg leading-8"
-                        >
-                          It has survived not only five centuries, but also the
-                          leap into electronic typesetting.
-                        </p>
-                      </div>
-                    </div>
-                  </div> -->
-                </div>
+                ></div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <!-- Expirience end -->
       <!-- End Section 5 -->
 
       <!-- Section 6 -->
       <!-- Services -->
-      <div
-        id="section6"
+      <section
+        data-set="6"
         class="mil-section relative fade fadeOut py-20 px-28 flex justify-center items-center max-2xl:p-0 max-xl:p-0"
       >
         <div
@@ -658,123 +626,25 @@
             <div
               id="content-ser"
               class="flex 2xl:flex-row xl:flex-row flex-col relative w-full h-full box-content"
-            >
-              <!-- <div class="flex mb-10 2xl:pr-14 xl:pr-14">
-                <div class="flex justify-start items-start">
-                  <div
-                    class="relative border-2 border-solid border-black box-border w-16 h-16 flex justify-center items-center pb-2 before:absolute before:bg-zinc-200 before:-top-3.5 before:-left-3.5 before:w-16 before:h-16 before:-z-10 after:-top-10 after:left-auto after:-right-5 after:absolute box-phone after:w-16 after:h-16 after:-z-10"
-                  >
-                    <div class="text-black font-Jost-Font font-normal text-3xl">
-                      <i class="fa-solid fa-code"></i>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="pl-10 pt-1">
-                  <p
-                    class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
-                  >
-                    Web Development
-                  </p>
-
-                  <p
-                    class="text-black uppercase font-Jost-Font font-medium text-sm mb-5"
-                  >
-                    $29 <span class="text-orange-600"> per hour </span>
-                  </p>
-
-                  <p
-                    class="text-black font-Jost-Font font-light text-lg leading-8"
-                  >
-                    It has survived not only five centuries, but also the leap
-                    into electronic typesetting, remaining unchanged.
-                  </p>
-                </div>
-              </div>
-
-              <div class="flex mb-10 2xl:pr-14 xl:pr-14">
-                <div class="flex justify-start items-start">
-                  <div
-                    class="relative border-2 border-solid border-black box-border w-16 h-16 flex justify-center items-center pb-2 before:absolute before:bg-zinc-200 before:-top-3.5 before:-left-3.5 before:w-16 before:h-16 before:-z-10 after:-top-10 after:left-auto after:-right-5 after:absolute box-phone after:w-16 after:h-16 after:-z-10"
-                  >
-                    <div class="text-black font-Jost-Font font-normal text-3xl">
-                      <i class="fa-solid fa-palette"></i>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="pl-10 pt-1">
-                  <p
-                    class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
-                  >
-                    Branding
-                  </p>
-
-                  <p
-                    class="text-black uppercase font-Jost-Font font-medium text-sm mb-5"
-                  >
-                    $39 <span class="text-orange-600"> per hour </span>
-                  </p>
-
-                  <p
-                    class="text-black font-Jost-Font font-light text-lg leading-8"
-                  >
-                    It has survived not only five centuries, but also the leap
-                    into electronic typesetting, remaining unchanged.
-                  </p>
-                </div>
-              </div>
-
-              <div class="flex mb-10">
-                <div class="flex justify-start items-start">
-                  <div
-                    class="relative border-2 border-solid border-black box-border w-16 h-16 flex justify-center items-center pb-2 before:absolute before:bg-zinc-200 before:-top-3.5 before:-left-3.5 before:w-16 before:h-16 before:-z-10 after:-top-10 after:left-auto after:-right-5 after:absolute box-phone after:w-16 after:h-16 after:-z-10"
-                  >
-                    <div class="text-black font-Jost-Font font-normal text-3xl">
-                      <i class="fas fa-server"></i>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="pl-10 pt-1">
-                  <p
-                    class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
-                  >
-                    Server Managment
-                  </p>
-
-                  <p
-                    class="text-black uppercase font-Jost-Font font-medium text-sm mb-5"
-                  >
-                    $49 <span class="text-orange-600"> per hour </span>
-                  </p>
-
-                  <p
-                    class="text-black font-Jost-Font font-light text-lg leading-8"
-                  >
-                    It has survived not only five centuries, but also the leap
-                    into electronic typesetting, remaining unchanged.
-                  </p>
-                </div>
-              </div> -->
-            </div>
+            ></div>
           </div>
         </div>
-      </div>
+      </section>
       <!-- Services end -->
       <!-- End Section 6 -->
+      <!-- End 3 section tiếp theo (Uyên) -->
 
       <!-- Section 7 -->
       <!-- Testimonials -->
-      <div
-        id="section7"
-        class="mil-section fade fadeOut relative z-10 w-full h-screen flex justify-center items-center max-xl:h-auto 2xl:pt-28 xl:pt-28 pb-20 max-xl:pb-0"
+      <section
+        data-set="7"
+        class="mil-section relative fade fadeOut py-20 px-28 flex justify-center items-center max-2xl:pt-8 max-xl:p-8"
       >
         <div
           class="w-72 h-96 opacity-35 -rotate-12 absolute box-bg -bottom-1/4 right-20 -z-10 rounded-full before:w-24 before:h-36 before:absolute before:-left-28 before:rounded-full"
         ></div>
 
-        <div class="container w-full mx-auto px-8 max-w-7xl">
+        <div class="container px-8 max-xl:p-0 max-2xl:p-8">
           <div class="2xl:text-center xl:text-center text-left">
             <p
               class="text-black uppercase font-Jost-Font font-semibold text-base mb-7 2xl:px-4 xl:px-4"
@@ -807,252 +677,64 @@
             class="flex 2xl:flex-row xl:flex-row flex-col relative w-full h-full box-content"
           >
             <div class="2xl:w-8/12 xl:w-8/12">
-              <div class="flex col-start-1 justify-start max-xl:mb-12">
+              <div
+                class="swiper swiper-section-testimonials overflow-hidden touch-pan-y pt-14"
+              >
                 <div
-                  class="swiper swiper-section-testimonials overflow-hidden touch-pan-y pt-14 max-xl:!w-full max-xl:!h-auto"
-                >
-                  <div
-                    id="content-tes"
-                    class="swiper-wrapper relative w-full h-full box-content flex transform duration-0"
-                  >
-                    <!-- <div class="swiper-slide">
-                      <div
-                        class="flex mb-10 2xl:flex-row xl:flex-row lg:flex-row flex-col"
-                      >
-                        <div
-                          class="flex justify-start items-start 2xl:w-1/3 xl:w-1/3 lg:w-1/3 w-full"
-                        >
-                          <div
-                            class="relative after:border-2 after:border-solid after:box-border flex justify-center items-center pb-2 after:absolute after:border-black after:top-3.5 after:left-3.5 after:-right-3.5 after:-bottom-2 after:w-full"
-                          >
-                            <img
-                              src="https://html.bslthemes.com/treto/img/faces/clients/1.jpg"
-                              alt="client1"
-                              class="w-40 h-40"
-                            />
-                          </div>
-                        </div>
-
-                        <div
-                          class="2xl:w-2/3 xl:w-2/3 lg:w-2/3 w-full mr-20 2xl:mt-0 xl:mt-0 lg:mt-0 mt-10"
-                        >
-                          <p
-                            class="text-black font-Jost-Font font-light text-lg leading-8 mb-7 text-wrap pl-5"
-                          >
-                            It has survived not only five centuries, but also
-                            the leap into electronic typesetting, remaining
-                            essentially unchanged. It was popularised in the
-                            1960s with the release of Letraset sheets containing
-                            Lorem Ipsum passages.
-                          </p>
-
-                          <p
-                            class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
-                          >
-                            Isabella
-                            <span class="text-orange-600"> Wilson </span>
-                          </p>
-
-                          <p
-                            class="text-black font-Jost-Font font-light text-lg leading-8 mb-7"
-                          >
-                            Director at Geands Hotel
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                      <div
-                        class="flex mb-10 2xl:flex-row xl:flex-row lg:flex-row flex-col"
-                      >
-                        <div
-                          class="flex justify-start items-start 2xl:w-1/3 xl:w-1/3 lg:w-1/3 w-full"
-                        >
-                          <div
-                            class="relative after:border-2 after:border-solid after:box-border flex justify-center items-center pb-2 after:absolute after:border-black after:top-3.5 after:left-3.5 after:-right-3.5 after:-bottom-2 after:w-full"
-                          >
-                            <img
-                              src="https://html.bslthemes.com/treto/img/faces/clients/2.jpg"
-                              alt="client2"
-                              class="w-40 h-40"
-                            />
-                          </div>
-                        </div>
-
-                        <div
-                          class="2xl:w-2/3 xl:w-2/3 lg:w-2/3 w-full mr-20 2xl:mt-0 xl:mt-0 lg:mt-0 mt-10"
-                        >
-                          <p
-                            class="text-black font-Jost-Font font-light text-lg leading-8 mb-7 text-wrap"
-                          >
-                            It has survived not only five centuries, but also
-                            the leap into electronic typesetting, remaining
-                            essentially unchanged. It was popularised in the
-                            1960s with the release of Letraset sheets containing
-                            Lorem Ipsum passages.
-                          </p>
-
-                          <p
-                            class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
-                          >
-                            Isabella
-                            <span class="text-orange-600"> Wilson </span>
-                          </p>
-
-                          <p
-                            class="text-black font-Jost-Font font-light text-lg leading-8 mb-7"
-                          >
-                            Director at Geands Hotel
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                      <div
-                        class="flex mb-10 2xl:flex-row xl:flex-row lg:flex-row flex-col"
-                      >
-                        <div
-                          class="flex justify-start items-start 2xl:w-1/3 xl:w-1/3 lg:w-1/3 w-full"
-                        >
-                          <div
-                            class="relative after:border-2 after:border-solid after:box-border flex justify-center items-center pb-2 after:absolute after:border-black after:top-3.5 after:left-3.5 after:-right-3.5 after:-bottom-2 after:w-full"
-                          >
-                            <img
-                              src="https://html.bslthemes.com/treto/img/faces/clients/3.jpg"
-                              alt="client3"
-                              class="w-40 h-40"
-                            />
-                          </div>
-                        </div>
-
-                        <div
-                          class="2xl:w-2/3 xl:w-2/3 lg:w-2/3 w-full mr-20 2xl:mt-0 xl:mt-0 lg:mt-0 mt-10"
-                        >
-                          <p
-                            class="text-black font-Jost-Font font-light text-lg leading-8 mb-7 text-wrap"
-                          >
-                            It has survived not only five centuries, but also
-                            the leap into electronic typesetting, remaining
-                            essentially unchanged. It was popularised in the
-                            1960s with the release of Letraset sheets containing
-                            Lorem Ipsum passages.
-                          </p>
-
-                          <p
-                            class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
-                          >
-                            Isabella
-                            <span class="text-orange-600"> Wilson </span>
-                          </p>
-
-                          <p
-                            class="text-black font-Jost-Font font-light text-lg leading-8 mb-7"
-                          >
-                            Director at Geands Hotel
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                      <div
-                        class="flex mb-10 2xl:flex-row xl:flex-row lg:flex-row flex-col"
-                      >
-                        <div
-                          class="flex justify-start items-start 2xl:w-1/3 xl:w-1/3 lg:w-1/3 w-full"
-                        >
-                          <div
-                            class="relative after:border-2 after:border-solid after:box-border flex justify-center items-center pb-2 after:absolute after:border-black after:top-3.5 after:left-3.5 after:-right-3.5 after:-bottom-2 after:w-full"
-                          >
-                            <img
-                              src="https://html.bslthemes.com/treto/img/faces/clients/4.jpg"
-                              alt="client4"
-                              class="w-40 h-40"
-                            />
-                          </div>
-                        </div>
-
-                        <div
-                          class="2xl:w-2/3 xl:w-2/3 lg:w-2/3 w-full mr-20 2xl:mt-0 xl:mt-0 lg:mt-0 mt-10"
-                        >
-                          <p
-                            class="text-black font-Jost-Font font-light text-lg leading-8 mb-7 text-wrap"
-                          >
-                            It has survived not only five centuries, but also
-                            the leap into electronic typesetting, remaining
-                            essentially unchanged. It was popularised in the
-                            1960s with the release of Letraset sheets containing
-                            Lorem Ipsum passages.
-                          </p>
-
-                          <p
-                            class="text-black uppercase font-Jost-Font font-semibold text-base mb-2"
-                          >
-                            Isabella
-                            <span class="text-orange-600"> Wilson </span>
-                          </p>
-
-                          <p
-                            class="text-black font-Jost-Font font-light text-lg leading-8 mb-7"
-                          >
-                            Director at Geands Hotel
-                          </p>
-                        </div>
-                      </div>
-                    </div> -->
-                  </div>
-                </div>
+                  id="content-tes"
+                  class="swiper-wrapper relative w-full h-full box-content flex transform duration-0"
+                ></div>
               </div>
             </div>
 
             <div class="2xl:w-4/12 xl:w-4/12 2xl:px-4 xl:px-4">
-              <div class="flex col-start-2 justify-end h-full">
-                <div
-                  class="flex w-full pt-14 pb-14 2xl:pl-14 xl:pl-14 relative 2xl:border-l-2 xl:border-l-2 2xl:block xl:block border-solic border-gray-300 h-full after:absolute 2xl:after:border-l-2 xl:after:border-l-2 after:border-t-2 after:border-solid after:border-black after:-left-2 after:-top-2 after:bottom-1 after:right-2 after:h-full"
-                >
+              <div
+                class="relative 2xl:border-l-2 xl:border-l-2 2xl:block xl:block border-solic border-gray-300 h-full after:absolute 2xl:after:border-l-2 xl:after:border-l-2 after:border-t-2 after:border-solid after:border-black after:-left-2 after:-top-2 after:bottom-1 after:right-2 after:h-full"
+              >
+                <div>
                   <div
-                    class="flex swiper-button2 relative items-center mb-7 mt-6"
+                    class="relative pt-14 pb-14 max-2xl:pl-14 max-xl:pl-14 flex 2xl:flex-col xl:flex-col justify-between"
                   >
-                    <button
-                      id="prevPage"
-                      class="swiper-button-prev flex justify-center items-center cursor-pointer w-16 h-16 border-2 border-solid border-black box-border shadow-custom-dark duration-500 ease-custom-cubic hover:shadow-none mr-4 2xl:left-0 xl:left-0 left-1/4 absolute"
+                    <div
+                      class="flex max-xl:absolute max-xl:right-40 swiper-button2 items-center mb-7 relative"
                     >
-                      <i class="fa-solid fa-chevron-left"></i>
-                    </button>
-                    <button
-                      id="nextPage"
-                      class="swiper-button-next flex justify-center items-center w-16 h-16 border-2 border-solid border-black box-border shadow-custom-dark duration-500 ease-custom-cubic hover:shadow-none mr-4 2xl:right-1/2 xl:right-1/2 left-20 absolute max-xl:!ml-24"
-                    >
-                      <i class="fa-solid fa-chevron-right"></i>
-                    </button>
-                  </div>
+                      <a
+                        class="swiper-button-prev flex justify-center mr-20 items-center w-16 h-16 border-2 border-solid border-black box-border shadow-custom-button hover:shadow-none duration-500 ease-custom-cubic-bezier"
+                      >
+                        <i class="fa-solid fa-chevron-left"></i>
+                      </a>
+                      <a
+                        class="swiper-button-next flex justify-center items-center w-16 h-16 ml-20 border-2 border-solid border-black box-border shadow-custom-button hover:shadow-none duration-500 ease-custom-cubic-bezier mr-4"
+                      >
+                        <i class="fa-solid fa-chevron-right"></i>
+                      </a>
+                    </div>
 
-                  <div
-                    class="pr-7 mr-7 2xl:mb-32 xl:mb-32 my-14 2xl:ml-16 xl:ml-16 text-black uppercase font-Jost-Font font-semibold text-base swiper-pagination 2xl:text-left xl:text-left text-right"
-                  >
-                    <span>1</span> / <span>4</span>
+                    <div
+                      class="w-auto mr-7 pl-5 pt-5 max-2xl:mb-36 max-xl:mb-36 max-xl:absolute max-xl:top-1/2 max-xl:left-0 text-black uppercase font-Jost-Font font-semibold text-base swiper-pagination"
+                    >
+                      <span>1</span> / <span>4</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <!-- Testimonials end -->
       <!-- End Section 7 -->
 
       <!-- Section 8-->
-      <div
-        id="section8"
-        class="mil-section fade fadeOut relative h-screen w-full flex justify-center items-center pt-8 max-lg:h-auto max-xl:pb-24 max-xl:text-3xl"
+      <section
+        data-set="8"
+        class="mil-section fade fadeOut relative h-screen w-full flex justify-center items-center pt-8 max-lg:h-auto max-xl:text-3xl"
       >
         <div
           class="box-bg top-block w-80 h-96 absolute -z-10 -bottom-8 -right-12 origin-bottom -rotate-12 opacity-35 rounded-full bg-black"
         ></div>
         <div
-          class="box-bg w-24 h-150px absolute bottom-32 right-80 -z-10 origin-bottom -rotate-12 opacity-35 rounded-full bg-black"
+          class="box-bg w-24 h-36 absolute bottom-32 right-80 -z-10 origin-bottom -rotate-12 opacity-35 rounded-full bg-black"
         ></div>
 
         <div class="container max-w-7xl w-full px-12 mx-auto font-Jost-Font">
@@ -1067,35 +749,7 @@
           <div
             class="flex flex-wrap justify-between text-base text-black max-lg:flex-col"
           >
-            <div id="container-contact" class="w-1/3 max-lg:w-full">
-              <!-- <div
-                class="box-email relative mb-7 p-7 border-solid border-2 border-black"
-              >
-                <div
-                  class="absolute left-1 -right-2 -bottom-2 top-1 border-2 border-solid border-zinc-300"
-                ></div>
-                <p class="uppercase font-semibold mb-5">Email</p>
-                <p>
-                  <a href="" class="text-lg">hello@treto.co</a><br />
-                  <a href="" class="text-lg">projects@treto.co</a>
-                </p>
-              </div>
-              <div
-                class="box-phone relative mb-7 p-7 border-solid border-2 border-black"
-              >
-                <div
-                  class="absolute left-1 -right-2 -bottom-2 top-1 border-2 border-solid border-zinc-300"
-                ></div>
-                <div
-                  class="absolute left-1 -right-2 -bottom-2 top-1 border-2 border-solid border-zinc-300"
-                ></div>
-                <p class="uppercase font-semibold mb-5">PHONE</p>
-                <p>
-                  <a href="" class="text-lg">+ 56 3636 60 60 </a><br />
-                  <a href="" class="text-lg">+ 56 6363 06 06</a>
-                </p>
-              </div> -->
-            </div>
+            <div id="container-contact" class="w-1/3 max-lg:w-full"></div>
             <div class="w-7/12 max-lg:w-full">
               <form action="">
                 <div
@@ -1136,33 +790,22 @@
                   >
                     <label
                       for=""
-                      class="container-label block cursor-pointer relative pl-10 mb-7"
+                      class="block cursor-pointer relative pl-10 mb-7"
                     >
                       by sending, I accept the
                       <a class="text-orange-600 underline decoration-solid"
                         >terms and conditions</a
-                      >
-                      <!-- <input
+                      ><input
                         type="checkbox"
-                        checked="checked"
                         class="cursor-pointer absolute h-0 w-0 opacity-0"
                       />
                       <span
                         class="check-box absolute top-0 left-0 h-6 w-6 bg-zinc-200"
                         onclick="toggleBackground()"
-                      ></span> -->
-
-                      <input
-                        type="checkbox"
-                        checked="checked"
-                        class="absolute opacity-0 cursor-pointer h-0 w-0"
-                      />
-                      <span
-                        class="checkmark absolute top-0 left-0 w-6 h-6 bg-gray-300"
                       ></span>
                     </label>
                     <button
-                      class="uppercase flex justify-center items-center text-sm h-14 px-10 border-solid border-2 border-orange-600 bg-orange-600 text-white font-semibold shadow-custom-orange hover:shadow-none"
+                      class="uppercase flex justify-center items-center text-sm h-14 px-10 border-solid border-2 border-orange-600 bg-orange-600 text-white font-semibold shadow-custom-button hover:shadow-none"
                     >
                       Submit
                     </button>
@@ -1172,7 +815,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <!-- End Section 8-->
     </div>
 
@@ -1184,8 +827,8 @@
         class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
       >
         <a
-          id="scrollToSection1"
-          class="group active1 absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
+          data-scroll-to="1"
+          class="scrollToSection group active1 absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
             class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
@@ -1198,8 +841,8 @@
         class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
       >
         <a
-          id="scrollToSection2"
-          class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
+          data-scroll-to="2"
+          class="scrollToSection group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
             class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
@@ -1212,8 +855,8 @@
         class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
       >
         <a
-          id="scrollToSection3"
-          class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
+          data-scroll-to="3"
+          class="scrollToSection group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
             class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-8 right-5 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
@@ -1226,8 +869,8 @@
         class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
       >
         <a
-          id="scrollToSection4"
-          class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
+          data-scroll-to="4"
+          class="scrollToSection group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
             class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-10 right-3 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
@@ -1240,8 +883,8 @@
         class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
       >
         <a
-          id="scrollToSection5"
-          class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
+          data-scroll-to="5"
+          class="scrollToSection group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
             class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-12 right-4 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
@@ -1254,8 +897,8 @@
         class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
       >
         <a
-          id="scrollToSection6"
-          class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
+          data-scroll-to="6"
+          class="scrollToSection group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
             class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-10 right-4 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
@@ -1268,8 +911,8 @@
         class="mil-dot flex items-center relative w-4 h-4 cursor-pointer mb-4"
       >
         <a
-          id="scrollToSection7"
-          class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
+          data-scroll-to="7"
+          class="scrollToSection group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
             class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-12 right-1 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
@@ -1280,8 +923,8 @@
       </div>
       <div class="mil-dot flex items-center relative w-4 h-4 cursor-pointer">
         <a
-          id="scrollToSection8"
-          class="group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
+          data-scroll-to="8"
+          class="scrollToSection group absolute w-full h-full bg-white border-4 border-solid border-gray-300 rotate-45 flex"
         >
           <p
             class="absolute group-hover:translate-x-1 duration-500 group-hover:opacity-100 top-10 right-3 font-Jost-Font font-semibold uppercase opacity-0 -rotate-45"
@@ -1365,77 +1008,71 @@
 
     <!--Scroll and pagination effect-->
     <script>
-      if ($(window).width() >= 1280) {
-        $(document).ready(function () {
+      $(document).ready(function () {
+        if ($(window).width() >= 1280) {
           var delay = false;
           var currentPage = 1;
-          var pageCount = $(".mil-section").length;
-          var swipe = document.getElementsByTagName(".mil-section");
+          var pageCount = $(".scrollToSection").length;
 
-          //Pagination Effect
           $(document).ready(function () {
-            for (let i = 1; i <= 8; i++) {
-              $(`#scrollToSection${i}`).click(function (event) {
-                event.preventDefault();
-
-                // Loại bỏ lớp 'active' từ tất cả các nút
-                $(`[id^='scrollToSection']`).removeClass("active1");
-
-                // Thêm lớp 'active' vào nút được nhấn
-                $(this).addClass("active1");
-
+            $("a[data-scroll-to]").on("click", function (event) {
+              event.preventDefault();
+              var targetDataSet = $(this).attr("data-scroll-to");
+              var targetSection = $(
+                'section[data-set="' + targetDataSet + '"]'
+              );
+              if (targetSection.length > 0) {
                 $("html, body").animate(
                   {
-                    scrollTop: $(`#section${i}`).offset().top,
+                    scrollTop: targetSection.offset().top,
                   },
-                  0,
-                  function () {
-                    currentPage = i;
-                    console.log("lalala", currentPage);
-                  }
+                  0
                 );
-              });
-            }
-          });
-          //Pagination Effect End
-
-          if ($(window).width() >= 1280) {
-            $(document).on("mousewheel DOMMouseScroll", function (event) {
-              if (delay) return;
-              delay = true;
-              setTimeout(function () {
-                delay = false;
-              }, 600);
-
-              var wd =
-                event.originalEvent.wheelDelta || -event.originalEvent.detail;
-              if (wd < 0) {
-                if (currentPage < pageCount) {
-                  currentPage++;
-                  console.log(currentPage);
-                }
-              } else {
-                if (1 < currentPage) {
-                  currentPage--;
-                  console.log(currentPage);
-                }
-              }
-              $("html,body").animate(
-                {
-                  scrollTop: $("#section" + currentPage).offset().top,
-                },
-                700
-              );
-              $("#scrollToSection" + currentPage).addClass("active1");
-              for (var i = 1; i <= pageCount; i++) {
-                if (i != currentPage) {
-                  $("#scrollToSection" + i).removeClass("active1");
-                }
+                currentPage = targetDataSet;
+                $("[data-scroll-to='" + currentPage + "']").addClass("active1");
+                $("[data-scroll-to]").each(function () {
+                  if ($(this).attr("data-scroll-to") != currentPage) {
+                    $(this).removeClass("active1");
+                  }
+                });
               }
             });
-          }
-        });
-      }
+          });
+          $(document).on("mousewheel DOMMouseScroll", function (event) {
+            if (delay) return;
+            delay = true;
+            setTimeout(function () {
+              delay = false;
+            }, 600);
+
+            var wd =
+              event.originalEvent.wheelDelta || -event.originalEvent.detail;
+            if (wd < 0) {
+              if (currentPage < pageCount) {
+                currentPage++;
+                console.log(currentPage);
+              }
+            } else {
+              if (1 < currentPage) {
+                currentPage--;
+                console.log(currentPage);
+              }
+            }
+            $("html,body").animate(
+              {
+                scrollTop: $("[data-set='" + currentPage + "']").offset().top,
+              },
+              700
+            );
+            $("[data-scroll-to='" + currentPage + "']").addClass("active1");
+            $("[data-scroll-to]").each(function () {
+              if ($(this).attr("data-scroll-to") != currentPage) {
+                $(this).removeClass("active1");
+              }
+            });
+          });
+        }
+      });
     </script>
     <!--Scroll and pagination effect end-->
 
@@ -1491,75 +1128,6 @@
     </script>
     <!--navbutton effect end-->
 
-    <!-- Disabled button swiper -->
-    <script>
-      $(document).ready(function (page) {
-        // Hàm quản lý trang
-        function managePage(totalPage) {
-          let currentPage = 1; // Trang hiện tại
-
-          // Hàm kiểm tra và cập nhật trạng thái của nút
-          function updateButtonState() {
-            let prevButton = $("#prevPage");
-            let nextButton = $("#nextPage");
-
-            // Nếu ở trang đầu, mờ nút bên trái
-            if (currentPage === 1) {
-              prevButton.addClass("disabled-button");
-            } else {
-              prevButton.removeClass("disabled-button");
-            }
-
-            // Nếu ở trang cuối, mờ nút bên phải
-            if (currentPage === totalPage) {
-              nextButton.addClass("disabled-button");
-            } else {
-              nextButton.removeClass("disabled-button");
-            }
-
-            console.log(currentPage);
-          }
-
-          // Hàm chuyển trang
-          function changePage(direction) {
-            let newPage = currentPage + direction;
-
-            // Kiểm tra giới hạn trang
-            if (newPage >= 1 && newPage <= totalPage) {
-              currentPage = newPage;
-              // Cập nhật trạng thái nút sau khi chuyển trang
-              updateButtonState();
-            }
-          }
-
-          // Bắt đầu cập nhật trạng thái của nút
-          updateButtonState();
-
-          // Lắng nghe sự kiện khi nhấn vào nút Previous
-          $("#prevPage").on("click", function () {
-            changePage(-1);
-          });
-
-          // Lắng nghe sự kiện khi nhấn vào nút Next
-          $("#nextPage").on("click", function () {
-            changePage(1);
-          });
-        }
-
-        managePage(2);
-        managePage(4);
-      });
-    </script>
-    <!-- Disabled button swiper end -->
-
-    <!-- Check box section 8 -->
-    <script>
-      function toggleBackground() {
-        const checkBox = document.getElementsByClassName("check-box");
-        checkBox[0].classList.toggle("checked");
-      }
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
