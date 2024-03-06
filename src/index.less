@@ -9,12 +9,10 @@
 .fadeOut {
   opacity: 0;
   transition: 0s;
-  transform: translateY(1%);
 }
 .fadeIn {
   opacity: 1;
-  transition: 1.5s;
-  transform: translateY(1%);
+  transition: 0.5s;
 }
 
 .active1 {
@@ -152,21 +150,10 @@
 
 .dropdown-m {
   transition-duration: 0.2s;
-  height: 0;
-  li{
-    opacity: 0;
-  }
 }
 .nav-respons {
-  height: 100px;
-  pointer-events: none; 
-  transition-duration: 0.2s;
-  transform: scaleX(1.1);
-  transform: scaleY(1.1);
-  li{
-    opacity: 1;
-    transition-duration: 1.5s;
-  }
+  pointer-events: none;
+  display: block;
 }
 
 .hide-nav {
@@ -225,4 +212,8 @@
   .swiper-button-next:after {
     content: none;
   }
+}
+
+.omg {
+  background: yellow;
 }
