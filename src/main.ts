@@ -222,7 +222,7 @@ const experienceElement: HTMLElement | null =
   document.getElementById("content-exp");
 
 if (experienceElement) {
-  const source = `<div class="swiper-slide">
+  const source = `{{#each this}}<div class="swiper-slide">
   <div class="mr-10 mb-7 flex">
     <div class="w-full">
       <p
@@ -244,9 +244,9 @@ if (experienceElement) {
       </p>
     </div>
   </div>
-</div>`;
+</div>{{/each}}`;
   const template = Handlebars.compile(source);
-  const contentExpHTML = exp.map((el) => template(el)).join("");
+  // const contentExpHTML = exp.map((el) => template(el)).join("");
 
   experienceElement.innerHTML = template(exp);
 }
@@ -375,9 +375,9 @@ if (testimonialsElement) {
           class="border-2 border-solid box-border absolute border-black top-3.5 left-3.5 -right-3.5 -bottom-2 w-full"
         ></div>
         <img
-          src="{{img}}"
+          data-src="{{img}}"
           alt="{{alt}}"
-          class="w-40 h-40"
+          class="lazy w-40 h-40"
         />
       </div>
     </div>
