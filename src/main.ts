@@ -44,7 +44,9 @@ const skills = [
 const skillsElement: HTMLElement | null = document.getElementById("skills");
 
 if (skillsElement) {
-  const source = `<div class="w-1/2 mb-10 pl-3 pr-5 max-xl:w-full">
+  const source = `
+  {{#each this}}
+  <div class="w-1/2 mb-10 pl-3 pr-5 max-xl:w-full">
   <div class="box-icon flex justify-between">
     <div class="flex">
       <div
@@ -80,12 +82,16 @@ if (skillsElement) {
       </div>
     </div>
   </div>
-</div>`;
+</div>
+{{/each}}
+`;
 
   const template = Handlebars.compile(source);
-  const skillsHTML = skills.map((skill) => template(skill)).join("");
 
-  skillsElement.innerHTML = skillsHTML;
+  console.log(template(skills).toString());
+  console.log(skillsElement);
+
+  skillsElement.innerHTML = template(skills);
 }
 // Handlebars Skills end
 
@@ -121,7 +127,7 @@ const educationElement: HTMLElement | null =
   document.getElementById("content-edu");
 
 if (educationElement) {
-  const source = `<div class="flex mb-10 px-1">
+  const source = `{{#each this}}<div class="flex mb-10 px-1">
   <div class="flex justify-start items-start">
     <div
       class="relative border-2 border-solid border-black box-border w-16 h-16 flex justify-center items-center pb-2"
@@ -159,11 +165,10 @@ if (educationElement) {
       {{para}}
     </p>
   </div>
-</div>`;
+</div>{{/each}}`;
   const template = Handlebars.compile(source);
-  const contentEduHTML = edu.map((el) => template(el)).join("");
 
-  educationElement.innerHTML = contentEduHTML;
+  educationElement.innerHTML = template(edu);
 }
 // Handlebars Education end
 
@@ -199,7 +204,7 @@ const experienceElement: HTMLElement | null =
   document.getElementById("content-exp");
 
 if (experienceElement) {
-  const source = `<div class="swiper-slide">
+  const source = `{{#each this}}<div class="swiper-slide">
   <div class="mr-10 mb-7 flex">
     <div class="w-full">
       <p
@@ -221,11 +226,10 @@ if (experienceElement) {
       </p>
     </div>
   </div>
-</div>`;
+</div>{{/each}}`;
   const template = Handlebars.compile(source);
-  const contentExpHTML = exp.map((el) => template(el)).join("");
 
-  experienceElement.innerHTML = contentExpHTML;
+  experienceElement.innerHTML = template(exp);
 }
 // Handlebars Experience end
 
@@ -255,7 +259,7 @@ const serviceElement: HTMLElement | null =
   document.getElementById("content-ser");
 
 if (serviceElement) {
-  const source = `<div class="flex mb-10 2xl:pr-14 xl:pr-14">
+  const source = `{{#each this}}<div class="flex mb-10 2xl:pr-14 xl:pr-14">
   <div class="flex justify-start items-start">
     <div
       class="relative border-2 border-solid border-black box-border w-16 h-16 flex justify-center items-center pb-2"
@@ -291,11 +295,10 @@ if (serviceElement) {
       {{para}}
     </p>
   </div>
-</div>`;
+</div>{{/each}}`;
   const template = Handlebars.compile(source);
-  const contentSerHTML = ser.map((el) => template(el)).join("");
 
-  serviceElement.innerHTML = contentSerHTML;
+  serviceElement.innerHTML = template(ser);
 }
 // Handlebars Service end
 
@@ -339,7 +342,7 @@ const testimonialsElement: HTMLElement | null =
   document.getElementById("content-tes");
 
 if (testimonialsElement) {
-  const source = `<div class="swiper-slide">
+  const source = `{{#each this}}<div class="swiper-slide">
   <div
     class="flex mb-10 2xl:flex-row xl:flex-row lg:flex-row flex-col"
   >
@@ -383,11 +386,9 @@ if (testimonialsElement) {
       </p>
     </div>
   </div>
-</div>`;
+</div>{{/each}}`;
   const template = Handlebars.compile(source);
-  const contentTesHTML = tes.map((el) => template(el)).join("");
-
-  testimonialsElement.innerHTML = contentTesHTML;
+  testimonialsElement.innerHTML = template(tes);
 }
 // Handlebars Testimonials end
 
@@ -405,7 +406,9 @@ const contactsElement: HTMLElement | null =
 console.log(contactsElement);
 
 if (contactsElement) {
-  const source = `<div
+  const source = `
+  {{#each this}}
+  <div
   class="box-email relative mb-7 p-7 border-2 border-solic border-black"
 >
   <div
@@ -416,13 +419,11 @@ if (contactsElement) {
     {{# each elements}}<a class="text-black font-Jost-Font font-light text-lg leading-8 mb-14">{{this}}</a> </br> {{/each}}
 
   </p>
-</div>`;
+</div>
+{{/each}}`;
 
   const template = Handlebars.compile(source);
-
-  const contactsHTML = contacts.map((contact) => template(contact)).join("");
-  // console.log(contactsHTML);
-  contactsElement.innerHTML = contactsHTML;
+  contactsElement.innerHTML = template(contacts);
 }
 // Handlebars Contacts end
 
@@ -456,7 +457,7 @@ const navDatas = [
 const navDeskTop: HTMLElement | null = document.getElementById("nav-desktop");
 
 if (navDeskTop) {
-  const source = `
+  const source = `{{#each this}}
   {{#if childrens}}
   <li
   class="group hover:text-orange-600 relative flex items-center mr-10"
@@ -483,17 +484,16 @@ if (navDeskTop) {
     >{{name}}</a>
 </li>
 {{/if}}
+{{/each}}
   `;
   const template = Handlebars.compile(source);
-  const navDeskHTML = navDatas.map((nav) => template(nav)).join("");
-
-  navDeskTop.innerHTML = navDeskHTML;
+  navDeskTop.innerHTML = template(navDatas);
 }
 
 const navRespone: HTMLElement | null = document.getElementById("nav-respon");
 
 if (navRespone) {
-  const source = `
+  const source = `{{#each this}}
   {{#if childrens}}
   <li class="navmb p-3">
     <a
@@ -521,11 +521,10 @@ if (navRespone) {
      </p>
   </li>
   {{/if}}
+  {{#each this}}
   `;
   const template = Handlebars.compile(source);
-  const navResponeHTML = navDatas.map((nav) => template(nav)).join("");
-
-  navRespone.innerHTML = navResponeHTML;
+  navRespone.innerHTML = template(navDatas);
 }
 
 const navIcons = [
@@ -537,17 +536,16 @@ const navIcons = [
 
 const navIcon: HTMLElement | null = document.getElementById("nav-icon");
 if (navIcon) {
-  const source = `<li class="list-none mr-6 mt-10">
+  const source = `{{#each this}}<li class="list-none mr-6 mt-10">
   <a
     href="#"
     class="social-icon hover:text-orange-600 duration-500"
   >
     <i class="{{icon}} text-lg"></i>
   </a>
-</li>`;
+</li>{{/each}}`;
 
   const template = Handlebars.compile(source);
-  const navIconHTML = navIcons.map((item) => template(item)).join("");
-  navIcon.innerHTML = navIconHTML;
+  navIcon.innerHTML = template(navIcons);
 }
 // Handlebars Navbar end
