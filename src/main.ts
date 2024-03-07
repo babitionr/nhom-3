@@ -356,9 +356,9 @@ if (testimonialsElement) {
           class="border-2 border-solid box-border absolute border-black top-3.5 left-3.5 -right-3.5 -bottom-2 w-full"
         ></div>
         <img
-          src="{{img}}"
+        data-src="{{img}}"
           alt="{{alt}}"
-          class="w-40 h-40"
+          class="w-40 h-40 lazy"
         />
       </div>
     </div>

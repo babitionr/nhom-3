@@ -59,8 +59,8 @@
               class="absolute border-r-2 h-20 border-b-2 border-solid border-gray-300 left-2 top-1.5 -bottom-2 -right-2"
             ></div>
             <img
-              src="https://html.bslthemes.com/treto/img/logo.png"
-              class="w-full"
+              data-src="https://html.bslthemes.com/treto/img/logo.png"
+              class="w-full lazy"
             />
           </a>
           <nav
@@ -192,9 +192,9 @@
               </div>
               <div class="w-5/12 pl-4 max-xl:w-full max-md:pl-0">
                 <img
-                  src="https://html.bslthemes.com/treto/img/faces/5.jpg"
+                  data-src="https://html.bslthemes.com/treto/img/faces/5.jpg"
                   alt=""
-                  class="h-full w-full object-cover object-center align-top max-xl:h-96"
+                  class="h-full w-full object-cover object-center align-top max-xl:h-96 lazy"
                 />
               </div>
             </div>
@@ -223,9 +223,9 @@
                   class="absolute border-2 border-solid border-black left-3 top-3 -bottom-3 right-1"
                 ></div>
                 <img
-                  src="https://html.bslthemes.com/treto/img/faces/1.jpg"
+                  data-src="https://html.bslthemes.com/treto/img/faces/1.jpg"
                   alt=""
-                  class="h-500px"
+                  class="h-500px lazy"
                 />
               </div>
             </div>
@@ -828,6 +828,17 @@
 
     <!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!--  vanilla-lazyload 17 -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.min.js"></script>
+    <script>
+      setTimeout(() => {
+        new LazyLoad({
+          callback_error: (el) =>
+            (el.src = "https://via.placeholder.com/1x1/?text="),
+        });
+      }, 1000);
+    </script>
 
     <!-- Magnific Popup core JS file -->
     <script src="src/magnific-popup.js"></script>
