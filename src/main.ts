@@ -1,24 +1,42 @@
-import './index.less'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+import './less.less'
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
+// sweetalert2 11
+import { Message } from './message.ts'
+import { API } from './api.ts'
+(<any>window).API = API;
+(<any>window).Message = Message;
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+import { setupFormValid } from './validation.ts'
+setupFormValid();
+(<any>window).SetupFormValid = setupFormValid;
+(<any>window)._MESSAGE_ = {
+  required: 'Xin vui lòng nhập nội dung',
+  email: 'Xin vui lòng nhập địa chỉ email hợp lệ!',
+  minLengthCheckBox: 'Xin vui lòng chọn ít nhất ',
+  minLength: 'Xin vui lòng nhập tối thiểu ',
+  maxLength: 'Xin vui lòng nhập không quá ',
+  compare: 'Xin vui lòng nhập không quá ',
+};
+
+import { setupMenuMobile } from './menu-mobile.ts';
+setupMenuMobile(document.getElementsByClassName('handle-menu'));
+// swiper 10
+import { setupSwiper } from './swiper.ts';
+setupSwiper();
+
+// echarts 5
+import { setupEchart } from './echart.ts'
+setupEchart();
+
+window.onload = async () => {
+  const test = await API.post('/authentication/jwt/login', {
+    deviceName:
+      "Chrome/116.0.0.0 desktop/mac-os-x-15 ccfeecc0-533f-8a96-f60d-8d6253b60420",
+    deviceNo: "Macintosh",
+    deviceType: "BROWSER",
+    password: "41234231",
+    remember: false,
+    username: "12342134",
+  });
+  console.log(test);
+};
