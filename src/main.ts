@@ -516,12 +516,12 @@ if (navRespone) {
 
   {{else}}
   <li class="p-3">
-    <p class="hover:text-orange-600duration-500 cursor-pointer">
+    <p class="hover:text-orange-600 duration-500 cursor-pointer">
       {{name}}
      </p>
   </li>
   {{/if}}
-  {{#each this}}
+  {{/each}}
   `;
   const template = Handlebars.compile(source);
   navRespone.innerHTML = template(navDatas);
@@ -536,14 +536,18 @@ const navIcons = [
 
 const navIcon: HTMLElement | null = document.getElementById("nav-icon");
 if (navIcon) {
-  const source = `{{#each this}}<li class="list-none mr-6 mt-10">
-  <a
-    href="#"
-    class="social-icon hover:text-orange-600 duration-500"
-  >
-    <i class="{{icon}} text-lg"></i>
-  </a>
-</li>{{/each}}`;
+  const source = `
+  {{#each this}}
+    <li class="list-none mr-6 mt-10">
+      <a
+        href="#"
+        class="social-icon hover:text-orange-600 duration-500"
+      >
+        <i class="{{icon}} text-lg"></i>
+      </a>
+    </li>
+  {{/each}}
+`;
 
   const template = Handlebars.compile(source);
   navIcon.innerHTML = template(navIcons);
